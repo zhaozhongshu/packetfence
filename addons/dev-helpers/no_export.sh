@@ -19,7 +19,7 @@ for module in $MODULES ;do
     ALL_EXPORTED_VARS="$(perl -Ilib -M$m -e'print join("|", map { $a= $_; $a=~s/^./\\\$/;($a,$_)  } grep { /^[@%]/ }  @'"$m"'::EXPORT);')"
     echo $ALL_EXPORTED_VARS
 
-    if [ -z "$ALL_EXPORTED_VARS_RX" ];then
+    if [ -z "$ALL_EXPORTED_VARS_RX" && -n "$ALL_EXPORTED_VALUES" ];then
         for f in $(ag -l "use $m;"); do 
             EXPORTED_SUBS=
             EXPORTED_VALUES=
