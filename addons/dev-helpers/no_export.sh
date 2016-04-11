@@ -33,8 +33,8 @@ for module in $MODULES ;do
                     perl -pi -e"s/use $m;//" $f
                 fi
         done
+        perl -pi -e's/,? *\@EXPORT_OK//' $module
         perl -pi -e's/EXPORT(?!_OK)/EXPORT_OK/' $module
-        perl -pi -e's/,? *@EXPORT_OK//' $module
     fi
 done
 
