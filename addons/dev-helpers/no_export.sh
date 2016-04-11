@@ -35,6 +35,8 @@ for module in $MODULES ;do
         done
         perl -pi -e's/,? *\@EXPORT_OK//' $module
         perl -pi -e's/EXPORT(?!_OK)/EXPORT_OK/' $module
+        git add -u
+        git commit -m"Move EXPORT to EXPORT_OK for $m"
     fi
 done
 
