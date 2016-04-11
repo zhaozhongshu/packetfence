@@ -17,9 +17,9 @@ for module in $MODULES ;do
     #Create a regex for arrays and hashes
     ALL_EXPORTED_VARS_RX="$(perl -Ilib -M$m -e'print join("|", map { $a= $_; $a=~s/^./\\\$/;($a,$_)  } grep { /^[@%]/ }  @'"$m"'::EXPORT);')"
     ALL_EXPORTED_VARS="$(perl -Ilib -M$m -e'print join("|", map { $a= $_; $a=~s/^./\\\$/;($a,$_)  } grep { /^[@%]/ }  @'"$m"'::EXPORT);')"
-    echo $ALL_EXPORTED_VARS
+    echo "'$ALL_EXPORTED_VALUES' '$ALL_EXPORTED_VARS'"
 
-    if [ -z "$ALL_EXPORTED_VARS_RX" && -n "$ALL_EXPORTED_VALUES" ];then
+    if [ -z "$ALL_EXPORTED_VARS_RX" ] && [ -n "$ALL_EXPORTED_VALUES" ];then
         for f in $(ag -l "use $m;"); do 
             EXPORTED_SUBS=
             EXPORTED_VALUES=
