@@ -37,7 +37,9 @@ use pf::accounting qw(acct_maintenance);
 use pf::config qw(%Config);
 use pf::constants qw($FALSE);
 use pf::config::cached;
-use pf::inline::accounting;
+use pf::inline::accounting qw(
+    inline_accounting_maintenance
+);
 use pf::iplog;
 use pf::locationlog;
 use pf::node;

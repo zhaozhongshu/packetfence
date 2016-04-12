@@ -43,7 +43,9 @@ use pf::services::util qw(
     daemonize
     deletepid
 );
-use pf::inline::accounting;
+use pf::inline::accounting qw(
+    inline_accounting_update_session_for_ip
+);
 use pf::ConfigStore::Interface;
 
 # initialization

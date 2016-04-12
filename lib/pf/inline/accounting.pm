@@ -38,9 +38,9 @@ my $ANALYZED = 3;
 
 BEGIN {
     use Exporter ();
-    our ( @ISA, @EXPORT );
+    our ( @ISA, @EXPORT_OK );
     @ISA = qw(Exporter);
-    @EXPORT = qw(
+    @EXPORT_OK = qw(
         inline_accounting_db_prepare
         $inline_accounting_db_prepared
 
