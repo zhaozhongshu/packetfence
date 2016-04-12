@@ -13,7 +13,9 @@ pf::cmd::pf::configfiles::pull
 
 use strict;
 use warnings;
-use pf::configfile;
+use pf::configfile qw(
+    configfile_export
+);
 use pf::file_paths qw(@stored_config_files);
 use pf::constants::exit_code qw($EXIT_SUCCESS);
 use base qw(pf::cmd);

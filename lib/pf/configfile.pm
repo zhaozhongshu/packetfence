@@ -32,9 +32,9 @@ use constant CONFIGFILE => 'configfile';
 
 BEGIN {
     use Exporter ();
-    our ( @ISA, @EXPORT );
+    our ( @ISA, @EXPORT_OK );
     @ISA = qw(Exporter);
-    @EXPORT = qw(
+    @EXPORT_OK = qw(
         configfile_db_prepare
         $configfile_db_prepared
 
