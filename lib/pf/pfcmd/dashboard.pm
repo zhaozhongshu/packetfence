@@ -18,9 +18,9 @@ use pf::pfcmd::report;
 
 BEGIN {
     use Exporter ();
-    our ( @ISA, @EXPORT );
+    our ( @ISA, @EXPORT_OK );
     @ISA    = qw(Exporter);
-    @EXPORT = qw(
+    @EXPORT_OK = qw(
         $dashboard_db_prepared
         dashboard_db_prepare
 
