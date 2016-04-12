@@ -24,9 +24,9 @@ use constant REPORT => 'pfcmd::report';
 
 BEGIN {
     use Exporter ();
-    our ( @ISA, @EXPORT );
+    our ( @ISA, @EXPORT_OK );
     @ISA    = qw(Exporter);
-    @EXPORT = qw(
+    @EXPORT_OK = qw(
         $report_db_prepared
         report_db_prepare
 

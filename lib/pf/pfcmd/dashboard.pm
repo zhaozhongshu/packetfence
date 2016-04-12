@@ -14,7 +14,12 @@ use pf::log;
 use constant DASHBOARD => 'pfcmd::dashboard';
 
 use pf::db;
-use pf::pfcmd::report;
+use pf::pfcmd::report qw(
+    report_active_all
+    report_inactive_all
+    report_registered_active
+    report_unregistered_active
+);
 
 BEGIN {
     use Exporter ();
@@ -35,7 +40,12 @@ BEGIN {
 };
 
 use pf::db;
-use pf::pfcmd::report;
+use pf::pfcmd::report qw(
+    report_active_all
+    report_inactive_all
+    report_registered_active
+    report_unregistered_active
+);
 
 # The next two variables and the _prepare sub are required for database handling magic (see pf::db)
 our $dashboard_db_prepared = 0;

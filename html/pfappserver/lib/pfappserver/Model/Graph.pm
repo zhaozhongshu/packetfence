@@ -18,7 +18,7 @@ use pf::log;
 use pf::config::ui;
 use pf::error qw(is_error is_success);
 use pf::pfcmd::graph;
-use pf::pfcmd::report;
+
 
 extends 'Catalyst::Model';
 
