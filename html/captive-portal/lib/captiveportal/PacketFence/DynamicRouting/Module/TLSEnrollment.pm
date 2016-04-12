@@ -23,7 +23,7 @@ use pf::authentication;
 use HTML::Entities;
 use MIME::Base64;
 use File::Slurp;
-use pf::web;
+
 use Crypt::OpenSSL::X509;
 use pf::password;
 use Crypt::GeneratePassword qw(word);

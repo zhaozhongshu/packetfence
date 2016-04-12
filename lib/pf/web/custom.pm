@@ -29,7 +29,7 @@ use pf::config;
 
 use pf::node qw(node_attributes node_view node_modify);
 use pf::useragent;
-use pf::web;
+
 
 =head1 WARNING
 

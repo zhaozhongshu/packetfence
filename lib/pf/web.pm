@@ -40,10 +40,10 @@ use List::MoreUtils qw(any);
 
 BEGIN {
     use Exporter ();
-    our ( @ISA, @EXPORT );
+    our ( @ISA, @EXPORT_OK );
     @ISA = qw(Exporter);
     # No export to force users to use full package name and allowing pf::web::custom to redefine us
-    @EXPORT = qw(i18n ni18n i18n_format render_template);
+    @EXPORT_OK = qw(i18n ni18n i18n_format render_template);
 }
 
 use pf::authentication;

@@ -14,7 +14,9 @@ use pf::activation qw($GUEST_ACTIVATION $SPONSOR_ACTIVATION);
 use pf::node;
 use pf::Portal::Session;
 use pf::util qw(valid_mac isenabled);
-use pf::web;
+use pf::web qw(
+    i18n_format
+);
 use pf::log;
 use pf::web::guest 1.30;
 use HTML::Entities;

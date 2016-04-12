@@ -25,7 +25,7 @@ use pf::node qw(node_register is_max_reg_nodes_reached);
 use pf::util qw(
     clean_mac
 );
-use pf::web;
+
 use pf::web::custom;    # called last to allow redefinitions
 
 use pf::authentication;

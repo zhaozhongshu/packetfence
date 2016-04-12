@@ -12,7 +12,7 @@ use pf::constants qw(
 use pf::config;
 use pf::node;
 use pf::person;
-use pf::web;
+
 
 BEGIN { extends 'captiveportal::Base::Controller'; }
 

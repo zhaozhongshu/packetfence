@@ -11,7 +11,7 @@ use pf::util qw(
     isdisabled
     valid_mac
 );
-use pf::web;
+
 use pf::web::device_registration;
 
 BEGIN { extends 'captiveportal::Base::Controller'; }

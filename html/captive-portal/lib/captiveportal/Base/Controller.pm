@@ -25,7 +25,10 @@ use pf::useragent;
 
 use pf::violation qw(violation_count);
 use pf::web::constants;
-use pf::web;
+use pf::web qw(
+    i18n
+    i18n_format
+);
 BEGIN { extends 'Catalyst::Controller'; }
 
 sub showError {

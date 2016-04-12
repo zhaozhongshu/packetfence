@@ -11,7 +11,7 @@ use pf::file_paths qw($conf_dir);
 use pf::log;
 
 use pf::Portal::Session;
-use pf::web;
+
 use pf::node;
 use pf::useragent;
 use pf::violation;

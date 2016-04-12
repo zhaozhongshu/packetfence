@@ -34,7 +34,7 @@ use pf::config qw(
 );
 
 use pf::node;
-use pf::web;
+
 use pf::Portal::Session;
 use pf::util qw(
     isenabled

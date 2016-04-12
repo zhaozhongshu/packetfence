@@ -30,7 +30,9 @@ use pf::util qw(
     valid_mac
 );
 use pf::violation;
-use pf::web;
+use pf::web qw(
+    i18n
+);
 use pf::enforcement;
 # called last to allow redefinitions
 use pf::web::custom;

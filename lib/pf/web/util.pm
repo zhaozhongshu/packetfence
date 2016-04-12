@@ -33,7 +33,9 @@ use pf::util qw(
 use pf::config::util qw(
     get_translatable_time
 );
-use pf::web;
+use pf::web qw(
+    ni18n
+);
 use File::Slurp;
 
 BEGIN {

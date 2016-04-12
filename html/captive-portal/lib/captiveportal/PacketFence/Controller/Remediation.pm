@@ -1,7 +1,7 @@
 package captiveportal::PacketFence::Controller::Remediation;
 use Moose;
 use namespace::autoclean;
-use pf::web;
+
 use pf::violation;
 use pf::class;
 use pf::node;
