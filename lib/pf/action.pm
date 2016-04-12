@@ -77,7 +77,10 @@ use pf::config qw(
 );
 use pf::db;
 use pf::util;
-use pf::config::util;
+use pf::config::util qw(
+    pfmailer
+    send_email
+);
 use pf::class qw(class_view class_view_actions);
 use pf::violation qw(violation_force_close);
 use pf::Portal::ProfileFactory;

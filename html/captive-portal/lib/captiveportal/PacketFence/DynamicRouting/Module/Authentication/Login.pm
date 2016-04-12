@@ -17,7 +17,9 @@ with 'captiveportal::Role::MultiSource';
 
 use pf::util;
 use pf::log;
-use pf::config::util;
+use pf::config::util qw(
+    get_user_sources
+);
 use List::MoreUtils qw(all);
 use pf::auth_log;
 use pf::person;

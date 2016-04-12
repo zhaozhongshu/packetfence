@@ -50,7 +50,9 @@ use pf::locationlog;
 use pf::node;
 use pf::SwitchFactory;
 use pf::util;
-use pf::config::util;
+use pf::config::util qw(
+    str_to_connection_type
+);
 use pf::role::custom $ROLE_API_LEVEL;
 use pf::client;
 use pf::cluster;

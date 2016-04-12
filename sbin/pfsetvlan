@@ -81,7 +81,9 @@ use pf::SwitchFactory;
 
 use pf::traplog;
 use pf::util;
-use pf::config::util;
+use pf::config::util qw(
+    pfmailer
+);
 use pf::services::util qw(
     daemonize
     deletepid

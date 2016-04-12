@@ -32,7 +32,7 @@ use pf::config qw(
 );
 use pf::violation_config;
 use pf::util qw(parse_template listify);
-use pf::config::util;
+
 
 has '+name' => ( default => sub { 'snort' } );
 

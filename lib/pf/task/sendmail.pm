@@ -20,7 +20,9 @@ use Net::SMTP;
 use pf::util qw(untaint_chain);
 use pf::log;
 use pf::config;
-use pf::config::util;
+use pf::config::util qw(
+    send_email
+);
 my $logger = get_logger();
 
 =head2 doTask

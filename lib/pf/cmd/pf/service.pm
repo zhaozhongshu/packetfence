@@ -66,7 +66,9 @@ our ($RESET_COLOR, $WARNING_COLOR, $ERROR_COLOR, $SUCCESS_COLOR);
 use pf::log;
 use pf::file_paths qw($install_dir);
 use pf::config qw(%Config);
-use pf::config::util;
+use pf::config::util qw(
+    pfmailer
+);
 use pf::util;
 use pf::constants;
 use pf::constants::exit_code qw($EXIT_SUCCESS $EXIT_FAILURE $EXIT_SERVICES_NOT_STARTED $EXIT_FATAL);

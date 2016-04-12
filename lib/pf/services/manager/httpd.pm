@@ -30,7 +30,12 @@ use pf::file_paths qw(
 use Moo;
 use POSIX;
 use pf::util;
-use pf::config::util;
+use pf::config::util qw(
+    get_inline_nets
+    get_internal_nets
+    get_routed_isolation_nets
+    get_routed_registration_nets
+);
 use pf::util::apache qw(url_parser);
 use pf::web::constants;
 use pf::authentication;

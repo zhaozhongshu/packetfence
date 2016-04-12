@@ -38,7 +38,11 @@ use pf::iplog;
 use pf::lookup::node;
 use pf::node;
 use pf::util;
-use pf::config::util;
+use pf::config::util qw(
+    connection_type_to_str
+    get_internal_macs
+    pfmailer
+);
 
 use pf::util::dhcp;
 use List::MoreUtils qw(any);

@@ -24,7 +24,7 @@ use List::Util qw(first);
 use pf::config;
 use pf::violation;
 use pf::config::violation;
-use pf::config::util;
+
 use pf::util;
 use pf::node;
 use pf::constants;

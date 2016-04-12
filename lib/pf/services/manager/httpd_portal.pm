@@ -25,7 +25,11 @@ use pf::config qw(
     @portal_ints
 );
 use pf::util;
-use pf::config::util;
+use pf::config::util qw(
+    get_inline_nets
+    get_routed_isolation_nets
+    get_routed_registration_nets
+);
 use pf::constants::config;
 use pf::web::constants();
 

@@ -22,7 +22,9 @@ use captiveportal::Base::I18N;
 use pf::node;
 use pf::useragent;
 use pf::util;
-use pf::config::util;
+use pf::config::util qw(
+    portal_hosts
+);
 use List::MoreUtils qw(any);
 use URI::Escape::XS qw(uri_unescape);
 use HTML::Entities;

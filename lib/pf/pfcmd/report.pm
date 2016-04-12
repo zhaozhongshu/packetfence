@@ -75,7 +75,9 @@ BEGIN {
 use pf::config qw(%connection_type_explained);
 use pf::db;
 use pf::util;
-use pf::config::util;
+use pf::config::util qw(
+    str_to_connection_type
+);
 
 # The next two variables and the _prepare sub are required for database handling magic (see pf::db)
 our $report_db_prepared = 0;

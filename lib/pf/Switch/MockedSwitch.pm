@@ -54,7 +54,9 @@ use pf::config qw(
 # importing switch constants
 use pf::Switch::constants;
 use pf::util;
-use pf::config::util;
+use pf::config::util qw(
+    pfmailer
+);
 
 # these are in microseconds (not milliseconds!) because of Time::HiRes's usleep
 # TODO benchmark more sensible values

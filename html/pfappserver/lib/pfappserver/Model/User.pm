@@ -30,7 +30,9 @@ use pf::node;
 use pf::violation;
 use pf::enforcement qw(reevaluate_access);
 use pf::util;
-use pf::config::util;
+use pf::config::util qw(
+    get_translatable_time
+);
 use pf::web::guest;
 
 =head2 field_names

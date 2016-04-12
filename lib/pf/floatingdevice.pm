@@ -82,7 +82,9 @@ use pf::config qw(
 );
 use pf::locationlog;
 use pf::util;
-use pf::config::util;
+use pf::config::util qw(
+    str_to_connection_type
+);
 
 =head1 SUBROUTINES
 

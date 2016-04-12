@@ -98,7 +98,9 @@ use pf::enforcement;
 use pf::locationlog;
 use pf::SwitchFactory;
 use pf::util;
-use pf::config::util;
+use pf::config::util qw(
+    str_to_connection_type
+);
 use pf::log;
 
 use threads;

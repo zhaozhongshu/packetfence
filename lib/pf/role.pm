@@ -35,7 +35,9 @@ use pf::node qw(node_exist node_modify);
 use pf::Switch::constants;
 use pf::constants::role qw($VOICE_ROLE);
 use pf::util;
-use pf::config::util;
+use pf::config::util qw(
+    connection_type_to_str
+);
 use pf::floatingdevice::custom;
 use pf::constants::scan qw($POST_SCAN_VID);
 use pf::authentication;

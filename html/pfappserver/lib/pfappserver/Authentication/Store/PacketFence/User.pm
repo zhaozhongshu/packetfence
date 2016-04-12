@@ -12,7 +12,9 @@ use pf::authentication;
 use pf::Authentication::constants;
 use pf::log;
 use List::MoreUtils qw(all any);
-use pf::config::util;
+use pf::config::util qw(
+    get_realm_source
+);
 use pf::util;
 
 BEGIN { __PACKAGE__->mk_accessors(qw/_user _store _roles/) }

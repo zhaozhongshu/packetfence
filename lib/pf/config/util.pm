@@ -53,9 +53,9 @@ use pf::authentication;
 
 BEGIN {
   use Exporter ();
-  our ( @ISA, @EXPORT );
+  our ( @ISA, @EXPORT_OK );
   @ISA = qw(Exporter);
-  @EXPORT = qw(
+  @EXPORT_OK = qw(
     whitelisted_mac ip2interface ip2device
     pfmailer send_email get_all_internal_ips
     get_internal_nets get_routed_isolation_nets

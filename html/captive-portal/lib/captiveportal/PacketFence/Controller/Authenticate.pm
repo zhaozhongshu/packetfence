@@ -9,7 +9,9 @@ use pf::config qw(%Profiles_Config);;
 use pf::web qw(i18n i18n_format);
 use pf::node;
 use pf::util;
-use pf::config::util;
+use pf::config::util qw(
+    get_realm_source
+);
 use pf::locationlog;
 use pf::authentication;
 use pf::Authentication::constants;

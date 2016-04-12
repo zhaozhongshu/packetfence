@@ -14,7 +14,7 @@ use pf::config qw(
 use constant LOOPBACK_IPV4 => '127.0.0.1';
 use pf::log;
 use pf::util;
-use pf::config::util;
+
 use pf::locationlog qw(locationlog_synchronize);
 use NetAddr::IP;
 use pf::Portal::ProfileFactory;

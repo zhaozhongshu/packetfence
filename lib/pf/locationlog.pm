@@ -67,7 +67,10 @@ use pf::config qw(
 use pf::db;
 use pf::node;
 use pf::util;
-use pf::config::util;
+use pf::config::util qw(
+    connection_type_to_str
+    str_to_connection_type
+);
 
 # The next two variables and the _prepare sub are required for database handling magic (see pf::db)
 our $locationlog_db_prepared = 0;

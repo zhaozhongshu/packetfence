@@ -46,7 +46,9 @@ use pf::config qw(
 use pf::config::cached;
 use pf::violation_config;
 use pf::util;
-use pf::config::util;
+use pf::config::util qw(
+    get_internal_devs
+);
 use pf::services;
 use pf::authentication;
 use NetAddr::IP;
