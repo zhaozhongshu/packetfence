@@ -15,7 +15,7 @@ use Moose;  # automatically turns on strict and warnings
 use namespace::autoclean;
 
 use pf::config::cached;
-use pf::util;
+
 use pf::domain;
 use pf::config qw(%ConfigDomain);
 

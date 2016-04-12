@@ -21,7 +21,9 @@ use warnings;
 use Moo;
 use pf::file_paths qw($domains_chroot_dir $var_dir);
 use pf::config qw(%ConfigDomain $DISTRIB $DIST_VERSION);
-use pf::util;
+use pf::util qw(
+    pf_run
+);
 use pfconfig::manager;
 extends 'pf::services::manager';
 

@@ -19,7 +19,7 @@ use namespace::autoclean;
 use pf::config;
 use File::Copy;
 use HTTP::Status qw(:constants is_error is_success);
-use pf::util;
+
 use File::Slurp qw(read_dir read_file);
 use File::Spec::Functions;
 use File::Copy::Recursive qw(dircopy);

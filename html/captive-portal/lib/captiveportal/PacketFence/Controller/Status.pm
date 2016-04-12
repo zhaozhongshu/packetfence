@@ -1,7 +1,9 @@
 package captiveportal::PacketFence::Controller::Status;
 use Moose;
 use namespace::autoclean;
-use pf::util;
+use pf::util qw(
+    all_defined
+);
 use pf::constants;
 use pf::config;
 use pf::node;

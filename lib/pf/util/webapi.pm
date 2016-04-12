@@ -15,7 +15,9 @@ pf::util::webapi
 use strict;
 use warnings;
 use pf::log;
-use pf::util;
+use pf::util qw(
+    clean_mac
+);
 
 sub add_mac_to_log_context {
     my ($args) = @_;

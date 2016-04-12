@@ -73,7 +73,10 @@ use pf::config qw(
 use pf::file_paths qw($lib_dir);
 # importing switch constants
 use pf::Switch::constants;
-use pf::util;
+use pf::util qw(
+    mac2oid
+    oid2mac
+);
 
 # CAPABILITIES
 # access technology supported

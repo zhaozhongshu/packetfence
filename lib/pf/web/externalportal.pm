@@ -26,7 +26,11 @@ use pf::config;
 use pf::iplog;
 use pf::locationlog qw(locationlog_view_open_mac locationlog_get_session);
 use pf::Portal::Session;
-use pf::util;
+use pf::util qw(
+    clean_mac
+    valid_ip
+    valid_mac
+);
 use pf::web::constants;
 use pf::web::util;
 use pf::constants;

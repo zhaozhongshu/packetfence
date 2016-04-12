@@ -30,7 +30,9 @@ use pf::config;
 use pf::db;
 use pf::radius::constants;
 use pf::violation;
-use pf::util;
+use pf::util qw(
+    clean_mac
+);
 
 our $VERSION = 1.00;
 

@@ -33,7 +33,9 @@ use Net::SNMP;
 
 use pf::Switch::constants;
 use pf::constants::role qw($VOICE_ROLE);
-use pf::util;
+use pf::util qw(
+    parse_mac_from_trap
+);
 
 =head1 METHODS
 

@@ -49,7 +49,10 @@ use pf::inline::custom $INLINE_API_LEVEL;
 use pf::locationlog;
 use pf::node;
 use pf::SwitchFactory;
-use pf::util;
+use pf::util qw(
+    clean_mac
+    isenabled
+);
 use pf::config::util qw(
     str_to_connection_type
 );

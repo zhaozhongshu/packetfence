@@ -38,7 +38,7 @@ use pf::config qw(
 use pf::file_paths qw($conf_dir);
 use pf::iplog;
 use pf::Portal::ProfileFactory;
-use pf::util;
+
 use pf::web::constants;
 use pf::web::util;
 use pf::web::constants;

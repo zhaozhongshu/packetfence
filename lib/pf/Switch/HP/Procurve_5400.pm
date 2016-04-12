@@ -50,7 +50,7 @@ use pf::config qw(
     $PORT
 );
 use pf::Switch::constants;
-use pf::util;
+
 
 sub description { 'HP ProCurve 5400 Series' }
 

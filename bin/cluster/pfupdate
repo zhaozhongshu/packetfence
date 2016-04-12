@@ -10,7 +10,9 @@ use constant INSTALL_DIR => '/usr/local/pf';
 use lib INSTALL_DIR . "/lib";
 
 use Getopt::Long;
-use pf::util;
+use pf::util qw(
+    pf_run
+);
 
 my $mode;
 

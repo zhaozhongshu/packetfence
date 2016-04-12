@@ -15,7 +15,7 @@ extends 'captiveportal::DynamicRouting::Module';
 
 use pf::log;
 use pf::config;
-use pf::util;
+
 use pf::node;
 use pf::web::constants;
 use List::MoreUtils qw(uniq any);

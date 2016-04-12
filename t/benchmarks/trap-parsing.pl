@@ -17,7 +17,9 @@ use Benchmark qw(cmpthese timethese);
 
 use lib '/usr/local/pf/lib';
 
-use pf::util;
+use pf::util qw(
+    parse_mac_from_trap
+);
 use pf::Switch::constants;
 
 =head1 new vs old trap parsing techniques (fix for #1098)

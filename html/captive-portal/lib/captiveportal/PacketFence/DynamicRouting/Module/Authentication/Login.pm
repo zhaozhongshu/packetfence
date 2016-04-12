@@ -15,7 +15,10 @@ extends 'captiveportal::DynamicRouting::Module::Authentication';
 with 'captiveportal::Role::FieldValidation';
 with 'captiveportal::Role::MultiSource';
 
-use pf::util;
+use pf::util qw(
+    isenabled
+    strip_username
+);
 use pf::log;
 use pf::config::util qw(
     get_user_sources

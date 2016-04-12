@@ -5,7 +5,12 @@ use pf::Authentication::constants;
 use pf::config qw(%Config);
 use pf::log;
 use pf::node;
-use pf::util;
+use pf::util qw(
+    all_defined
+    clean_mac
+    isdisabled
+    valid_mac
+);
 use pf::web;
 use pf::web::device_registration;
 

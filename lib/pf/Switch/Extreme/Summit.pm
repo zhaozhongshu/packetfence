@@ -20,7 +20,7 @@ sub description { 'ExtremeNet Summit series' }
 
 # importing switch constants
 use pf::Switch::constants;
-use pf::util;
+
 
 =head1 AUTHOR
 

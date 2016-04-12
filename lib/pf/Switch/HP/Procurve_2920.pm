@@ -25,7 +25,7 @@ sub description {'HP ProCurve 2920 Series'}
 # importing switch constants
 use pf::Switch::constants;
 use pf::constants::role qw($VOICE_ROLE);
-use pf::util;
+
 use pf::config qw(
     $MAC
     $PORT

@@ -18,7 +18,9 @@ use base ('pf::Switch');
 use Net::SNMP;
 
 use pf::Switch::constants;
-use pf::util;
+use pf::util qw(
+    parse_mac_from_trap
+);
 
 sub getVersion {
     my ($self) = @_;

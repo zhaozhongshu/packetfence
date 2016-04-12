@@ -21,7 +21,9 @@ use warnings;
 use base qw(pf::cmd);
 
 use pf::domain;
-use pf::util;
+use pf::util qw(
+    pf_run
+);
 use pf::constants::exit_code qw($EXIT_SUCCESS);
 
 sub _run {

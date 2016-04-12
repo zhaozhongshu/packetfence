@@ -44,7 +44,12 @@ use pf::radius::constants;
 use pf::roles::custom $ROLES_API_LEVEL;
 # SNMP constants (several standard-based and vendor-based namespaces)
 use pf::Switch::constants;
-use pf::util;
+use pf::util qw(
+    clean_mac
+    generate_session_id
+    isenabled
+    mac2oid
+);
 use pf::util::radius qw(perform_disconnect);
 use List::MoreUtils qw(any all);
 use Scalar::Util qw(looks_like_number);

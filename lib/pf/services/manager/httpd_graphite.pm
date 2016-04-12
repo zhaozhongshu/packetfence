@@ -24,7 +24,9 @@ use pf::config qw(
     $management_network
     $OS
 );
-use pf::util;
+use pf::util qw(
+    parse_template
+);
 use pf::cluster;
 use pf::log;
 use Bytes::Random::Secure qw( random_bytes_base64 );

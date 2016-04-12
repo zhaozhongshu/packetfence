@@ -23,7 +23,9 @@ use pf::condition::any;
 use pf::condition::false;
 use pf::filter;
 use pf::filter_engine;
-use pf::util;
+use pf::util qw(
+    isenabled
+);
 use pf::log;
 
 use base 'pfconfig::namespaces::resource';

@@ -97,7 +97,9 @@ use pf::file_paths qw($bin_dir);
 use pf::enforcement;
 use pf::locationlog;
 use pf::SwitchFactory;
-use pf::util;
+use pf::util qw(
+    pf_run
+);
 use pf::config::util qw(
     str_to_connection_type
 );

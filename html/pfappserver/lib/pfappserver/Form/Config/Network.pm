@@ -10,7 +10,9 @@ Form definition to update a default network.
 
 =cut
 
-use pf::util;
+use pf::util qw(
+    ip2int
+);
 
 use HTML::FormHandler::Moose;
 extends 'pfappserver::Base::Form';

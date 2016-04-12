@@ -17,7 +17,10 @@ use pf::config qw($DISTRIB $DIST_VERSION);
 
 use pf::log;
 use pf::error qw(is_error is_success);
-use pf::util;
+use pf::util qw(
+    pf_run
+    valid_ip
+);
 
 extends 'Catalyst::Model';
 
@@ -320,7 +323,10 @@ Moose class derivated from role for OS specific methods
 
 use Moose;
 
-use pf::util;
+use pf::util qw(
+    pf_run
+    valid_ip
+);
 use pf::log;
 
 with 'pfappserver::Model::Config::System::Role';
@@ -424,7 +430,10 @@ Moose class derivated from role for OS specific methods
 
 use Moose;
 
-use pf::util;
+use pf::util qw(
+    pf_run
+    valid_ip
+);
 use pf::log;
 
 with 'pfappserver::Model::Config::System::Role';

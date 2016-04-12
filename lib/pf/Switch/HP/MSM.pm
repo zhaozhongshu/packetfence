@@ -26,7 +26,7 @@ sub description { 'HP ProCurve MSM Access Point' }
 
 # importing switch constants
 use pf::Switch::constants;
-use pf::util;
+
 
 =head1 SUBROUTINES
 

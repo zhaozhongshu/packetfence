@@ -53,7 +53,9 @@ use pf::radius::constants;
 use pf::roles::custom $ROLES_API_LEVEL;
 # importing switch constants
 use pf::Switch::constants;
-use pf::util;
+use pf::util qw(
+    isenabled
+);
 
 =head1 SUBROUTINES
 

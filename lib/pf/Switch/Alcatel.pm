@@ -39,7 +39,7 @@ sub description { 'Alcatel switch' }
 # importing switch constants
 use pf::Switch::constants;
 use pf::constants::role qw($VOICE_ROLE);
-use pf::util;
+
 use pf::constants;
 use pf::config qw(
     $MAC

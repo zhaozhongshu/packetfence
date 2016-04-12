@@ -78,7 +78,7 @@ use pf::config qw(
 use pf::file_paths qw($lib_dir);
 # importing switch constants
 use pf::Switch::constants;
-use pf::util;
+
 
 =head1 SUBROUTINES
 

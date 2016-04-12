@@ -45,7 +45,9 @@ use Try::Tiny;
 
 use lib $FindBin::Bin . "/../lib";
 
-use pf::util;
+use pf::util qw(
+    clean_mac
+);
 use pf::util::dhcp qw(
     decompose_dhcp
     dhcp_summary

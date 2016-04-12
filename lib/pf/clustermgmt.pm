@@ -28,7 +28,7 @@ use warnings;
 use pf::config qw(%Config);
 use pf::config::cached;
 use pf::log;
-use pf::util;
+
 use pf::ConfigStore::Interface;
 use pf::ConfigStore::Pf;
 use NetAddr::IP;

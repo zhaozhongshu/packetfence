@@ -19,7 +19,9 @@ use warnings;
 
 use pfconfig::namespaces::config;
 use pf::file_paths qw($pfdetect_config_file);
-use pf::util;
+use pf::util qw(
+    isenabled
+);
 
 use base 'pfconfig::namespaces::config';
 
@@ -48,8 +50,6 @@ sub build_child {
 
     return \%tmp_cfg;
 }
-
-=back
 
 =head1 AUTHOR
 

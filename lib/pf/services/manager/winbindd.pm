@@ -20,7 +20,7 @@ use pf::config qw(
     %Config
 );
 use pf::constants qw($TRUE $FALSE);
-use pf::util;
+
 use List::MoreUtils qw(any all uniq);
 use Linux::Inotify2;
 use Errno qw(EINTR EAGAIN);

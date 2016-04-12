@@ -15,7 +15,9 @@ use pf::constants::authentication::messages qw(
     $AUTH_SUCCESS_MSG
 );
 use pf::Authentication::Source;
-use pf::util;
+use pf::util qw(
+    isenabled
+);
 use pf::log;
 
 use Apache::Htpasswd;

@@ -24,7 +24,11 @@ use pf::log;
 use Readonly;
 use pf::node;
 use pf::person;
-use pf::util;
+use pf::util qw(
+    mysql_date
+    pf_run
+    untaint_chain
+);
 use pf::violation_config;
 
 use constant ACTION => 'action';
@@ -76,7 +80,11 @@ use pf::config qw(
     $fqdn
 );
 use pf::db;
-use pf::util;
+use pf::util qw(
+    mysql_date
+    pf_run
+    untaint_chain
+);
 use pf::config::util qw(
     pfmailer
     send_email

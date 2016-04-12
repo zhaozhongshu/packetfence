@@ -18,7 +18,7 @@ use namespace::autoclean;
 use pf::config::cached;
 use pf::config;
 use pf::ConfigStore::Domain;
-use pf::util;
+
 use pf::domain;
 
 extends 'pfappserver::Base::Model::Config';

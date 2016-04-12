@@ -34,7 +34,7 @@ use Net::SNMP;
 
 use pf::Switch::constants;
 use pf::constants;
-use pf::util;
+
 
 use base ('pf::Switch::Netgear');
 

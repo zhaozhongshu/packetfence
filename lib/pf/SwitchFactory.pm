@@ -18,7 +18,11 @@ use warnings;
 
 use Carp;
 use pf::log;
-use pf::util;
+use pf::util qw(
+    untaint_chain
+    valid_ip
+    valid_mac
+);
 use pf::freeradius;
 use Module::Load;
 use Benchmark qw(:all);

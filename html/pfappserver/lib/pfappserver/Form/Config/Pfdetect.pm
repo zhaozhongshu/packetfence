@@ -15,7 +15,7 @@ extends 'pfappserver::Base::Form';
 with 'pfappserver::Base::Form::Role::Help';
 
 use pf::config;
-use pf::util;
+
 use pf::constants::pfdetect qw(@PFDETECT_PARSERS);
 
 ## Definition

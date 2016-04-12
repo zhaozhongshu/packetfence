@@ -34,7 +34,7 @@ use pf::config qw(
     @portal_ints
     $management_network
 );
-use pf::util;
+
 use pf::web::constants;
 
 use constant BUFF_LEN => 1024;

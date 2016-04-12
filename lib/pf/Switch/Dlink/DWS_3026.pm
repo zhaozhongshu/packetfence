@@ -53,7 +53,9 @@ use pf::config qw(
     $MAC
     $SSID
 );
-use pf::util;
+use pf::util qw(
+    mac2oid
+);
 
 sub description { 'D-Link DWS 3026' }
 

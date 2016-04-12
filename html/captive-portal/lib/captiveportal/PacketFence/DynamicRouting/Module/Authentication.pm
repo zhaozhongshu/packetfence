@@ -18,7 +18,9 @@ use List::MoreUtils qw(uniq);
 use pf::constants qw($FALSE $TRUE);
 use pf::config qw(%Config);
 use pf::person;
-use pf::util;
+use pf::util qw(
+    isenabled
+);
 use pf::log;
 use captiveportal::Form::Authentication;
 use pf::locationlog;

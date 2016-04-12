@@ -37,7 +37,10 @@ use List::MoreUtils qw(any firstval uniq);
 use Scalar::Util qw(refaddr reftype tainted blessed);
 use UNIVERSAL::require;
 use pf::log;
-use pf::util;
+use pf::util qw(
+    touch_file
+    untaint_chain
+);
 use Fcntl;
 use Time::HiRes qw(stat time);
 use File::Find;

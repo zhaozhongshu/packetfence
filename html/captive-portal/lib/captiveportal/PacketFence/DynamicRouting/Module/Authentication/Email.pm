@@ -23,7 +23,9 @@ use pf::log;
 use pf::authentication;
 use pf::Authentication::constants;
 use Date::Format qw(time2str);
-use pf::util;
+use pf::util qw(
+    normalize_time
+);
 use pf::node;
 use pf::enforcement;
 

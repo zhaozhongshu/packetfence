@@ -17,7 +17,9 @@ use warnings;
 use Moo;
 use pf::file_paths qw($install_dir);
 use pf::log;
-use pf::util;
+use pf::util qw(
+    pf_run
+);
 
 extends 'pf::services::manager';
 

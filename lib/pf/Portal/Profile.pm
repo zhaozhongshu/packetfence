@@ -22,7 +22,9 @@ use List::MoreUtils qw(all none any uniq);
 use pf::constants qw($TRUE $FALSE);
 use pf::constants::config qw($SELFREG_MODE_NULL $SELFREG_MODE_KICKBOX);
 use pf::constants::Portal::Profile qw($DEFAULT_ROOT_MODULE);
-use pf::util;
+use pf::util qw(
+    isenabled
+);
 use pf::config::util qw(
     get_user_sources
 );

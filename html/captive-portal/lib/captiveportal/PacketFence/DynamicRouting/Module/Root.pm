@@ -29,7 +29,9 @@ use pf::log;
 use pf::node;
 use pf::config;
 use pf::constants qw($TRUE $FALSE);
-use pf::util;
+use pf::util qw(
+    valid_mac
+);
 use pf::violation;
 use pf::constants::scan qw($POST_SCAN_VID);
 use pf::inline;

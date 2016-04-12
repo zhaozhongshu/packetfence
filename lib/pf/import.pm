@@ -33,7 +33,10 @@ use POSIX;
 use pf::constants;
 use pf::config qw(%Config);
 use pf::node;
-use pf::util;
+use pf::util qw(
+    clean_mac
+    valid_mac
+);
 
 =head1 SUBROUTINES
 

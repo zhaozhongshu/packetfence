@@ -5,7 +5,7 @@ use Getopt::Std;
 
 BEGIN {
     use lib qw(/usr/local/pf/lib /usr/local/pf/t);
-    use pf::util;
+    
     use setup_test_config;
 }
 

@@ -103,7 +103,9 @@ sub description { 'Cisco Catalyst 2950' }
 
 # importing switch constants
 use pf::Switch::constants;
-use pf::util;
+use pf::util qw(
+    pf_run
+);
 use pf::config::util qw(
     pfmailer
 );

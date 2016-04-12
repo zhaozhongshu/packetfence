@@ -22,7 +22,7 @@ use pf::log;
 use pf::config;
 use pf::file_paths qw($install_dir $conf_dir);
 use pf::error;
-use pf::util;
+
 use Perl::Version;
 
 extends 'Catalyst::Model';

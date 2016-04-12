@@ -47,7 +47,16 @@ use Try::Tiny;
 use pf::file_paths qw(
     $conf_dir
 );
-use pf::util;
+use pf::util qw(
+    clean_mac
+    get_abbr_time
+    getlocalmac
+    ip2int
+    isenabled
+    untaint_chain
+    valid_ip
+    valid_mac
+);
 use pf::log;
 use pf::authentication;
 

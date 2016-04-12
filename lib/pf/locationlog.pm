@@ -66,7 +66,9 @@ use pf::config qw(
 );
 use pf::db;
 use pf::node;
-use pf::util;
+use pf::util qw(
+    clean_mac
+);
 use pf::config::util qw(
     connection_type_to_str
     str_to_connection_type

@@ -44,7 +44,11 @@ use NetAddr::IP;
 use Net::Pcap qw(pcap_open_offline pcap_loop);
 use Pod::Usage;
 use List::MoreUtils qw(any);
-use pf::util;
+use pf::util qw(
+    clean_ip
+    clean_mac
+    get_vlan_from_int
+);
 use pf::node;
 use pf::fingerbank;
 my %options;

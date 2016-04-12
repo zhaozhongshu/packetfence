@@ -13,7 +13,7 @@ This field extends the Text field to obfuscate the content but still support pla
 use HTML::FormHandler::Moose;
 extends 'HTML::FormHandler::Field::Text';
 
-use pf::util;
+
 use namespace::autoclean;
 
 has '+type_attr'        => ( default => 'password' );

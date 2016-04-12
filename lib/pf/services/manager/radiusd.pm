@@ -19,7 +19,9 @@ use pf::file_paths qw(
     $conf_dir
     $install_dir
 );
-use pf::util;
+use pf::util qw(
+    untaint_chain
+);
 use Moo;
 use pf::cluster;
 use pf::services::manager::radiusd_child;

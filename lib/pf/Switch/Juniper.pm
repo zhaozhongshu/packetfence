@@ -39,7 +39,9 @@ use pf::config qw($MAC $PORT);
 use pf::locationlog;
 # importing switch constants
 use pf::Switch::constants;
-use pf::util;
+use pf::util qw(
+    pf_run
+);
 
 # capabilities
 # TODO implement supportsSnmpTraps globally

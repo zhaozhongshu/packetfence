@@ -13,7 +13,9 @@ For giving a choice between multiple modules
 use Moose;
 extends 'captiveportal::DynamicRouting::ModuleManager';
 
-use pf::util;
+use pf::util qw(
+    isenabled
+);
 use pf::log;
 
 has 'show_first_module_on_default' => (is => 'rw', isa => 'Str', default => sub{'disabled'});

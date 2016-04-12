@@ -20,7 +20,9 @@ use pf::file_paths qw(
     $conf_dir
     $log_dir
 );
-use pf::util;
+use pf::util qw(
+    parse_template
+);
 use pf::config qw(
     %Config
     $OS

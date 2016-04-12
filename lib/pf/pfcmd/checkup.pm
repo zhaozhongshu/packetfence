@@ -45,7 +45,17 @@ use pf::config qw(
 );
 use pf::config::cached;
 use pf::violation_config;
-use pf::util;
+use pf::util qw(
+    clean_ip
+    get_total_system_memory
+    isdisabled
+    isenabled
+    pf_run
+    untaint_chain
+    valid_ip
+    valid_ip_range
+    valid_mac_or_ip
+);
 use pf::config::util qw(
     get_internal_devs
 );

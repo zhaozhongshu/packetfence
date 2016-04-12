@@ -17,7 +17,7 @@ use Moose;
 use pf::config qw($default_pid $fqdn);
 use pf::constants qw($TRUE $FALSE);
 use pf::Authentication::constants;
-use pf::util;
+
 
 extends 'pf::Authentication::Source';
 with 'pf::Authentication::CreateLocalAccountRole';

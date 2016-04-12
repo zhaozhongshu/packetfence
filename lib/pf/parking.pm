@@ -21,7 +21,10 @@ use pf::violation;
 use pf::constants::parking qw($PARKING_VID $PARKING_DHCP_GROUP_NAME $PARKING_IPSET_NAME);
 use pf::constants;
 use pf::config qw(%Config);
-use pf::util;
+use pf::util qw(
+    isenabled
+    pf_run
+);
 
 =head2 trigger_parking
 

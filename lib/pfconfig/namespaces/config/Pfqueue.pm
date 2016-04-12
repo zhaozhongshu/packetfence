@@ -19,7 +19,9 @@ use warnings;
 
 use pfconfig::namespaces::config;
 use pf::file_paths qw($pfqueue_config_file);
-use pf::util;
+use pf::util qw(
+    isenabled
+);
 use pf::constants::pfqueue qw(
     $PFQUEUE_WORKERS_DEFAULT
     $PFQUEUE_DELAYED_QUEUE_BATCH_DEFAULT

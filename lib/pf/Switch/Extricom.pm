@@ -35,7 +35,7 @@ use pf::config qw(
 );
 # importing switch constants
 use pf::Switch::constants;
-use pf::util;
+
 
 =head1 SUBROUTINES
 

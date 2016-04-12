@@ -41,7 +41,11 @@ use base ('pf::Switch');
 use pf::constants;
 use pf::constants::role qw($VOICE_ROLE);
 use pf::Switch::constants;
-use pf::util;
+use pf::util qw(
+    mac2oid
+    oid2mac
+    parse_mac_from_trap
+);
 
 =head1 CAPABILITIES
 

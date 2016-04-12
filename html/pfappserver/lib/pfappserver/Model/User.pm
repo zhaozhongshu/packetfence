@@ -29,7 +29,7 @@ use pf::log;
 use pf::node;
 use pf::violation;
 use pf::enforcement qw(reevaluate_access);
-use pf::util;
+
 use pf::config::util qw(
     get_translatable_time
 );

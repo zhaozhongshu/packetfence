@@ -45,7 +45,9 @@ BEGIN {
 }
 
 use pf::db;
-use pf::util;
+use pf::util qw(
+    clean_mac
+);
 
 # The next two variables and the _prepare sub are required for database handling magic (see pf::db)
 our $ifoctetslog_db_prepared = 0;

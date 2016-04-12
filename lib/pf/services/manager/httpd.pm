@@ -29,7 +29,12 @@ use pf::file_paths qw(
 );
 use Moo;
 use POSIX;
-use pf::util;
+use pf::util qw(
+    get_total_system_memory
+    isenabled
+    parse_template
+    pf_run
+);
 use pf::config::util qw(
     get_inline_nets
     get_internal_nets

@@ -15,7 +15,10 @@ use warnings;
 
 use Net::SNMP;
 use Template;
-use pf::util;
+use pf::util qw(
+    pf_run
+    untaint_chain
+);
 use pf::config qw(%ConfigDomain);
 use pf::constants qw($TRUE $FALSE);
 use pf::log;

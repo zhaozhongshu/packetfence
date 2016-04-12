@@ -25,7 +25,7 @@ use base ('pf::Switch::Nortel');
 
 use pf::constants;
 use pf::Switch::constants;
-use pf::util;
+
 
 sub description { 'Nortel BPS 2000' }
 

@@ -25,7 +25,7 @@ use pf::locationlog;
 use pf::node;
 use pf::Switch;
 use pf::SwitchFactory;
-use pf::util;
+
 use pf::role::custom $ROLE_API_LEVEL;
 # constants used by this module are provided by
 use pf::radius::constants;

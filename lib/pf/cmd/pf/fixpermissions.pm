@@ -38,7 +38,9 @@ use pf::file_paths qw(
 );
 use pf::log;
 use pf::constants::exit_code qw($EXIT_SUCCESS $EXIT_FAILURE);
-use pf::util;
+use pf::util qw(
+    untaint_chain
+);
 
 use fingerbank::FilePath;
 

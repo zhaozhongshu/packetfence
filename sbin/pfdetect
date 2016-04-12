@@ -36,7 +36,7 @@ use pf::db;
 use pf::iplog;
 use pf::node;
 use pf::person;
-use pf::util;
+
 use pf::services::util qw(
     daemonize
     deletepid

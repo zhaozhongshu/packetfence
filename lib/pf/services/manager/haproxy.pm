@@ -31,7 +31,9 @@ use pf::file_paths qw(
     $var_dir
 );
 use pf::log;
-use pf::util;
+use pf::util qw(
+    parse_template
+);
 use pf::cluster;
 
 extends 'pf::services::manager';

@@ -32,7 +32,9 @@ use pf::config qw(
 use pf::node;
 use pf::violation;
 use pf::locationlog;
-use pf::util;
+use pf::util qw(
+    clean_mac
+);
 
 use base ('pf::Switch::AeroHIVE::AP');
 

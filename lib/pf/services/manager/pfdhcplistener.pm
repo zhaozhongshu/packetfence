@@ -22,7 +22,9 @@ use pf::config qw(
 use pf::file_paths qw(
     $var_dir
 );
-use pf::util;
+use pf::util qw(
+    isenabled
+);
 use List::MoreUtils qw(any all uniq);
 use Linux::Inotify2;
 use pf::log;

@@ -23,7 +23,9 @@ use pf::file_paths qw(
     $conf_dir
 );
 use pf::SwitchFactory;
-use pf::util;
+use pf::util qw(
+    parse_template
+);
 use pf::log;
 
 extends 'pf::services::manager';

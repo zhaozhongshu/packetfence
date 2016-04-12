@@ -30,7 +30,11 @@ use pf::Portal::ProfileFactory;
 use captiveportal::DynamicRouting::Application;
 use pf::config qw(%connection_type);
 use pf::constants qw($TRUE $FALSE);
-use pf::util;
+use pf::util qw(
+    empty_dir
+    format_bytes
+    pf_make_dir
+);
 use pf::file_paths qw(
     $captiveportal_profile_templates_path
     $captiveportal_default_profile_templates_path

@@ -18,7 +18,9 @@ use pf::constants;
 
 use pf::config;
 use Email::Valid;
-use pf::util;
+use pf::util qw(
+    isenabled
+);
 
 extends 'pf::Authentication::Source';
 

@@ -24,7 +24,9 @@ use pf::file_paths qw(
     $captiveportal_templates_path
     $captiveportal_profile_templates_path
 );
-use pf::util;
+use pf::util qw(
+    normalize_time
+);
 use pfconfig::namespaces::resource::guest_self_registration;
 use pf::constants::Portal::Profile;
 use pf::filter_engine::profile;

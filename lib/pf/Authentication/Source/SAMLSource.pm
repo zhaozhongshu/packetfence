@@ -17,7 +17,9 @@ use Lasso;
 use Template::AutoFilter;
 use File::Slurp qw(read_file write_file);
 use File::Temp qw(tempfile);
-use pf::util;
+use pf::util qw(
+    isenabled
+);
 
 use Moose;
 extends 'pf::Authentication::Source';

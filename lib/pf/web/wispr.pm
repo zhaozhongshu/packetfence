@@ -36,7 +36,9 @@ use pf::iplog;
 use pf::node;
 use pf::web;
 use pf::Portal::Session;
-use pf::util;
+use pf::util qw(
+    isenabled
+);
 use pf::locationlog;
 use pf::enforcement qw(reevaluate_access);
 

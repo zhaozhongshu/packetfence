@@ -18,7 +18,10 @@ use Net::Netmask;
 use pf::constants;
 use pf::config qw(%ConfigDomain);
 use pf::error qw(is_error is_success);
-use pf::util;
+use pf::util qw(
+    isenabled
+    pf_run
+);
 use pf::log;
 
 extends 'Catalyst::Model';

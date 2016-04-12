@@ -32,7 +32,9 @@ use warnings;
 use Net::SNMP;
 
 use pf::Switch::constants;
-use pf::util;
+use pf::util qw(
+    mac2oid
+);
 
 use base ('pf::Switch::Cisco::Catalyst_2960');
 

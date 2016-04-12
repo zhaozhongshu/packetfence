@@ -18,7 +18,7 @@ use base ('pf::Switch::Extreme::Summit');
 
 # importing switch constants
 use pf::Switch::constants;
-use pf::util;
+
 
 =head1 AUTHOR
 

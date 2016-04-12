@@ -46,7 +46,7 @@ use base ('pf::Switch');
 
 # importing switch constants
 use pf::Switch::constants;
-use pf::util;
+
 use pf::constants;
 use pf::config qw(
     $MAC

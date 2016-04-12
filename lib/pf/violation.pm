@@ -117,7 +117,11 @@ use pf::constants qw(
 use pf::enforcement;
 use pf::db;
 use pf::constants::scan qw($SCAN_VID $POST_SCAN_VID $PRE_SCAN_VID);
-use pf::util;
+use pf::util qw(
+    mysql_date
+    validate_argv
+    valid_mac
+);
 use pf::config::util qw(
     trappable_mac
     whitelisted_mac

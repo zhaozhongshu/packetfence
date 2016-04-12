@@ -19,7 +19,9 @@ use pf::file_paths qw(
     $install_dir
     $conf_dir
 );
-use pf::util;
+use pf::util qw(
+    parse_template
+);
 use pf::config qw(
     %Config
     $management_network

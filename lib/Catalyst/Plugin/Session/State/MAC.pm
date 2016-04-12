@@ -14,7 +14,10 @@ Overrides the cookie session state in order to keep use the MAC as the real sess
 
 use Moose;
 use namespace::autoclean;
-use pf::util;
+use pf::util qw(
+    generate_session_id
+    valid_mac
+);
 
 extends 'Catalyst::Plugin::Session::State::Cookie';
 

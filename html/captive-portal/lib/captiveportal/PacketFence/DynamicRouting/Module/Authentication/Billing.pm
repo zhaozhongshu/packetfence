@@ -25,7 +25,10 @@ use pf::config;
 use pf::violation;
 use pf::config::violation;
 
-use pf::util;
+use pf::util qw(
+    isenabled
+    normalize_time
+);
 use pf::node;
 use pf::constants;
 

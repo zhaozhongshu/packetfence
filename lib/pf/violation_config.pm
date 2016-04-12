@@ -21,7 +21,9 @@ use pf::config;
 use pf::class qw(class_merge);
 use pf::db;
 use pfconfig::cached_hash;
-use pf::util;
+use pf::util qw(
+    normalize_time
+);
 
 our (%Violation_Config);
 

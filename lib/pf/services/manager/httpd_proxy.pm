@@ -16,7 +16,9 @@ use strict;
 use warnings;
 use Moo;
 use pf::config qw(%Config @internal_nets);
-use pf::util;
+use pf::util qw(
+    isenabled
+);
 
 extends 'pf::services::manager::httpd';
 

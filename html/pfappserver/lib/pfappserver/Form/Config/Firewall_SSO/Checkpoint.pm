@@ -15,7 +15,7 @@ extends 'pfappserver::Form::Config::Firewall_SSO';
 with 'pfappserver::Base::Form::Role::Help';
 
 use pf::config;
-use pf::util;
+
 use File::Find qw(find);
 
 ## Definition

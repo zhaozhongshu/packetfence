@@ -35,7 +35,11 @@ use pf::node;
 use pf::person;
 use pf::enforcement qw(reevaluate_access);
 use pf::useragent qw(node_useragent_view);
-use pf::util;
+use pf::util qw(
+    clean_mac
+    oui_to_vendor
+    valid_mac
+);
 use pf::config::util qw(
     str_to_connection_type
 );

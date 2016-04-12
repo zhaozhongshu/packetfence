@@ -119,7 +119,10 @@ use pf::config qw(
     $WIRED_MAC_AUTH
 );
 use pf::Switch::constants;
-use pf::util;
+use pf::util qw(
+    isenabled
+    mac2oid
+);
 use pf::util::radius qw(perform_coa);
 use pf::web::util;
 use pf::radius::constants;

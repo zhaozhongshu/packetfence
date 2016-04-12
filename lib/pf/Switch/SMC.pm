@@ -25,7 +25,11 @@ use base ('pf::Switch');
 
 # importing switch constants
 use pf::Switch::constants;
-use pf::util;
+use pf::util qw(
+    mac2oid
+    oid2mac
+    parse_mac_from_trap
+);
 
 # FIXME: add to admin guide instruction to cut up/down traps and get rid of the 02:00... traps
 

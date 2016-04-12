@@ -15,7 +15,7 @@ pf::services::manager::radsniff
 use strict;
 use warnings;
 use pf::file_paths qw($install_dir);
-use pf::util;
+
 use pf::config qw($management_network);
 use Moo;
 use pf::cluster;

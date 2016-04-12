@@ -46,7 +46,9 @@ use pf::node;
 use pf::db;
 use pf::services;
 use pf::traplog;
-use pf::util;
+use pf::util qw(
+    isenabled
+);
 use pf::services::util qw(
     daemonize
     deletepid

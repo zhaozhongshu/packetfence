@@ -26,7 +26,7 @@ use Template;
 use URI::Escape::XS qw(uri_escape);
 
 use pf::config;
-use pf::util;
+
 use pf::web::constants;
 use pf::proxypassthrough::constants;
 

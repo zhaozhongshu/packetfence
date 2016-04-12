@@ -47,7 +47,10 @@ use Net::SNMP;
 
 use pf::Switch::constants;
 use pf::constants;
-use pf::util;
+use pf::util qw(
+    mac2oid
+    parse_mac_from_trap
+);
 
 use base ('pf::Switch::Netgear');
 

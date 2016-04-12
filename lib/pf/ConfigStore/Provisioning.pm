@@ -15,7 +15,9 @@ use strict;
 use warnings;
 use Moo;
 use pf::file_paths qw($provisioning_config_file);
-use pf::util;
+use pf::util qw(
+    listify
+);
 extends 'pf::ConfigStore';
 
 sub configFile { $provisioning_config_file };

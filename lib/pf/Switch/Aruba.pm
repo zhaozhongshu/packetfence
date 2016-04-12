@@ -67,7 +67,13 @@ use pf::config qw(
     $SSID
 );
 use pf::Switch::constants;
-use pf::util;
+use pf::util qw(
+    clean_mac
+    isenabled
+    mac2oid
+    parse_mac_from_trap
+    valid_mac
+);
 sub description { 'Aruba Networks' }
 use pf::roles::custom;
 use pf::accounting qw(node_accounting_current_sessionid);

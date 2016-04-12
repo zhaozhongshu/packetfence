@@ -22,7 +22,7 @@ use base ('pf::scan');
 
 use pf::config;
 use pf::scan;
-use pf::util;
+
 use pf::node;
 use pf::scan::wmi::rules;
 use pf::violation qw(violation_close);

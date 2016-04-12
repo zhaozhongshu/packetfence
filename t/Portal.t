@@ -34,7 +34,7 @@ BEGIN {
 }
 
 use pf::config qw($management_network);
-use pf::util;
+
 
 =head1 SETUP
 

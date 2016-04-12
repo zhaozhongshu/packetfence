@@ -28,7 +28,9 @@ use pf::file_paths qw(
     $pf_omapi_key_file
     $log_dir
 );
-use pf::util;
+use pf::util qw(
+    normalize_time
+);
 use List::MoreUtils qw(uniq);
 
 use base 'pfconfig::namespaces::config';

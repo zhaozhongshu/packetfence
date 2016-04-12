@@ -32,7 +32,7 @@ use pf::config qw(
 );
 use pf::radius::constants;
 use pf::Switch::constants;
-use pf::util;
+
 
 
 =head1 SUPPORTED TECHNOLOGIES

@@ -62,7 +62,11 @@ use pf::config qw(
     $PORT
 );
 use pf::Switch::constants;
-use pf::util;
+use pf::util qw(
+    mac2oid
+    oid2mac
+    parse_mac_from_trap
+);
 
 # CAPABILITIES
 # access technology supported

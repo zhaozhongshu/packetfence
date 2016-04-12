@@ -46,9 +46,9 @@ our ( %local_mac );
 
 BEGIN {
     use Exporter ();
-    our ( @ISA, @EXPORT );
+    our ( @ISA, @EXPORT_OK );
     @ISA = qw(Exporter);
-    @EXPORT = qw(
+    @EXPORT_OK = qw(
         valid_date valid_ip valid_ips reverse_ip clean_ip
         clean_mac valid_mac mac2nb macoui2nb format_mac_for_acct format_mac_as_cisco
         ip2int int2ip sort_ip

@@ -14,7 +14,10 @@ use Moose;
 extends 'captiveportal::DynamicRouting::Module::Authentication';
 with 'captiveportal::Role::Routed';
 
-use pf::util;
+use pf::util qw(
+    isenabled
+    strip_username
+);
 use pf::auth_log;
 
 has '+source' => (isa => 'pf::Authentication::Source::SAMLSource');

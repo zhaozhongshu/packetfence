@@ -21,7 +21,7 @@ use Net::LDAP;
 
 use pf::log;
 use pf::person;
-use pf::util;
+
 use pf::authentication;
 use pf::pfqueue::producer::redis;
 

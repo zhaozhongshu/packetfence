@@ -77,7 +77,10 @@ use pf::constants::config qw(
 use pfconfig::cached_array;
 use pfconfig::cached_scalar;
 use pfconfig::cached_hash;
-use pf::util;
+use pf::util qw(
+    isenabled
+    normalize_time
+);
 use Module::Pluggable (
   search_path => 'pf::ConfigStore',
   'sub_name'  => 'configStores',

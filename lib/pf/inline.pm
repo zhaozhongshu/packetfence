@@ -27,7 +27,9 @@ use pf::node qw(node_attributes);
 use pf::violation qw(violation_count_reevaluate_access);
 use Try::Tiny;
 use NetAddr::IP;
-use pf::util;
+use pf::util qw(
+    clean_ip
+);
 
 our $VERSION = 1.01;
 

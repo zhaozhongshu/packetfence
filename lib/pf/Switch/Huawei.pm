@@ -32,7 +32,7 @@ sub description { 'Huawei AC6605' }
 
 # importing switch constants
 use pf::Switch::constants;
-use pf::util;
+
 use pf::util::radius qw(perform_disconnect);
 use pf::accounting qw(node_accounting_current_sessionid);
 

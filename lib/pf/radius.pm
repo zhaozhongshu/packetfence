@@ -44,7 +44,12 @@ use pf::locationlog;
 use pf::node;
 use pf::Switch;
 use pf::SwitchFactory;
-use pf::util;
+use pf::util qw(
+    clean_mac
+    format_mac_for_acct
+    isdisabled
+    isenabled
+);
 use pf::config::util qw(
     connection_type_to_str
     str_to_connection_type

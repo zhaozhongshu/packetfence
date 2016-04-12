@@ -34,7 +34,10 @@ use strict;
 
 use pf::file_paths qw($var_dir $install_dir);
 use pf::log;
-use pf::util;
+use pf::util qw(
+    isenabled
+    untaint_chain
+);
 use Moo;
 use File::Slurp qw(read_file);
 use Proc::ProcessTable;

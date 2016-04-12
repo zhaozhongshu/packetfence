@@ -23,7 +23,9 @@ use pf::constants;
 use pf::constants::role qw($MAC_DETECTION_ROLE);
 # importing switch constants
 use pf::Switch::constants;
-use pf::util;
+use pf::util qw(
+    parse_mac_from_trap
+);
 use pf::util::radius qw(perform_coa);
 
 # CAPABILITIES

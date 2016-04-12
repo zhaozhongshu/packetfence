@@ -18,7 +18,7 @@ use Moose;
 use pf::config qw($default_pid $fqdn);
 use pf::constants qw($FALSE $TRUE);
 use pf::Authentication::constants;
-use pf::util;
+
 use pf::log;
 use HTTP::Status qw(is_success);
 use WWW::Curl::Easy;

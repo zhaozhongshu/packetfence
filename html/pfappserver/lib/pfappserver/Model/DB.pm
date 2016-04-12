@@ -21,7 +21,9 @@ use pf::log;
 use pf::config;
 use pf::file_paths qw($install_dir);
 use pf::error;
-use pf::util;
+use pf::util qw(
+    pf_run
+);
 use File::Slurp qw(read_dir);
 
 extends 'Catalyst::Model';

@@ -42,7 +42,12 @@ use pf::config qw(
     $WIRED_MAC_AUTH
 );
 use pf::Switch::constants;
-use pf::util;
+use pf::util qw(
+    clean_mac
+    mac2oid
+    oid2mac
+    parse_mac_from_trap
+);
 use pf::accounting qw(node_accounting_current_sessionid);
 use pf::node qw(node_attributes);
 use pf::util::radius qw(perform_coa perform_disconnect);

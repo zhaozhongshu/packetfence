@@ -14,7 +14,9 @@ use Moose;
 extends 'captiveportal::DynamicRouting::Module::Authentication';
 with 'captiveportal::Role::FieldValidation';
 
-use pf::util;
+use pf::util qw(
+    isenabled
+);
 use pf::config qw($default_pid);
 use pf::log;
 use pf::auth_log;

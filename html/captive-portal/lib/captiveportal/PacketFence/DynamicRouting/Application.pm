@@ -21,7 +21,9 @@ use Locale::gettext qw(gettext ngettext);
 use captiveportal::Base::I18N;
 use pf::node;
 use pf::useragent;
-use pf::util;
+use pf::util qw(
+    isenabled
+);
 use pf::config::util qw(
     portal_hosts
 );

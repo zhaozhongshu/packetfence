@@ -31,7 +31,9 @@ use Regexp::Common qw(net);
 
 use base qw(pf::base::cmd::action_cmd);
 use pf::node;
-use pf::util;
+use pf::util qw(
+    valid_mac
+);
 use pf::log;
 use pf::constants;
 use pf::constants::exit_code qw($EXIT_SUCCESS $EXIT_FAILURE);

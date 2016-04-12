@@ -28,7 +28,9 @@ BEGIN {
   Log::Log4perl::init(\$log_conf);
 }
 
-use pf::util;
+use pf::util qw(
+    pf_run
+);
 use pf::domain;
 use pf::ConfigStore::Domain;
 

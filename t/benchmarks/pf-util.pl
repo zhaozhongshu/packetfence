@@ -21,7 +21,9 @@ use lib '/usr/local/pf/lib';
 
 =cut
 
-use pf::util;
+use pf::util qw(
+    clean_mac
+);
 
 sub clean_mac_v1 {
     my ($mac) = @_;

@@ -61,7 +61,10 @@ use pf::config qw(
     $MAC
     $SSID
 );
-use pf::util;
+use pf::util qw(
+    clean_mac
+    mac2oid
+);
 
 =head1 SUBROUTINES
 

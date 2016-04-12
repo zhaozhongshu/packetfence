@@ -7,7 +7,9 @@ extends 'Catalyst::Model';
 use pf::config;
 use pf::file_paths qw($bin_dir);
 use pf::error;
-use pf::util;
+use pf::util qw(
+    pf_run
+);
 use pf::services;
 use pf::log;
 use HTTP::Status qw(:constants :is);

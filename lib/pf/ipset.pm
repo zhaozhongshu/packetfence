@@ -38,7 +38,12 @@ use pf::config qw(
 );
 use pf::node qw(nodes_registered_not_violators node_view node_deregister $STATUS_REGISTERED);
 use pf::nodecategory;
-use pf::util;
+use pf::util qw(
+    clean_ip
+    clean_mac
+    isenabled
+    pf_run
+);
 use pf::violation qw(violation_view_open_uniq violation_count);
 use pf::iplog;
 use pf::authentication;

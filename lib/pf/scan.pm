@@ -37,7 +37,11 @@ use pf::iplog;
 use pf::scan::nessus;
 use pf::scan::openvas;
 use pf::scan::wmi;
-use pf::util;
+use pf::util qw(
+    clean_ip
+    generate_id
+    untaint_chain
+);
 use pf::violation qw(violation_close violation_exist_open violation_trigger violation_modify);
 use pf::Portal::ProfileFactory;
 use pf::api::jsonrpcclient;

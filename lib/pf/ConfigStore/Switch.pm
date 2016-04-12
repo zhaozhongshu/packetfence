@@ -16,7 +16,10 @@ use Moo;
 use namespace::autoclean;
 use pf::log;
 use pf::file_paths qw($switches_config_file);
-use pf::util;
+use pf::util qw(
+    sort_ip
+    valid_ip
+);
 use HTTP::Status qw(:constants is_error is_success);
 use List::MoreUtils qw(part any);
 use pfconfig::manager;

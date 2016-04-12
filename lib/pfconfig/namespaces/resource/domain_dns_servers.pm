@@ -16,7 +16,9 @@ This module create an associative hash between a domain and it's DNS server
 
 use strict;
 use warnings;
-use pf::util;
+use pf::util qw(
+    isenabled
+);
 
 use base 'pfconfig::namespaces::resource';
 
@@ -36,8 +38,6 @@ sub build {
     }
     return \%domain_dns_servers;
 }
-
-=back
 
 =head1 AUTHOR
 

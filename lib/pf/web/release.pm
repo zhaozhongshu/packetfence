@@ -25,7 +25,10 @@ use pf::iplog;
 use pf::node;
 use pf::Portal::Session;
 use pf::constants::scan qw($SCAN_VID);
-use pf::util;
+use pf::util qw(
+    mysql_date
+    valid_mac
+);
 use pf::violation;
 use pf::web;
 use pf::enforcement;

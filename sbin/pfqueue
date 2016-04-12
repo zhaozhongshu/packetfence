@@ -33,7 +33,7 @@ BEGIN {
 }
 
 use pf::file_paths qw($var_dir);;
-use pf::util;
+
 use pf::config::pfqueue;
 use pf::services::util qw(
     daemonize

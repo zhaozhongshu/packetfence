@@ -40,7 +40,12 @@ use pf::config qw(
 );
 use pf::db;
 use pf::node qw(node_add_simple node_exist);
-use pf::util;
+use pf::util qw(
+    clean_mac
+    isenabled
+    valid_ip
+    valid_mac
+);
 use pf::CHI;
 use pf::OMAPI;
 

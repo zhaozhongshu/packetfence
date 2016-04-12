@@ -53,7 +53,11 @@ use pf::config qw(
 );
 # importing switch constants
 use pf::Switch::constants;
-use pf::util;
+use pf::util qw(
+    clean_mac
+    generate_session_id
+    parse_mac_from_trap
+);
 use pf::config::util qw(
     pfmailer
 );
@@ -2831,7 +2835,11 @@ sub handleReAssignVlanTrapForWiredMacAuth {
                 "sending email to admin regarding isolation of $mac behind VoIP phone"
             );
             # put the use statement here because we'll be able to get rid of it when refactoring this piece
-            use pf::util;
+            use pf::util qw(
+    clean_mac
+    generate_session_id
+    parse_mac_from_trap
+);
             pfmailer(%message);
         }
     }

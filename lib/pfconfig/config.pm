@@ -17,7 +17,9 @@ Configuration access to pfconfig.conf
 use pfconfig::constants;
 use UNIVERSAL::require;
 use Config::IniFiles;
-use pf::util;
+use pf::util qw(
+    untaint_chain
+);
 
 =head2 new
 
@@ -82,8 +84,6 @@ sub get_backend {
 
     $self->{cache} = $type->new();
 }
-
-=back
 
 =head1 AUTHOR
 

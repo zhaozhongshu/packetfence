@@ -22,7 +22,9 @@ BEGIN {
 use Test::More tests => 2;
 use Test::NoWarnings;
 
-use pf::util;
+use pf::util qw(
+    get_total_system_memory
+);
 
 Log::Log4perl->init("log.conf");
 my $logger = Log::Log4perl->get_logger('linux.t');

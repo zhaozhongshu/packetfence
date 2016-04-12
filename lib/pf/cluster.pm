@@ -27,7 +27,9 @@ use Socket;
 use pf::file_paths qw(
     $cluster_config_file
 );
-use pf::util;
+use pf::util qw(
+    valid_ip
+);
 use pf::constants;
 use Config::IniFiles;
 

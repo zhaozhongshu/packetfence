@@ -37,7 +37,14 @@ use pf::inline::custom $INLINE_API_LEVEL;
 use pf::iplog;
 use pf::lookup::node;
 use pf::node;
-use pf::util;
+use pf::util qw(
+    clean_mac
+    isdisabled
+    isenabled
+    mysql_date
+    valid_ip
+    valid_mac
+);
 use pf::config::util qw(
     connection_type_to_str
     get_internal_macs

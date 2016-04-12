@@ -81,7 +81,7 @@ use pf::config qw(
     $WIRED_MAC_AUTH
 );
 use pf::locationlog;
-use pf::util;
+
 use pf::config::util qw(
     str_to_connection_type
 );

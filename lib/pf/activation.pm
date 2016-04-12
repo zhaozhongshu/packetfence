@@ -96,7 +96,7 @@ use pf::config qw(
 );
 use pf::file_paths qw($conf_dir);
 use pf::db;
-use pf::util;
+
 use pf::web::constants;
 # TODO this dependency is unfortunate, ideally it wouldn't be in that direction
 use pf::web::guest;

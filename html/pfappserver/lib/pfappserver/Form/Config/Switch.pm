@@ -26,7 +26,11 @@ use pf::config qw(
 use pf::Switch::constants;
 use pf::constants::role qw(@ROLES);
 use pf::SwitchFactory;
-use pf::util;
+use pf::util qw(
+    isdisabled
+    isenabled
+    valid_mac
+);
 use List::MoreUtils qw(any);
 
 has 'roles' => ( is => 'rw' );

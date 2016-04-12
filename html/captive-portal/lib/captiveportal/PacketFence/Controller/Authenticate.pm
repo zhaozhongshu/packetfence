@@ -8,7 +8,10 @@ use pf::constants::Portal::Profile qw($DEFAULT_PROFILE);
 use pf::config qw(%Profiles_Config);;
 use pf::web qw(i18n i18n_format);
 use pf::node;
-use pf::util;
+use pf::util qw(
+    isenabled
+    strip_username
+);
 use pf::config::util qw(
     get_realm_source
 );

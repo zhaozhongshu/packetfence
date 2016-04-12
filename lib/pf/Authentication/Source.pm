@@ -14,7 +14,10 @@ use pf::log;
 use pf::config;
 use pf::constants;
 use Moose;
-use pf::util;
+use pf::util qw(
+    isenabled
+    strip_username
+);
 use pf::Authentication::constants;
 use pf::Authentication::Action;
 

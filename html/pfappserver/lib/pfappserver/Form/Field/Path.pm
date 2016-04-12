@@ -13,7 +13,7 @@ This field extends the default Text field and checks if the input value is an va
 use HTML::FormHandler::Moose;
 extends 'HTML::FormHandler::Field::Text';
 
-use pf::util;
+
 use namespace::autoclean;
 
 # If the field value matches one of the values defined in "accept", the field will pass validation.

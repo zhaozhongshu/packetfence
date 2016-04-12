@@ -33,7 +33,13 @@ use pf::file_paths qw(
     $generated_conf_dir
 );
 use pf::log;
-use pf::util;
+use pf::util qw(
+    clean_ip
+    isenabled
+    parse_template
+    pf_run
+    untaint_chain
+);
 use pf::cluster;
 
 extends 'pf::services::manager';

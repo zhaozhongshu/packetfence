@@ -20,7 +20,7 @@ use pf::log;
 use pf::config qw($default_pid);
 use pf::constants qw($TRUE $FALSE);
 use pf::Authentication::constants;
-use pf::util;
+
 use List::Util qw(pairmap);
 use Readonly;
 

@@ -39,7 +39,9 @@ sub description { 'HP ProCurve MSM710 Mobility Controller' }
 
 # importing switch constants
 use pf::Switch::constants;
-use pf::util;
+use pf::util qw(
+    parse_mac_from_trap
+);
 
 =head1 SUBROUTINES
 

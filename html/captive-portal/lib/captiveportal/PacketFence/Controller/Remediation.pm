@@ -7,7 +7,7 @@ use pf::class;
 use pf::node;
 use List::Util qw(first);
 use pf::config qw(%Config);
-use pf::util;
+
 use File::Spec::Functions;
 
 BEGIN { extends 'captiveportal::Base::Controller'; }

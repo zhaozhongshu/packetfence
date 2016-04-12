@@ -74,7 +74,10 @@ BEGIN {
 
 use pf::config qw(%connection_type_explained);
 use pf::db;
-use pf::util;
+use pf::util qw(
+    oui_to_vendor
+    pretty_bandwidth
+);
 use pf::config::util qw(
     str_to_connection_type
 );

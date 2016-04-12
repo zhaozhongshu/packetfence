@@ -14,7 +14,9 @@ value is an IP address.
 use HTML::FormHandler::Moose;
 extends 'HTML::FormHandler::Field::Text';
 
-use pf::util;
+use pf::util qw(
+    valid_ip
+);
 use namespace::autoclean;
 
 # If the field value matches one of the values defined in "accept", the field will pass validation.

@@ -71,7 +71,7 @@ BEGIN {
 use pf::constants;
 use pf::config qw(%Config);
 use pf::db;
-use pf::util;
+
 
 # The next two variables and the _prepare sub are required for database handling magic (see pf::db)
 our $password_db_prepared = 0;

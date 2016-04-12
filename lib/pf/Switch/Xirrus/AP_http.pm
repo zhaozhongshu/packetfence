@@ -32,7 +32,9 @@ use pf::constants;
 use pf::config qw(
     $WIRELESS_MAC_AUTH
 );
-use pf::util;
+use pf::util qw(
+    clean_mac
+);
 use pf::node;
 
 sub description { 'Xirrus WiFi Arrays HTTP' }

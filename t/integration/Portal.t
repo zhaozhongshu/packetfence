@@ -32,7 +32,7 @@ BEGIN {
     use_ok('pf::Portal::ProfileFactory');
 }
 
-use pf::util;
+
 
 =head1 TESTS
 

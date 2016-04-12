@@ -38,7 +38,7 @@ use Module::Pluggable
 use Clone qw(clone);
 use List::Util qw(first);
 use List::MoreUtils qw(none any);
-use pf::util;
+
 use pfconfig::cached_array;
 use pfconfig::cached_hash;
 use pf::StatsD::Timer;

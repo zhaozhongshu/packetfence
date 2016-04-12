@@ -28,7 +28,10 @@ use pf::iplog;
 use pf::locationlog;
 use pf::node;
 use pf::useragent qw(node_useragent_view);
-use pf::util;
+use pf::util qw(
+    oui_to_vendor
+    pretty_bandwidth
+);
 
 sub lookup_node {
     my ($mac) = @_;

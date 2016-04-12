@@ -66,7 +66,10 @@ use Net::SNMP;
 use base ('pf::Switch::ThreeCom');
 
 use pf::Switch::constants;
-use pf::util;
+use pf::util qw(
+    mac2oid
+    oid2mac
+);
 
 sub description { '3COM SS4500' }
 

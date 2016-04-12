@@ -46,7 +46,9 @@ use pf::config qw(
     $MAC
     $SSID
 );
-use pf::util;
+use pf::util qw(
+    clean_mac
+);
 
 sub description { 'Ruckus Wireless Controllers' }
 

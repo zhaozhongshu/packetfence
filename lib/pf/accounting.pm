@@ -58,7 +58,12 @@ use pf::constants::trigger qw($TRIGGER_TYPE_ACCOUNTING);
 use pf::config::violation;
 use pf::db;
 use pf::violation;
-use pf::util;
+use pf::util qw(
+    clean_mac
+    format_mac_for_acct
+    pretty_bandwidth
+    unpretty_bandwidth
+);
 use pf::CHI;
 
 # The next two variables and the _prepare sub are required for database handling magic (see pf::db)

@@ -32,7 +32,7 @@ sub description { 'Hostapd' }
 
 # importing switch constants
 use pf::Switch::constants;
-use pf::util;
+
 use pf::util::radius qw(perform_disconnect);
 
 =head1 SUBROUTINES

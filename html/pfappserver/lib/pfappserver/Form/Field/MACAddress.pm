@@ -14,7 +14,10 @@ value is a MAC address.
 use HTML::FormHandler::Moose;
 extends 'HTML::FormHandler::Field::Text';
 
-use pf::util;
+use pf::util qw(
+    clean_mac
+    valid_mac
+);
 use namespace::autoclean;
 
 our $class_messages = {

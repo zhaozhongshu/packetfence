@@ -33,7 +33,9 @@ use lib LIB_DIR;
 
 use pf::node;
 use pf::db;
-use pf::util;
+use pf::util qw(
+    clean_mac
+);
 
 my $filename;
 my $mode = "test";

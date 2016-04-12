@@ -90,7 +90,13 @@ use pf::config qw(
 use pf::db;
 use pf::nodecategory;
 use pf::constants::scan qw($SCAN_VID $POST_SCAN_VID);
-use pf::util;
+use pf::util qw(
+    clean_mac
+    isenabled
+    mysql_date
+    valid_ip
+    valid_mac
+);
 use pf::Portal::ProfileFactory;
 
 # The next two variables and the _prepare sub are required for database handling magic (see pf::db)

@@ -9,7 +9,7 @@ use pf::enforcement qw(reevaluate_access);
 use pf::config;
 use pf::file_paths qw($conf_dir);
 use pf::log;
-use pf::util;
+
 use pf::Portal::Session;
 use pf::web;
 use pf::node;

@@ -22,7 +22,9 @@ use pf::file_paths qw(
 use pf::config qw(
     %Config
 );
-use pf::util;
+use pf::util qw(
+    parse_template
+);
 
 extends 'pf::services::manager';
 

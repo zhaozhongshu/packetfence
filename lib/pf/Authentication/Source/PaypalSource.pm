@@ -18,7 +18,7 @@ use Moose;
 use pf::config qw($default_pid $fqdn %Config);
 use pf::constants;
 use pf::Authentication::constants;
-use pf::util;
+
 use pf::log;
 use WWW::Curl::Easy;
 use JSON::MaybeXS;

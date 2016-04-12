@@ -23,7 +23,11 @@ use pf::file_paths qw(
     $install_dir
     $var_dir
 );
-use pf::util;
+use pf::util qw(
+    isdisabled
+    isenabled
+    parse_template
+);
 use pf::config qw(
     %Config
     $management_network

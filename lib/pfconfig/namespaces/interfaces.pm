@@ -22,7 +22,7 @@ use pfconfig::util qw(is_type_inline);
 use Net::Netmask;
 use Net::Interface;
 use Socket;
-use pf::util;
+
 
 use base 'pfconfig::namespaces::resource';
 

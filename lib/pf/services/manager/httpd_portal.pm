@@ -24,7 +24,10 @@ use pf::config qw(
     @internal_nets
     @portal_ints
 );
-use pf::util;
+use pf::util qw(
+    get_total_system_memory
+    isenabled
+);
 use pf::config::util qw(
     get_inline_nets
     get_routed_isolation_nets

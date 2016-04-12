@@ -23,7 +23,7 @@ use pf::log;
 use pf::config;
 use pf::error qw(is_error is_success);
 use pf::useragent qw(node_useragent_count_searchable node_useragent_view_all_searchable);
-use pf::util;
+
 
 =head1 METHODS
 

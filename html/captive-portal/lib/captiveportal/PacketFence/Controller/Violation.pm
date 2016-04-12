@@ -7,7 +7,7 @@ use pf::constants::scan qw($SCAN_VID $POST_SCAN_VID $PRE_SCAN_VID);
 use pf::log;
 use pf::web;
 use pf::node;
-use pf::util;
+
 
 BEGIN { extends 'captiveportal::Base::Controller'; }
 

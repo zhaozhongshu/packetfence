@@ -15,7 +15,10 @@ use strict;
 use warnings;
 use Moose;
 use namespace::autoclean;
-use pf::util;
+use pf::util qw(
+    clean_mac
+    valid_mac
+);
 use pf::SearchBuilder;
 extends 'pfappserver::Base::Model';
 

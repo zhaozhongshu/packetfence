@@ -34,7 +34,10 @@ use pf::config qw(
 use pf::node qw(node_exist node_modify);
 use pf::Switch::constants;
 use pf::constants::role qw($VOICE_ROLE);
-use pf::util;
+use pf::util qw(
+    isdisabled
+    isenabled
+);
 use pf::config::util qw(
     connection_type_to_str
 );

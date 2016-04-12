@@ -18,7 +18,10 @@ use pf::constants::authentication::messages qw(
 use pf::Authentication::constants;
 use pf::Authentication::Condition;
 use pf::CHI;
-use pf::util;
+use pf::util qw(
+    isenabled
+    strip_username
+);
 use Readonly;
 
 use pf::LDAP;

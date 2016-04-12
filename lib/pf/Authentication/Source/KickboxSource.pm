@@ -18,7 +18,7 @@ use Moose;
 use JSON::MaybeXS;
 use pf::constants;
 use pf::config;
-use pf::util;
+
 use WWW::Curl::Easy;
 use Readonly;
 use pf::log;

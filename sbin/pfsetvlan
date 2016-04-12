@@ -80,7 +80,15 @@ use pf::Switch::constants;
 use pf::SwitchFactory;
 
 use pf::traplog;
-use pf::util;
+use pf::util qw(
+    clean_mac
+    isdisabled
+    isempty
+    isenabled
+    is_in_list
+    ordinal_suffix
+    pf_run
+);
 use pf::config::util qw(
     pfmailer
 );

@@ -9,7 +9,14 @@ BEGIN {
 
 use_ok('pf::MAC') or die;
 use pf::MAC;
-use pf::util;
+use pf::util qw(
+    clean_mac
+    format_mac_for_acct
+    mac2nb
+    mac2oid
+    macoui2nb
+    valid_mac
+);
 
 my $mac = pf::MAC->new( mac => '00:12:f0:13:32:BA' );
 isa_ok( $mac, 'Net::MAC' );

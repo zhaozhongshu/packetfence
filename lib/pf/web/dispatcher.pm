@@ -34,7 +34,10 @@ use pf::config qw(
     $HTTPS
 );
 use pf::constants qw($TRUE $FALSE);
-use pf::util;
+use pf::util qw(
+    clean_ip
+    isenabled
+);
 use pf::web::constants;
 use pf::web::filter;
 use pf::web::util;

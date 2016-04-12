@@ -19,7 +19,7 @@ use pf::constants;
 use pf::config;
 use pf::Authentication::constants;
 
-use pf::util;
+
 
 extends 'pf::Authentication::Source';
 

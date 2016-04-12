@@ -15,7 +15,9 @@ use strict;
 use warnings;
 use Moo::Role;
 use pf::config qw(%Config $monitor_int);
-use pf::util;
+use pf::util qw(
+    isenabled
+);
 
 =head2 isManaged
 

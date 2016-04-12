@@ -17,7 +17,9 @@ use pf::constants;
 use pf::constants::eap_type qw($EAP_TLS);
 use pf::log;
 use captiveportal::DynamicRouting::Module::TLSEnrollment;
-use pf::util;
+use pf::util qw(
+    isenabled
+);
 use pf::provisioner;
 
 has 'skipable' => (is => 'rw', default => sub {'disabled'});

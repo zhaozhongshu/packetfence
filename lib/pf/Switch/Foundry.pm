@@ -52,7 +52,9 @@ use base ('pf::Switch');
 use POSIX;
 use Net::SNMP;
 
-use pf::util;
+use pf::util qw(
+    mac2oid
+);
 use pf::constants::role qw($VOICE_ROLE);
 
 # snPortMacSecurityIntfMacRowStatus value constants
