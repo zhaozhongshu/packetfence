@@ -46,7 +46,9 @@ use pf::services::util qw(
     daemonize
     deletepid
 );
-use pf::util::dhcp;
+use pf::util::dhcp qw(
+    make_pcap_filter
+);
 use pf::StatsD;
 use List::MoreUtils qw(any);
 use NetAddr::IP;

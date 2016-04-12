@@ -44,7 +44,9 @@ use pf::config::util qw(
     pfmailer
 );
 
-use pf::util::dhcp;
+use pf::util::dhcp qw(
+    decode_dhcp
+);
 use List::MoreUtils qw(any);
 use pf::api::jsonrpcclient;
 use NetAddr::IP;

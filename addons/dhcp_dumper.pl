@@ -46,7 +46,10 @@ use Try::Tiny;
 use lib $FindBin::Bin . "/../lib";
 
 use pf::util;
-use pf::util::dhcp;
+use pf::util::dhcp qw(
+    decompose_dhcp
+    dhcp_summary
+);
 
 my %args;
 getopts( 't:i:f:c:o:huv', \%args );
