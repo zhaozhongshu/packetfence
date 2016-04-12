@@ -1,7 +1,9 @@
 package captiveportal::PacketFence::Controller::Enabler;
 use Moose;
 use namespace::autoclean;
-use pf::violation;
+use pf::violation qw(
+    violation_view_top
+);
 use pf::class qw(
     class_view
 );

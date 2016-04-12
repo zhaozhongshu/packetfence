@@ -63,7 +63,11 @@ use pf::db qw(
     db_query_execute
     get_db_handle
 );
-use pf::violation;
+use pf::violation qw(
+    violation_exist_acct
+    violation_trigger
+    violation_view_last_closed
+);
 use pf::util qw(
     clean_mac
     format_mac_for_acct

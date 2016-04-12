@@ -35,7 +35,9 @@ use pf::constants qw($TRUE $FALSE);
 use pf::util qw(
     valid_mac
 );
-use pf::violation;
+use pf::violation qw(
+    violation_view_top
+);
 use pf::constants::scan qw($POST_SCAN_VID);
 use pf::inline;
 use pf::Portal::Session;

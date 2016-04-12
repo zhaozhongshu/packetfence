@@ -17,7 +17,11 @@ use warnings;
 
 use pf::log;
 use pf::OMAPI;
-use pf::violation;
+use pf::violation qw(
+    violation_close
+    violation_count_open_vid
+    violation_trigger
+);
 use pf::constants::parking qw($PARKING_VID $PARKING_DHCP_GROUP_NAME $PARKING_IPSET_NAME);
 use pf::constants qw(
     $FALSE

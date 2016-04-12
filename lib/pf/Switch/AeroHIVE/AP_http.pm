@@ -34,7 +34,9 @@ use pf::config qw(
 use pf::node qw(
     node_view
 );
-use pf::violation;
+use pf::violation qw(
+    violation_view_top
+);
 
 use pf::util qw(
     clean_mac

@@ -121,7 +121,10 @@ use pf::services::util qw(
     daemonize
     deletepid
 );
-use pf::violation;
+use pf::violation qw(
+    violation_trigger
+    violation_view_open_desc
+);
 use pf::role::custom $ROLE_API_LEVEL;
 
 pf::SwitchFactory->preloadConfiguredModules();

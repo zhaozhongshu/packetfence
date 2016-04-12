@@ -31,7 +31,12 @@ use pf::util qw(
     mysql_date
     valid_mac
 );
-use pf::violation;
+use pf::violation qw(
+    violation_close
+    violation_count
+    violation_modify
+    violation_view_top
+);
 use pf::web qw(
     i18n
 );

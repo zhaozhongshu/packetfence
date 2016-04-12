@@ -50,7 +50,9 @@ use pf::db qw(
     db_query_execute
     get_db_handle
 );
-use pf::violation;
+use pf::violation qw(
+    violation_trigger
+);
 
 our @useragent_data;
 # created for faster lookups

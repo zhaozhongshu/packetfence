@@ -41,7 +41,7 @@ use pf::services::util qw(
     daemonize
     deletepid
 );
-use pf::violation;
+
 use pf::SwitchFactory;
 
 pf::SwitchFactory->preloadConfiguredModules();

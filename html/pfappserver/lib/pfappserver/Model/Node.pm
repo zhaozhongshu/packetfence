@@ -77,7 +77,14 @@ use pf::util qw(
 use pf::config::util qw(
     str_to_connection_type
 );
-use pf::violation;
+use pf::violation qw(
+    violation_add
+    violation_exist_id
+    violation_force_close
+    violation_run_delayed
+    violation_view_desc
+    violation_view_open_desc
+);
 
 =head1 METHODS
 

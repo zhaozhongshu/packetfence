@@ -36,7 +36,10 @@ use pf::config qw(%Config);
 use pf::SwitchFactory;
 use pf::Switch::constants;
 
-BEGIN { use pf::violation;
+BEGIN { use pf::violation qw(
+    violation_count_reevaluate_access
+    violation_view_top
+);
 }
 
 BEGIN {

@@ -75,9 +75,9 @@ our %POST_CLOSE_ACTIONS = (
 
 BEGIN {
     use Exporter ();
-    our ( @ISA, @EXPORT );
+    our ( @ISA, @EXPORT_OK );
     @ISA = qw(Exporter);
-    @EXPORT = qw(
+    @EXPORT_OK = qw(
         violation_db_prepare
         $violation_db_prepared
 

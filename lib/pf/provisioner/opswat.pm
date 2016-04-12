@@ -24,7 +24,9 @@ use pf::log;
 
 use pf::ConfigStore::Provisioning;
 use DateTime::Format::RFC3339;
-use pf::violation;
+use pf::violation qw(
+    violation_add
+);
 
 =head1 Atrributes
 

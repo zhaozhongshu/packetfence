@@ -22,7 +22,9 @@ use Tie::IxHash;
 use pf::log;
 use List::Util qw(first);
 use pf::config;
-use pf::violation;
+use pf::violation qw(
+    violation_force_close
+);
 use pf::config::violation;
 
 use pf::util qw(

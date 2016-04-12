@@ -1,7 +1,11 @@
 package captiveportal::PacketFence::Controller::Violation;
 use Moose;
 use namespace::autoclean;
-use pf::violation;
+use pf::violation qw(
+    violation_close
+    violation_count
+    violation_view_top
+);
 use pf::class qw(
     class_view
 );

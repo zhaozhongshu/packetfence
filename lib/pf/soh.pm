@@ -36,7 +36,9 @@ use pf::db qw(
     get_db_handle
 );
 use pf::radius::constants;
-use pf::violation;
+use pf::violation qw(
+    violation_trigger
+);
 use pf::util qw(
     clean_mac
 );

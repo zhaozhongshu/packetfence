@@ -69,7 +69,9 @@ use pf::config::util qw(
     connection_type_to_str
     str_to_connection_type
 );
-use pf::violation;
+use pf::violation qw(
+    violation_trigger
+);
 use pf::role::custom $ROLE_API_LEVEL;
 use pf::floatingdevice::custom;
 # constants used by this module are provided by

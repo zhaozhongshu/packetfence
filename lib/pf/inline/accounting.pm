@@ -56,7 +56,9 @@ use pf::db qw(
     db_query_execute
     get_db_handle
 );
-use pf::violation;
+use pf::violation qw(
+    violation_trigger
+);
 use pf::config::violation;
 
 # The next two variables and the _prepare sub are required for database handling magic (see pf::db)

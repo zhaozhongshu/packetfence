@@ -39,7 +39,11 @@ use pf::node qw(
     node_modify
     node_register
 );
-use pf::violation;
+use pf::violation qw(
+    violation_add
+    violation_force_close
+    violation_view_open_desc
+);
 use pf::enforcement qw(reevaluate_access);
 
 use pf::config::util qw(
