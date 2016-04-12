@@ -29,7 +29,13 @@ use Moose;
 
 extends 'pfappserver::Base::Model';
 
-use pf::savedsearch;
+use pf::savedsearch qw(
+    savedsearch_add
+    savedsearch_delete
+    savedsearch_for_pid_and_namespace
+    savedsearch_update
+    savedsearch_view
+);
 use HTML::FormHandler::Params;
 use HTTP::Status qw(:constants is_error is_success);
 
