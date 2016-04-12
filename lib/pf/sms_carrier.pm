@@ -24,9 +24,9 @@ use constant SMS_CARRIER => 'sms_carrier';
 
 BEGIN {
     use Exporter ();
-    our (@ISA, @EXPORT);
+    our (@ISA, @EXPORT_OK);
     @ISA    = qw(Exporter);
-    @EXPORT = qw(sms_carrier_view_all);
+    @EXPORT_OK = qw(sms_carrier_view_all);
 }
 
 # The next two variables and the _prepare sub are required for database handling magic (see pf::db)

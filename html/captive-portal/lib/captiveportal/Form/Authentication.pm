@@ -20,7 +20,9 @@ has '+field_name_space' => ( default => 'captiveportal::Form::Field' );
 has '+widget_name_space' => ( default => 'captiveportal::Form::Widget' );
 
 use pf::log;
-use pf::sms_carrier;
+use pf::sms_carrier qw(
+    sms_carrier_view_all
+);
 
 has 'source' => (is => 'rw');
 

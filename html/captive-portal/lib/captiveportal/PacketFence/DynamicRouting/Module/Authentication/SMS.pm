@@ -20,7 +20,9 @@ use pf::constants qw(
     $FALSE
     $TRUE
 );
-use pf::sms_carrier;
+use pf::sms_carrier qw(
+    sms_carrier_view_all
+);
 use pf::web::guest;
 use pf::auth_log;
 

@@ -15,7 +15,9 @@ extends 'pfappserver::Form::Config::Authentication::Source';
 with 'pfappserver::Base::Form::Role::Help';
 
 use pf::Authentication::Source::SMSSource;
-use pf::sms_carrier;
+use pf::sms_carrier qw(
+    sms_carrier_view_all
+);
 
 # Form fields
 has_field 'sms_carriers' =>
