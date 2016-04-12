@@ -22,7 +22,14 @@ use strict;
 use warnings;
 use pf::log;
 use Readonly;
-use pf::node;
+use pf::node qw(
+    is_node_registered
+    node_attributes
+    node_deregister
+    node_modify
+    node_register
+    node_view
+);
 use pf::person qw(
     person_view
 );

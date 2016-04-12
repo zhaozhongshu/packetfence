@@ -39,7 +39,7 @@ use pf::config qw($WIRELESS_MAC_AUTH);
 use pf::util qw(
     clean_mac
 );
-use pf::node;
+
 
 =head1 SUBROUTINES
 

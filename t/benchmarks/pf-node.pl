@@ -21,7 +21,11 @@ use pf::db qw(
     db_query_execute
     get_db_handle
 );
-use pf::node;
+use pf::node qw(
+    node_attributes
+    node_view
+    node_view_all
+);
 
 # get the db layer started
 my $ignored = node_view('f0:4d:a2:cb:d9:c5');

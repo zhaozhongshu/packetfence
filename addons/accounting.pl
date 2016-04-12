@@ -28,7 +28,7 @@ use pf::SwitchFactory;
 
 
 
-use pf::node;
+
 use pf::ifoctetslog qw(
     ifoctetslog_insert
 );

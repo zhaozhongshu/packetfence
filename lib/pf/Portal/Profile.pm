@@ -29,7 +29,9 @@ use pf::config::util qw(
     get_user_sources
 );
 use pf::log;
-use pf::node;
+use pf::node qw(
+    node_attributes
+);
 use pf::factory::provisioner;
 use pf::ConfigStore::Scan;
 use pf::StatsD::Timer;

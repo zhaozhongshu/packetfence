@@ -22,7 +22,9 @@ use pf::constants qw(
 use pf::log;
 use Locale::gettext qw(gettext ngettext);
 use captiveportal::Base::I18N;
-use pf::node;
+use pf::node qw(
+    node_modify
+);
 use pf::useragent;
 use pf::util qw(
     isenabled

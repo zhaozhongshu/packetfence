@@ -29,7 +29,18 @@ use pf::constants qw(
 );
 use pf::config qw($EAP);
 use pf::error qw(is_error is_success);
-use pf::node;
+use pf::node qw(
+    node_attributes
+    node_count_all
+    node_delete
+    node_deregister
+    node_exist
+    node_modify
+    node_pid
+    node_register
+    node_view
+    node_view_all
+);
 use pf::nodecategory qw(
     nodecategory_lookup
     nodecategory_view
@@ -41,7 +52,18 @@ use pf::locationlog qw(
     locationlog_history_mac
 );
 use pf::log;
-use pf::node;
+use pf::node qw(
+    node_attributes
+    node_count_all
+    node_delete
+    node_deregister
+    node_exist
+    node_modify
+    node_pid
+    node_register
+    node_view
+    node_view_all
+);
 use pf::person qw(
     person_exist
 );

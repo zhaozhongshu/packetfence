@@ -34,7 +34,11 @@ use pf::person qw(
     person_violations
 );
 use pf::log;
-use pf::node;
+use pf::node qw(
+    node_deregister
+    node_modify
+    node_register
+);
 use pf::violation;
 use pf::enforcement qw(reevaluate_access);
 

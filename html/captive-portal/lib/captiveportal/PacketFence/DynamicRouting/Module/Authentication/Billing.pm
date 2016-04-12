@@ -29,7 +29,9 @@ use pf::util qw(
     isenabled
     normalize_time
 );
-use pf::node;
+use pf::node qw(
+    node_view
+);
 use pf::constants qw(
     $default_pid
     $TRUE

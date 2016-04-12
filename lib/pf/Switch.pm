@@ -44,7 +44,9 @@ use pf::locationlog qw(
     locationlog_set_session
     locationlog_synchronize
 );
-use pf::node;
+use pf::node qw(
+    node_attributes_with_fingerprint
+);
 use pf::cluster;
 # RADIUS constants (RADIUS:: namespace)
 use pf::radius::constants;

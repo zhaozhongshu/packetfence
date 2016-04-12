@@ -19,7 +19,9 @@ use pf::config qw(
 );
 use Hash::Merge qw(merge);
 use List::MoreUtils qw(any);
-use pf::node;
+use pf::node qw(
+    node_view
+);
 use pf::person qw(
     person_add
     person_exist

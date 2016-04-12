@@ -6,7 +6,9 @@ use pf::violation;
 use pf::class qw(
     class_view
 );
-use pf::node;
+use pf::node qw(
+    node_view
+);
 use List::Util qw(first);
 use pf::config qw(%Config);
 

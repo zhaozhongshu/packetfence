@@ -30,7 +30,10 @@ use pf::iplog qw(
 use pf::locationlog qw(
     locationlog_history_mac
 );
-use pf::node;
+use pf::node qw(
+    node_exist
+    node_view
+);
 use pf::useragent qw(node_useragent_view);
 use pf::util qw(
     oui_to_vendor

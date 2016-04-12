@@ -34,7 +34,10 @@ use pf::constants qw(
     $default_pid
 );
 use pf::config qw(%Config);
-use pf::node;
+use pf::node qw(
+    node_register
+    node_view
+);
 use pf::util qw(
     clean_mac
     valid_mac

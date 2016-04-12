@@ -33,7 +33,9 @@ use pf::config qw(
     $HTTPS
 );
 
-use pf::node;
+use pf::node qw(
+    node_register
+);
 
 use pf::Portal::Session;
 use pf::util qw(

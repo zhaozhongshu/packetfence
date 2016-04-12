@@ -31,7 +31,10 @@ use constant {
 
 use lib LIB_DIR;
 
-use pf::node;
+use pf::node qw(
+    node_add_simple
+    node_modify
+);
 use pf::db qw(
     db_connect
 );

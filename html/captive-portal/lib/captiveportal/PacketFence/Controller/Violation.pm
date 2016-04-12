@@ -8,7 +8,9 @@ use pf::class qw(
 use pf::constants::scan qw($SCAN_VID $POST_SCAN_VID $PRE_SCAN_VID);
 use pf::log;
 
-use pf::node;
+use pf::node qw(
+    node_view
+);
 
 
 BEGIN { extends 'captiveportal::Base::Controller'; }

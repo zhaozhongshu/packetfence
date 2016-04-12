@@ -52,7 +52,10 @@ use pf::inline::custom $INLINE_API_LEVEL;
 use pf::locationlog qw(
     locationlog_view_open_mac
 );
-use pf::node;
+use pf::node qw(
+    node_attributes
+    $STATUS_REGISTERED
+);
 use pf::SwitchFactory;
 use pf::util qw(
     clean_mac

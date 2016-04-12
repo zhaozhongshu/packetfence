@@ -89,7 +89,15 @@ use pf::locationlog qw(
     locationlog_view_open_switchport_no_VoIP
     locationlog_view_open_switchport_only_VoIP
 );
-use pf::node;
+use pf::node qw(
+    is_node_voip
+    node_add_simple
+    node_attributes
+    node_exist
+    node_register
+    node_search
+    node_view
+);
 use pf::Switch 2.00;
 use pf::Switch::constants;
 use pf::SwitchFactory;

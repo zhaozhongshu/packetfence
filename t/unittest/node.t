@@ -22,7 +22,7 @@ BEGIN {
     use setup_test_config;
 }
 
-use pf::node;
+
 use Test::More tests => 6;
 
 #This test will running last

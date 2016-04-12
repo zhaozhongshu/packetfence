@@ -48,7 +48,15 @@ use pf::locationlog qw(
     locationlog_update_end_mac
     locationlog_view_open_mac
 );
-use pf::node;
+use pf::node qw(
+    is_node_voip
+    node_add_simple
+    node_attributes
+    node_exist
+    node_modify
+    node_register
+    node_view
+);
 use pf::Switch;
 use pf::SwitchFactory;
 use pf::util qw(

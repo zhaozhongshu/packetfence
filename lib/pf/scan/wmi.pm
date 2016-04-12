@@ -23,7 +23,7 @@ use base ('pf::scan');
 use pf::config;
 use pf::scan;
 
-use pf::node;
+
 use pf::scan::wmi::rules;
 use pf::violation qw(violation_close);
 use pf::api::jsonrpcclient;

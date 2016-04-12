@@ -26,7 +26,10 @@ has '+route_map' => (default => sub {
 });
 
 use pf::log;
-use pf::node;
+use pf::node qw(
+    node_register
+    node_view
+);
 use pf::config;
 use pf::constants qw($TRUE $FALSE);
 use pf::util qw(

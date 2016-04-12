@@ -49,7 +49,9 @@ use pf::config qw(
     $WIRED_802_1X
     $WIRED_MAC_AUTH
 );
-use pf::node;
+use pf::node qw(
+    node_attributes
+);
 use pf::util::radius qw(perform_disconnect);
 
 =head1 SUBROUTINES

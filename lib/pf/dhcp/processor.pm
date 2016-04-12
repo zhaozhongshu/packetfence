@@ -40,7 +40,13 @@ use pf::firewallsso;
 use pf::inline::custom $INLINE_API_LEVEL;
 
 use pf::lookup::node;
-use pf::node;
+use pf::node qw(
+    node_add_simple
+    node_exist
+    node_modify
+    node_view
+    $STATUS_REGISTERED
+);
 use pf::util qw(
     clean_mac
     isdisabled

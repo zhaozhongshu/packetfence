@@ -7,7 +7,11 @@ use pf::constants qw(
     $default_pid
 );
 use pf::config;
-use pf::node;
+use pf::node qw(
+    node_deregister
+    node_modify
+    node_view
+);
 use pf::enforcement qw(reevaluate_access);
 
 BEGIN {extends 'captiveportal::Base::Controller'; }

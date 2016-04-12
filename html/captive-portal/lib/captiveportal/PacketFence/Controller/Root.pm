@@ -12,7 +12,10 @@ use pf::log;
 
 use pf::Portal::Session;
 
-use pf::node;
+use pf::node qw(
+    node_attributes
+    node_view
+);
 use pf::useragent;
 use pf::violation;
 

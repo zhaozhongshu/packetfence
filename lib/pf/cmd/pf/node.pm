@@ -30,7 +30,15 @@ use warnings;
 use Regexp::Common qw(net);
 
 use base qw(pf::base::cmd::action_cmd);
-use pf::node;
+use pf::node qw(
+    node_add
+    node_count_all
+    node_delete
+    node_exist
+    node_modify
+    node_view
+    node_view_all
+);
 use pf::util qw(
     valid_mac
 );

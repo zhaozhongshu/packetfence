@@ -31,7 +31,14 @@ use fingerbank::Model::DHCP_Fingerprint;
 use fingerbank::Model::DHCP_Vendor;
 use fingerbank::Model::User_Agent;
 use pf::violation_config;
-use pf::node;
+use pf::node qw(
+    is_node_registered
+    node_add_simple
+    node_attributes
+    node_count_all
+    node_exist
+    node_view
+);
 use pf::StatsD::Timer;
 
 

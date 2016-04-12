@@ -24,7 +24,7 @@ use pf::class qw(
 use pf::config;
 use pf::file_paths qw($bin_dir);
 
-use pf::node;
+
 use pf::Portal::Session;
 use pf::constants::scan qw($SCAN_VID);
 use pf::util qw(

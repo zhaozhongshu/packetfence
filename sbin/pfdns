@@ -55,7 +55,10 @@ use pf::CHI;
 use pf::ConfigStore::Interface;
 use pf::cluster;
 use pf::SwitchFactory;
-use pf::node;
+use pf::node qw(
+    node_attributes
+    $STATUS_REGISTERED
+);
 use Storable 'dclone';
 use pf::access_filter::dns;
 

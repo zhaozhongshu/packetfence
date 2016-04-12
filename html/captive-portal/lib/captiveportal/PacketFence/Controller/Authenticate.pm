@@ -9,7 +9,9 @@ use pf::constants::eap_type qw($EAP_TLS);
 use pf::constants::Portal::Profile qw($DEFAULT_PROFILE);
 use pf::config qw(%Profiles_Config);;
 use pf::web qw(i18n i18n_format);
-use pf::node;
+use pf::node qw(
+    node_view
+);
 use pf::util qw(
     isenabled
     strip_username

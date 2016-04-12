@@ -70,7 +70,10 @@ use pf::db qw(
     db_query_execute
     get_db_handle
 );
-use pf::node;
+use pf::node qw(
+    node_add_simple
+    node_exist
+);
 use pf::util qw(
     clean_mac
 );

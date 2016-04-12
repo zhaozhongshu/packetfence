@@ -26,7 +26,7 @@ use Date::Format qw(time2str);
 use pf::util qw(
     normalize_time
 );
-use pf::node;
+
 use pf::enforcement;
 
 =head2 execute_child

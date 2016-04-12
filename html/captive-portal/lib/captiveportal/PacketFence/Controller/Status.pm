@@ -10,7 +10,9 @@ use pf::constants qw(
     $TRUE
 );
 use pf::config;
-use pf::node;
+use pf::node qw(
+    node_view
+);
 use pf::person qw(
     person_nodes
 );

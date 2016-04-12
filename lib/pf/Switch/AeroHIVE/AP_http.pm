@@ -31,7 +31,9 @@ use pf::constants qw(
 use pf::config qw(
     $WIRELESS_MAC_AUTH
 );
-use pf::node;
+use pf::node qw(
+    node_view
+);
 use pf::violation;
 
 use pf::util qw(

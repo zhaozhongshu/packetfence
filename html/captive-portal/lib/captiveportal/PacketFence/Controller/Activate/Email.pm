@@ -11,7 +11,9 @@ use pf::constants qw(
 );
 use pf::config qw(%Config);
 use pf::activation qw($GUEST_ACTIVATION $SPONSOR_ACTIVATION);
-use pf::node;
+use pf::node qw(
+    node_modify
+);
 use pf::Portal::Session;
 use pf::util qw(valid_mac isenabled);
 use pf::web qw(

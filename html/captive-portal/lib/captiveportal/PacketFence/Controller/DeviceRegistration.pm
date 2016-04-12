@@ -4,7 +4,10 @@ use namespace::autoclean;
 use pf::Authentication::constants;
 use pf::config qw(%Config);
 use pf::log;
-use pf::node;
+use pf::node qw(
+    node_modify
+    node_view
+);
 use pf::util qw(
     all_defined
     clean_mac

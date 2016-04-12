@@ -47,7 +47,9 @@ use constant {
 use lib LIB_DIR;
 
 use pf::config;
-use pf::node;
+use pf::node qw(
+    node_view_all
+);
 use pf::useragent;
 
 my $help;

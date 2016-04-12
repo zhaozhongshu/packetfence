@@ -37,7 +37,7 @@ use pf::config qw(
 use pf::util qw(
     clean_mac
 );
-use pf::node;
+
 
 sub description { 'Xirrus WiFi Arrays HTTP' }
 

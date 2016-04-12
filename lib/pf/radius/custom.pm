@@ -22,7 +22,7 @@ use warnings;
 use base ('pf::radius');
 use pf::config qw($ROLE_API_LEVEL);
 
-use pf::node;
+
 use pf::Switch;
 use pf::SwitchFactory;
 

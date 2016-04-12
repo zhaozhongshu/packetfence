@@ -50,7 +50,9 @@ use pf::util qw(
     clean_mac
     get_vlan_from_int
 );
-use pf::node;
+use pf::node qw(
+    node_modify
+);
 use pf::fingerbank;
 my %options;
 GetOptions(\%options, "interface|i=s", "pcap|p=s", "help|h") or die("Error in command line arguments\n");
