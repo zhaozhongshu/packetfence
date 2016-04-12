@@ -19,7 +19,9 @@ use Try::Tiny;
 
 use pf::config;
 use pf::class qw(class_merge);
-use pf::db;
+use pf::db qw(
+    db_ping
+);
 use pfconfig::cached_hash;
 use pf::util qw(
     normalize_time

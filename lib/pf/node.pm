@@ -93,7 +93,11 @@ use pf::config qw(
     $VOIP
     $NO_VOIP
 );
-use pf::db;
+use pf::db qw(
+    db_data
+    db_query_execute
+    get_db_handle
+);
 use pf::nodecategory;
 use pf::constants::scan qw($SCAN_VID $POST_SCAN_VID);
 use pf::util qw(

@@ -43,7 +43,10 @@ use pf::inline::accounting qw(
 use pf::iplog;
 use pf::locationlog;
 use pf::node;
-use pf::db;
+use pf::db qw(
+    db_cancel_current_query
+    db_disconnect
+);
 use pf::services;
 use pf::traplog;
 use pf::util qw(

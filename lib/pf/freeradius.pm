@@ -46,7 +46,11 @@ BEGIN {
 
 use pf::config;
 use pf::config::cached;
-use pf::db;
+use pf::db qw(
+    db_ping
+    db_query_execute
+    get_db_handle
+);
 use pf::util qw(valid_mac);
 
 # The next two variables and the _prepare sub are required for database handling magic (see pf::db)

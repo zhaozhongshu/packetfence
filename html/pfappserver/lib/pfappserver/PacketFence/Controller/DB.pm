@@ -16,7 +16,9 @@ use warnings;
 use HTTP::Status qw(:constants is_error is_success);
 use Moose;
 use namespace::autoclean;
-use pf::db;
+use pf::db qw(
+    db_disconnect
+);
 
 BEGIN {extends 'Catalyst::Controller'; }
 

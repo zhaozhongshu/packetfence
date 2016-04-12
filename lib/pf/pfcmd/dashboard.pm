@@ -13,7 +13,10 @@ use pf::log;
 
 use constant DASHBOARD => 'pfcmd::dashboard';
 
-use pf::db;
+use pf::db qw(
+    db_data
+    get_db_handle
+);
 use pf::pfcmd::report qw(
     report_active_all
     report_inactive_all
@@ -39,7 +42,10 @@ BEGIN {
     );
 };
 
-use pf::db;
+use pf::db qw(
+    db_data
+    get_db_handle
+);
 use pf::pfcmd::report qw(
     report_active_all
     report_inactive_all

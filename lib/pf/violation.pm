@@ -118,7 +118,11 @@ use pf::constants qw(
     $TRUE
 );
 use pf::enforcement;
-use pf::db;
+use pf::db qw(
+    db_data
+    db_query_execute
+    get_db_handle
+);
 use pf::constants::scan qw($SCAN_VID $POST_SCAN_VID $PRE_SCAN_VID);
 use pf::util qw(
     mysql_date

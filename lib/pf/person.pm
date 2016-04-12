@@ -48,7 +48,11 @@ BEGIN {
     );
 }
 
-use pf::db;
+use pf::db qw(
+    db_data
+    db_query_execute
+    get_db_handle
+);
 use List::MoreUtils qw(any);
 
 =head1 GLOBALS

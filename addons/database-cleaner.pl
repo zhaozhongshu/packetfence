@@ -44,7 +44,7 @@ BEGIN {
   Log::Log4perl::init(\$log_conf);
 }
 
-use pf::db;
+
 use DBI;
 use Data::Dumper;
 use Getopt::Long;

@@ -38,7 +38,12 @@ use pf::config qw(
     $management_network
     %Config
 );
-use pf::db;
+use pf::db qw(
+    db_data
+    db_now
+    db_query_execute
+    get_db_handle
+);
 use pf::node qw(node_add_simple node_exist);
 use pf::util qw(
     clean_mac

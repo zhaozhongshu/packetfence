@@ -45,7 +45,11 @@ use Log::Log4perl::Level;
 use pf::log;
 use pf::config;
 use pf::file_paths qw($install_dir);
-use pf::db;
+use pf::db qw(
+    db_data
+    db_query_execute
+    get_db_handle
+);
 
 # The next two variables and the _prepare sub are required for database handling magic (see pf::db)
 our $traplog_db_prepared = 0;

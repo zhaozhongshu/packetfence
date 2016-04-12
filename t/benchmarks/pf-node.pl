@@ -17,7 +17,10 @@ use Benchmark qw(cmpthese timethese);
 
 use lib '/usr/local/pf/lib';
 
-use pf::db;
+use pf::db qw(
+    db_query_execute
+    get_db_handle
+);
 use pf::node;
 
 # get the db layer started

@@ -35,7 +35,7 @@ use pf::config qw(
     $INLINE
 );
 use pf::config::cached;
-use pf::db;
+
 use pf::firewallsso;
 use pf::inline::custom $INLINE_API_LEVEL;
 use pf::iplog;

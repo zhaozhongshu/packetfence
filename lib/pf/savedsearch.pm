@@ -38,7 +38,11 @@ our $savedsearch_db_prepared = 0;
 
 our $savedsearch_statements = {};
 
-use pf::db;
+use pf::db qw(
+    db_data
+    db_query_execute
+    get_db_handle
+);
 
 =head1 Subroutines
 

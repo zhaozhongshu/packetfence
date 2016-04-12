@@ -64,7 +64,12 @@ use pf::config qw(
     $WIRED
     $NO_VOIP
 );
-use pf::db;
+use pf::db qw(
+    db_data
+    db_now
+    db_query_execute
+    get_db_handle
+);
 use pf::node;
 use pf::util qw(
     clean_mac

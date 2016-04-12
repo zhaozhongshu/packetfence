@@ -16,7 +16,10 @@ use strict;
 use warnings;
 
 
-use pf::db;
+use pf::db qw(
+    db_query_execute
+    get_db_handle
+);
 use pf::file_paths qw($conf_dir);
 use pf::log;
 

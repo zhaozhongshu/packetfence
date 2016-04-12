@@ -34,7 +34,7 @@ BEGIN {
     my $manager = pfconfig::manager->new;
     $manager->expire_all;
 
-    use pf::db;
+    
     # Setup database connection infos based on ENV variables if they are defined
     $pf::db::DB_Config->{host} = $ENV{PF_TEST_DB_HOST} // $pf::db::DB_Config->{host};
     $pf::db::DB_Config->{user} = $ENV{PF_TEST_DB_USER} // $pf::db::DB_Config->{user};

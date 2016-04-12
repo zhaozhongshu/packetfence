@@ -35,7 +35,12 @@ BEGIN {
 }
 
 use pf::log;
-use pf::db;
+use pf::db qw(
+    db_data
+    db_now
+    db_query_execute
+    get_db_handle
+);
 
 # The next two variables and the _prepare sub are required for database handling magic (see pf::db)
 our $radius_audit_log_db_prepared = 0;

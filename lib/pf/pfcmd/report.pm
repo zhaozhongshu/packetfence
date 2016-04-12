@@ -73,7 +73,10 @@ BEGIN {
 }
 
 use pf::config qw(%connection_type_explained);
-use pf::db;
+use pf::db qw(
+    db_data
+    get_db_handle
+);
 use pf::util qw(
     oui_to_vendor
     pretty_bandwidth

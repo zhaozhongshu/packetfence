@@ -35,7 +35,10 @@ use pf::constants qw(
 );
 use pf::constants::scan qw($SEVERITY_HOLE $SEVERITY_WARNING $SEVERITY_INFO $STATUS_CLOSED $STATUS_NEW $STATUS_STARTED);
 use pf::config;
-use pf::db;
+use pf::db qw(
+    db_query_execute
+    get_db_handle
+);
 use pf::iplog;
 use pf::scan::nessus;
 use pf::scan::openvas;

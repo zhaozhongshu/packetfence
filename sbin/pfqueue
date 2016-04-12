@@ -39,7 +39,9 @@ use pf::services::util qw(
     daemonize
     deletepid
 );
-use pf::db;
+use pf::db qw(
+    db_disconnect
+);
 use Config::IniFiles;
 use pf::SwitchFactory;
 use pf::pfqueue::consumer::redis;

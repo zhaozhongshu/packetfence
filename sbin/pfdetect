@@ -32,7 +32,7 @@ BEGIN {
 use pf::class;
 use pf::config qw(%ConfigDetect);
 use pf::config::cached;
-use pf::db;
+
 use pf::iplog;
 use pf::node;
 use pf::person;

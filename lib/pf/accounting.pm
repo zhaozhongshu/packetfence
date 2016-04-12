@@ -58,7 +58,11 @@ use pf::config qw(
 use pf::constants::config qw($ACCT_TIME_MODIFIER_RE);
 use pf::constants::trigger qw($TRIGGER_TYPE_ACCOUNTING);
 use pf::config::violation;
-use pf::db;
+use pf::db qw(
+    db_data
+    db_query_execute
+    get_db_handle
+);
 use pf::violation;
 use pf::util qw(
     clean_mac

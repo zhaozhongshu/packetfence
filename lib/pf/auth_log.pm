@@ -25,7 +25,10 @@ BEGIN {
     );
 }
 
-use pf::db;
+use pf::db qw(
+    db_data
+    get_db_handle
+);
 use pf::log;
 
 # The next two variables and the _prepare sub are required for database handling magic (see pf::db)

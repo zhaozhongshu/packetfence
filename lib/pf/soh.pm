@@ -30,7 +30,11 @@ use pf::constants qw(
     $TRUE
 );
 use pf::config;
-use pf::db;
+use pf::db qw(
+    db_data
+    db_query_execute
+    get_db_handle
+);
 use pf::radius::constants;
 use pf::violation;
 use pf::util qw(

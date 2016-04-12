@@ -32,7 +32,10 @@ BEGIN {
     );
 }
 
-use pf::db;
+use pf::db qw(
+    db_data
+    get_db_handle
+);
 
 # The next two variables and the _prepare sub are required for database handling magic (see pf::db)
 our $graph_db_prepared = 0;

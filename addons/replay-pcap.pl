@@ -30,6 +30,7 @@ use pf::dhcp::processor();
 use pf::util::dhcpv6();
 use pf::client;
 pf::client::setClient("pf::api::can_fork");
+use pf::api;
 use NetPacket::Ethernet;
 use NetPacket::UDP;
 use Getopt::Long;

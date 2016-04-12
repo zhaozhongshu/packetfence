@@ -16,7 +16,9 @@ use strict;
 use warnings;
 
 use Rose::DB;
-use pf::db;
+use pf::db qw(
+    db_connect
+);
 use List::MoreUtils qw(any);
 our @ISA = qw(Rose::DB);
 

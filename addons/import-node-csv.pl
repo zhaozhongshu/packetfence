@@ -32,7 +32,9 @@ use constant {
 use lib LIB_DIR;
 
 use pf::node;
-use pf::db;
+use pf::db qw(
+    db_connect
+);
 use pf::util qw(
     clean_mac
 );
