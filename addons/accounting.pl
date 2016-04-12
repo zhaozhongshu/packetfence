@@ -29,7 +29,9 @@ use pf::db;
 use pf::person;
 use pf::locationlog;
 use pf::node;
-use pf::ifoctetslog;
+use pf::ifoctetslog qw(
+    ifoctetslog_insert
+);
 use threads;
 use threads::shared;
 use Thread::Pool;

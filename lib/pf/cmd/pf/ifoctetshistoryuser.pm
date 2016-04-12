@@ -22,7 +22,9 @@ pf::cmd::pf::ifoctetshistoryuser
 use strict;
 use warnings;
 
-use pf::ifoctetslog;
+use pf::ifoctetslog qw(
+    ifoctetslog_history_user
+);
 use base qw(pf::cmd::display);
 
 sub parseArgs {

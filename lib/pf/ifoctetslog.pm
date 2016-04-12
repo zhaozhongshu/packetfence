@@ -26,9 +26,9 @@ use constant IFOCTETSLOG => 'ifoctetslog';
 
 BEGIN {
     use Exporter ();
-    our ( @ISA, @EXPORT );
+    our ( @ISA, @EXPORT_OK );
     @ISA    = qw(Exporter);
-    @EXPORT = qw(
+    @EXPORT_OK = qw(
         $ifoctetslog_db_prepared
         ifoctetslog_db_prepare
 
