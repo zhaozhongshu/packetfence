@@ -26,7 +26,7 @@ use lib '/usr/local/pf/lib/';
 
 #use pf::config;
 use pf::radius::constants;
-use pf::radius::soapclient;
+
 
 use pf::util::freeradius qw(clean_mac);
 use pfconfig::cached_hash;

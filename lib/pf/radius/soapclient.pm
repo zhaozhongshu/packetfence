@@ -22,7 +22,7 @@ use Encode qw(decode);
 $XML::Simple::PREFERRED_PARSER = 'XML::LibXML::SAX';
 
 use base qw(Exporter);
-our @EXPORT = qw(send_soap_request build_soap_request);
+our @EXPORT_OK = qw(send_soap_request build_soap_request);
 
 # Configuration parameter
 use constant SOAP_PORT => '9090'; #TODO: See note1

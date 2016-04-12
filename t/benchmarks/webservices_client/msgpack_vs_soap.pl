@@ -15,7 +15,9 @@ use strict;
 use warnings;
 use lib qw(/usr/local/pf/lib);
 
-use pf::radius::soapclient;
+use pf::radius::soapclient qw(
+    send_soap_request
+);
 use pf::api::jsonrpcclient;
 use pf::api::msgpackclient;
 use Data::Dumper;
