@@ -44,7 +44,9 @@ BEGIN {
 }
 
 use pf::log;
-use pf::constants;
+use pf::constants qw(
+    $FALSE
+);
 use pf::config qw(
     %Config
     $fqdn

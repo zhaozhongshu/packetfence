@@ -56,7 +56,9 @@ use base ('pf::Switch');
 use POSIX;
 use Net::SNMP;
 
-use pf::constants;
+use pf::constants qw(
+    $TRUE
+);
 use pf::config qw(
     $MAC
     $PORT

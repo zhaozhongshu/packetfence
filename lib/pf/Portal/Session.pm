@@ -30,7 +30,7 @@ use Readonly;
 use URI::Escape::XS qw(uri_escape uri_unescape);
 use File::Spec::Functions;
 
-use pf::constants;
+
 use pf::config qw(
     %CAPTIVE_PORTAL
     $management_network

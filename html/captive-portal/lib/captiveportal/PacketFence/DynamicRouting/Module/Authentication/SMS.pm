@@ -16,7 +16,10 @@ with 'captiveportal::Role::FieldValidation';
 
 use pf::activation;
 use pf::log;
-use pf::constants;
+use pf::constants qw(
+    $FALSE
+    $TRUE
+);
 use pf::sms_carrier;
 use pf::web::guest;
 use pf::auth_log;

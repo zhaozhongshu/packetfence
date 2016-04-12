@@ -15,7 +15,7 @@ deletion, read info, ...
 
 use strict;
 use warnings;
-use pf::constants;
+
 use pf::log;
 use pf::password;
 use DateTime;

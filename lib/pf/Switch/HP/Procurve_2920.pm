@@ -30,7 +30,9 @@ use pf::config qw(
     $MAC
     $PORT
 );
-use pf::constants;
+use pf::constants qw(
+    $TRUE
+);
 
 # CAPABILITIES
 # access technology supported

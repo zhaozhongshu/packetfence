@@ -38,7 +38,12 @@ BEGIN {
     );
 }
 
-use pf::constants;
+use pf::constants qw(
+    $FALSE
+    $NO
+    $TRUE
+    $YES
+);
 use pf::config;
 use pf::db;
 use pf::violation;

@@ -25,7 +25,10 @@ use pf::log;
 use Data::Dumper;
 use Try::Tiny;
 
-use pf::constants;
+use pf::constants qw(
+    $FALSE
+    $TRUE
+);
 use pf::config;
 use pf::db;
 use pf::radius::constants;

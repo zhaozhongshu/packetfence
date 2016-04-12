@@ -4,7 +4,11 @@ use namespace::autoclean;
 use pf::util qw(
     all_defined
 );
-use pf::constants;
+use pf::constants qw(
+    $admin_pid
+    $default_pid
+    $TRUE
+);
 use pf::config;
 use pf::node;
 use pf::person;

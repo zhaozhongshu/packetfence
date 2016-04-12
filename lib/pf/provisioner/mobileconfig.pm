@@ -17,7 +17,9 @@ use warnings;
 use Crypt::SMIME;
 use MIME::Base64 qw(decode_base64);
 use pf::log;
-use pf::constants;
+use pf::constants qw(
+    $FALSE
+);
 
 use Moo;
 extends 'pf::provisioner';

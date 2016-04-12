@@ -32,7 +32,9 @@ use warnings;
 
 use base ('pf::Switch');
 
-use pf::constants;
+use pf::constants qw(
+    $TRUE
+);
 use pf::config qw($WIRELESS_MAC_AUTH);
 use pf::util qw(
     clean_mac

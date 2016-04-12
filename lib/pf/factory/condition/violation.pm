@@ -17,7 +17,9 @@ use strict;
 use warnings;
 use Module::Pluggable search_path => 'pf::condition', sub_name => '_modules' , require => 1;
 use List::MoreUtils qw(any);
-use pf::constants;
+use pf::constants qw(
+    $TRUE
+);
 
 our @MODULES;
 

@@ -27,7 +27,10 @@ use pf::web;
 use Crypt::OpenSSL::X509;
 use pf::password;
 use Crypt::GeneratePassword qw(word);
-use pf::constants;
+use pf::constants qw(
+    $FALSE
+    $TRUE
+);
 
 has 'pki_provider' => (is => 'rw', isa => 'pf::pki_provider');
 

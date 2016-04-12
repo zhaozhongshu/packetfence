@@ -87,7 +87,11 @@ BEGIN {
 
 # TODO pf::util shouldn't rely on pf::config as this prevent pf::config from
 #      being able to use pf::util
-use pf::constants;
+use pf::constants qw(
+    $FALSE
+    $NO
+    $TRUE
+);
 use pf::constants::config;
 use pf::constants::user;
 #use pf::config;

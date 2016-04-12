@@ -17,7 +17,7 @@ use Fcntl ':mode'; # symbolic file permissions
 use Try::Tiny;
 use Readonly;
 
-use pf::constants;
+
 use pf::constants::config qw($TIME_MODIFIER_RE);
 use pf::config qw(
     %Config

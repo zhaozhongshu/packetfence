@@ -15,7 +15,7 @@ pf::Authentication::Source::EAPTLSSource
 use strict;
 use warnings;
 use Moose;
-use pf::constants;
+
 use pf::Authentication::constants;
 use List::Util qw(first);
 

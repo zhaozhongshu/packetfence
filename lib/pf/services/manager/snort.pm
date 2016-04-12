@@ -24,7 +24,9 @@ use pf::file_paths qw(
     $var_dir
 );
 use pf::log;
-use pf::constants;
+use pf::constants qw(
+    $TRUE
+);
 use pf::config qw(
     $monitor_int
     %Config

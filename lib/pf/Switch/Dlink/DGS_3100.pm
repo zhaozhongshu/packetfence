@@ -46,7 +46,9 @@ sub description { 'D-Link DGS 3100' }
 # importing switch constants
 use pf::Switch::constants;
 
-use pf::constants;
+use pf::constants qw(
+    $TRUE
+);
 use pf::config qw(
     $MAC
     $PORT

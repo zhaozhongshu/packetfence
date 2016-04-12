@@ -32,7 +32,10 @@ my $logger = Log::Log4perl->get_logger( "dao/person.t" );
 Log::Log4perl::MDC->put( 'proc', "dao/person.t" );
 Log::Log4perl::MDC->put( 'tid',  0 );
 
-use pf::constants;
+use pf::constants qw(
+    $FALSE
+    $TRUE
+);
 use pf::config;
 use lib qw(/usr/local/pf/t);
 use TestUtils;

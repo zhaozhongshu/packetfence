@@ -15,7 +15,7 @@ Creates the filter engine for triggering violations
 
 use strict;
 use warnings;
-use pf::constants;
+
 use pfconfig::namespaces::config;
 use pfconfig::namespaces::config::Violations;
 use pf::factory::condition::violation;

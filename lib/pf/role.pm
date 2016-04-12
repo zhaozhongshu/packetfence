@@ -17,7 +17,11 @@ use warnings;
 
 use pf::log;
 
-use pf::constants;
+use pf::constants qw(
+    $default_pid
+    $FALSE
+    $TRUE
+);
 use pf::constants::trigger qw($TRIGGER_ID_PROVISIONER $TRIGGER_TYPE_PROVISIONER);
 use pf::config qw(
     %ConfigFloatingDevices

@@ -35,7 +35,10 @@ use pf::util qw(
     valid_mac
 );
 use pf::log;
-use pf::constants;
+use pf::constants qw(
+    $FALSE
+    $TRUE
+);
 use pf::constants::exit_code qw($EXIT_SUCCESS $EXIT_FAILURE);
 my $pid_re = qr{(?:
     ( [a-zA-Z0-9\-\_\.\@\/\:\+\!,]+ )                               # unquoted allowed

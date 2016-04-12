@@ -13,7 +13,9 @@ Tested on a Netgear M4100 on firmware 10.0.1.27
 use strict;
 use warnings;
 
-use pf::constants;
+use pf::constants qw(
+    $TRUE
+);
 
 use base ('pf::Switch::Netgear');
 

@@ -16,7 +16,9 @@ This module is currently only a placeholder, see pf::Switch::AeroHIVE
 
 use strict;
 use warnings;
-use pf::constants;
+use pf::constants qw(
+    $TRUE
+);
 
 use base ('pf::Switch::AeroHIVE');
 sub description { 'AeroHive BR100' }

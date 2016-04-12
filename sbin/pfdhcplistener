@@ -29,7 +29,10 @@ BEGIN {
     use pf::log(service => 'pfdhcplistener');
 }
 
-use pf::constants;
+use pf::constants qw(
+    $NO
+    $TRUE
+);
 use pf::clustermgmt;
 use pf::config qw(
     %Config

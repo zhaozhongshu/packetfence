@@ -16,7 +16,9 @@ use strict;
 use warnings;
 use Moose;
 use pf::config qw($default_pid $fqdn %Config);
-use pf::constants;
+use pf::constants qw(
+    $default_pid
+);
 use pf::Authentication::constants;
 
 use pf::log;

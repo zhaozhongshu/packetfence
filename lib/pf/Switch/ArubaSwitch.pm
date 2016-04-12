@@ -38,7 +38,9 @@ use pf::Switch::constants;
 use pf::util qw(
     isenabled
 );
-use pf::constants;
+use pf::constants qw(
+    $TRUE
+);
 use pf::config qw(
     $MAC
     $PORT

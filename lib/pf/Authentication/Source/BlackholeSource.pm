@@ -15,7 +15,9 @@ pf::Authentication::Source::BlackholeSource
 use strict;
 use warnings;
 use Moose;
-use pf::constants;
+use pf::constants qw(
+    $FALSE
+);
 use pf::config;
 use pf::Authentication::constants;
 

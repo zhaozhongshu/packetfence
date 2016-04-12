@@ -29,7 +29,10 @@ BEGIN {
     @EXPORT_OK = qw(scan_insert_sql scan_select_sql scan_update_status_sql);
 }
 
-use pf::constants;
+use pf::constants qw(
+    $FALSE
+    $TRUE
+);
 use pf::constants::scan qw($SEVERITY_HOLE $SEVERITY_WARNING $SEVERITY_INFO $STATUS_CLOSED $STATUS_NEW $STATUS_STARTED);
 use pf::config;
 use pf::db;

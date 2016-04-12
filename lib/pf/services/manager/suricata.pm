@@ -19,7 +19,9 @@ use pf::file_paths qw(
     $conf_dir
     $generated_conf_dir
 );
-use pf::constants;
+use pf::constants qw(
+    $TRUE
+);
 use pf::config qw(%Config $monitor_int);
 use Moo;
 use pf::util qw(parse_template);

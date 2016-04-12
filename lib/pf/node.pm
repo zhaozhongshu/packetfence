@@ -79,7 +79,13 @@ BEGIN {
     );
 }
 
-use pf::constants;
+use pf::constants qw(
+    $admin_pid
+    $default_pid
+    $FALSE
+    $NO
+    $TRUE
+);
 use pf::config::violation;
 use pf::config qw(
     %connection_type_to_str

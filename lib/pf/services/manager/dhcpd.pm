@@ -19,7 +19,9 @@ use File::Touch;
 use IPC::Cmd qw[can_run run];
 use POSIX;
 use Net::Netmask;
-use pf::constants;
+use pf::constants qw(
+    $TRUE
+);
 use NetAddr::IP;
 use pf::config qw(
     @listen_ints

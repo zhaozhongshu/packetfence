@@ -25,7 +25,12 @@ use strict;
 use warnings;
 use pf::log;
 use pf::config::cached;
-use pf::constants;
+use pf::constants qw(
+    $default_pid
+    $FALSE
+    $NO
+    $TRUE
+);
 use Date::Parse;
 use File::Basename qw(basename);
 use File::Spec;

@@ -2,7 +2,10 @@ package captiveportal::PacketFence::Controller::Node::Manager;
 
 use Moose;
 use namespace::autoclean;
-use pf::constants;
+use pf::constants qw(
+    $admin_pid
+    $default_pid
+);
 use pf::config;
 use pf::node;
 use pf::enforcement qw(reevaluate_access);

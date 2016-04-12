@@ -24,7 +24,9 @@ use POSIX;
 
 use base ('pf::Switch');
 
-use pf::constants;
+use pf::constants qw(
+    $TRUE
+);
 use pf::constants::role qw($VOICE_ROLE);
 use pf::config qw(
     $MAC

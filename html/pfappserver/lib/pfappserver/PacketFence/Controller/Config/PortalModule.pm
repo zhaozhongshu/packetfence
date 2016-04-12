@@ -14,7 +14,7 @@ use HTTP::Status qw(:constants is_error is_success);
 use Moose;  # automatically turns on strict and warnings
 use namespace::autoclean;
 
-use pf::constants;
+
 use pf::config::cached;
 use captiveportal::util;
 use captiveportal::DynamicRouting::Factory;

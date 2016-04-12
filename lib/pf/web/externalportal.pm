@@ -33,7 +33,9 @@ use pf::util qw(
 );
 use pf::web::constants;
 use pf::web::util;
-use pf::constants;
+use pf::constants qw(
+    $TRUE
+);
 
 =head1 SUBROUTINES
 

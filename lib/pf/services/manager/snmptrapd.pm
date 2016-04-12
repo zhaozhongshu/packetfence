@@ -14,7 +14,9 @@ pf::services::manager::snmptrapd
 use strict;
 use warnings;
 use Moo;
-use pf::constants;
+use pf::constants qw(
+    $TRUE
+);
 use pf::config qw($management_network);
 use pf::file_paths qw(
     $install_dir

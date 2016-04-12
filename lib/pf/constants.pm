@@ -15,7 +15,7 @@ use strict;
 use warnings;
 use Readonly;
 use base qw(Exporter);
-our @EXPORT = qw(
+our @EXPORT_OK = qw(
     $FALSE $TRUE $YES $NO $default_pid $admin_pid
 );
 

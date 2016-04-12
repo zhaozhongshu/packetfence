@@ -30,7 +30,9 @@ BEGIN { use_ok('pf::services::manager::httpd') }
 BEGIN { use_ok('pf::services::manager::dhcpd') }
 BEGIN { use_ok('pf::services::manager::snmptrapd') }
 
-use pf::constants;
+use pf::constants qw(
+    $TRUE
+);
 use pf::config;
 
 =head1 CONFIGURATION VALIDATION

@@ -17,7 +17,11 @@ use warnings;
 
 use Try::Tiny;
 use pf::client;
-use pf::constants;
+use pf::constants qw(
+    $FALSE
+    $NO
+    $TRUE
+);
 use pf::constants::dhcp qw($DEFAULT_LEASE_LENGTH);
 use pf::clustermgmt;
 use pf::config qw(

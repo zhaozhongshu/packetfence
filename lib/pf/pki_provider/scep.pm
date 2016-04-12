@@ -16,7 +16,7 @@ use strict;
 use warnings;
 use Moo;
 use WWW::Curl::Easy;
-use pf::constants;
+
 use URI::Escape::XS qw(uri_escape uri_unescape);
 use File::Tempdir;
 use File::Slurp qw(read_file);

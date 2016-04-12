@@ -20,7 +20,7 @@ has 'custom_fields' => (is => 'rw', isa => 'ArrayRef[Str]', default => sub {[]})
 with 'captiveportal::Role::MultiSource';
 
 use pf::log;
-use pf::constants;
+
 use captiveportal::util;
 
 =head2 BUILD

@@ -24,7 +24,9 @@ use fingerbank::FilePath;
 use fingerbank::Model::Endpoint;
 use fingerbank::Util;
 use pf::cluster;
-use pf::constants;
+use pf::constants qw(
+    $TRUE
+);
 use pf::constants::fingerbank qw($RATE_LIMIT);
 
 use pf::client;

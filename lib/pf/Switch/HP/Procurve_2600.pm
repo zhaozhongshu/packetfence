@@ -23,7 +23,9 @@ use base ('pf::Switch::HP');
 sub description { 'HP ProCurve 2600 Series' }
 
 # importing switch constants
-use pf::constants;
+use pf::constants qw(
+    $TRUE
+);
 use pf::config qw(
     $MAC
     $PORT

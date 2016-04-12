@@ -18,7 +18,9 @@ use Moose;
 use pf::Moose::Types;
 extends 'pf::condition';
 use pf::log;
-use pf::constants;
+use pf::constants qw(
+    $FALSE
+);
 
 our $logger = get_logger();
 

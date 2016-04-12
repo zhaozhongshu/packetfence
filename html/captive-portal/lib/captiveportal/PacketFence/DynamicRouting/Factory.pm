@@ -20,7 +20,10 @@ use Moose;
 
 use Module::Pluggable search_path => 'captiveportal::DynamicRouting::Module', sub_name => 'modules' , require => 1;
 use pfconfig::cached_hash;
-use pf::constants;
+use pf::constants qw(
+    $FALSE
+    $TRUE
+);
 
 use Graph;
 use List::MoreUtils qw(any);

@@ -18,7 +18,10 @@ use warnings;
 use base qw(Exporter);
 use List::MoreUtils qw(any all uniq);
 use pfconfig::cached_hash;
-use pf::constants;
+use pf::constants qw(
+    $FALSE
+    $TRUE
+);
 use pf::constants::admin_roles qw(@ADMIN_ACTIONS);
 use DateTime::Format::Strptime;
 

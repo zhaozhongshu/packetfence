@@ -18,7 +18,7 @@ use warnings;
 use Crypt::OpenSSL::PKCS12;
 use Moo;
 
-use pf::constants;
+
 use pf::log;
 
 extends 'pf::pki_provider';

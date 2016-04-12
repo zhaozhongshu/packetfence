@@ -30,7 +30,9 @@ use pf::log;
 use Text::CSV;
 use POSIX;
 
-use pf::constants;
+use pf::constants qw(
+    $default_pid
+);
 use pf::config qw(%Config);
 use pf::node;
 use pf::util qw(

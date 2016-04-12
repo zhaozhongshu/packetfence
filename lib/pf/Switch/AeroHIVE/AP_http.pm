@@ -25,7 +25,9 @@ Using the default success page of AeroHIVE works.
 
 use strict;
 use warnings;
-use pf::constants;
+use pf::constants qw(
+    $TRUE
+);
 use pf::config qw(
     $WIRELESS_MAC_AUTH
 );

@@ -19,7 +19,9 @@ use pf::log;
 use Net::SNMP;
 use Try::Tiny;
 
-use pf::constants;
+use pf::constants qw(
+    $TRUE
+);
 use pf::constants::role qw($MAC_DETECTION_ROLE);
 # importing switch constants
 use pf::Switch::constants;

@@ -18,7 +18,10 @@ use strict;
 use warnings;
 
 use pfconfig::namespaces::config;
-use pf::constants;
+use pf::constants qw(
+    $FALSE
+    $TRUE
+);
 use pf::file_paths qw($network_config_file);
 use pf::constants::config;
 use pfconfig::util qw(is_type_inline);

@@ -23,7 +23,9 @@ use Net::SNMP;
 
 use base ('pf::Switch::Nortel');
 
-use pf::constants;
+use pf::constants qw(
+    $FALSE
+);
 use pf::Switch::constants;
 
 

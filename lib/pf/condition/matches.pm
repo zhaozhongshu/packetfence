@@ -16,7 +16,7 @@ use strict;
 use warnings;
 use Moose;
 extends qw(pf::condition);
-use pf::constants;
+
 
 =head2 value
 

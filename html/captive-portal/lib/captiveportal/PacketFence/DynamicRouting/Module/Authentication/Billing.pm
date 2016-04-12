@@ -30,7 +30,10 @@ use pf::util qw(
     normalize_time
 );
 use pf::node;
-use pf::constants;
+use pf::constants qw(
+    $default_pid
+    $TRUE
+);
 
 has '+pid_field' => (default => sub { "email" });
 

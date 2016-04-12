@@ -23,7 +23,7 @@ Sub-commands to interact with pfqueue via pfcmd.
 
 use strict;
 use warnings;
-use pf::constants;
+
 use pf::constants::exit_code qw($EXIT_SUCCESS);
 use pf::constants::pfqueue qw($PFQUEUE_COUNTER);
 use pf::config::pfqueue;

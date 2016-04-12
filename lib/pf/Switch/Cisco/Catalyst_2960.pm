@@ -113,7 +113,9 @@ use Net::SNMP;
 use Try::Tiny;
 
 use base ('pf::Switch::Cisco::Catalyst_2950');
-use pf::constants;
+use pf::constants qw(
+    $TRUE
+);
 use pf::config qw(
     $WIRED_802_1X
     $WIRED_MAC_AUTH

@@ -15,7 +15,9 @@ use strict;
 use warnings;
 use Moo;
 use pf::log;
-use pf::constants;
+use pf::constants qw(
+    $FALSE
+);
 
 has id => (is => 'rw', required => 1);
 

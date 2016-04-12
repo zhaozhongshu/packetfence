@@ -15,7 +15,9 @@ use warnings;
 
 use base ('pf::Switch');
 
-use pf::constants;
+use pf::constants qw(
+    $TRUE
+);
 
 =head1 SUBROUTINES
 

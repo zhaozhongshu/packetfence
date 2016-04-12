@@ -61,7 +61,9 @@ use base ('pf::Switch');
 use POSIX;
 use Try::Tiny;
 
-use pf::constants;
+use pf::constants qw(
+    $TRUE
+);
 use pf::config qw(
     $MAC
     $SSID

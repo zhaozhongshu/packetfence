@@ -38,7 +38,11 @@ use Net::SNMP;
 
 use base ('pf::Switch');
 
-use pf::constants;
+use pf::constants qw(
+    $FALSE
+    $NO
+    $TRUE
+);
 use pf::constants::role qw($VOICE_ROLE);
 use pf::Switch::constants;
 use pf::util qw(

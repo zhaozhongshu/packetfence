@@ -34,7 +34,10 @@ BEGIN {
     @EXPORT_OK = qw(reevaluate_access);
 }
 
-use pf::constants;
+use pf::constants qw(
+    $FALSE
+    $TRUE
+);
 use pf::config qw(
     $INLINE_API_LEVEL
     $ROLE_API_LEVEL

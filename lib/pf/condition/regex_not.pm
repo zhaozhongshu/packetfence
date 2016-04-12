@@ -18,7 +18,7 @@ use Moose;
 
 
 extends qw(pf::condition::regex);
-use pf::constants;
+
 
 =head2 match
 

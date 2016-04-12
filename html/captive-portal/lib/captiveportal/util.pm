@@ -18,7 +18,10 @@ our @EXPORT = qw(
 );
 
 use Tie::IxHash;
-use pf::constants;
+use pf::constants qw(
+    $FALSE
+    $TRUE
+);
 
 =head2 clean_id
 

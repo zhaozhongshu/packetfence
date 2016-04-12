@@ -17,7 +17,9 @@ use POSIX;
 
 use base ('pf::Switch');
 
-use pf::constants;
+use pf::constants qw(
+    $TRUE
+);
 use pf::file_paths qw($lib_dir);
 use pf::config qw(
     $MAC

@@ -34,7 +34,10 @@ use warnings;
 
 use base ('pf::Switch');
 
-use pf::constants;
+use pf::constants qw(
+    $FALSE
+    $TRUE
+);
 use pf::config qw($MAC $PORT);
 use pf::locationlog;
 # importing switch constants

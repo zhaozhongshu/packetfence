@@ -19,7 +19,10 @@ use strict;
 use warnings;
 
 use pf::log;
-use pf::constants;
+use pf::constants qw(
+    $FALSE
+    $TRUE
+);
 use pf::constants::config qw($TIME_MODIFIER_RE $DEADLINE_UNIT);
 use pf::config qw(%Config);
 use pf::file_paths qw($ssl_configuration_file);

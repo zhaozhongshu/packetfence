@@ -24,7 +24,11 @@ use Try::Tiny;
 our $VERSION = 2.10;
 
 use pf::CHI;
-use pf::constants;
+use pf::constants qw(
+    $FALSE
+    $NO
+    $TRUE
+);
 use pf::constants::role qw($VOICE_ROLE $MAC_DETECTION_ROLE);
 use pf::config qw(
     $ROLES_API_LEVEL

@@ -89,7 +89,9 @@ use POSIX;
 
 use base ('pf::Switch::ThreeCom::SS4500');
 
-use pf::constants;
+use pf::constants qw(
+    $TRUE
+);
 use pf::config qw(
     $MAC
     $PORT

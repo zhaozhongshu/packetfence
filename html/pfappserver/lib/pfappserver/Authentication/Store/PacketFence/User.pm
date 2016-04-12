@@ -6,7 +6,9 @@ use base qw/Catalyst::Authentication::User Class::Accessor::Fast/;
 use strict;
 use warnings;
 
-use pf::constants;
+use pf::constants qw(
+    $FALSE
+);
 use pf::config qw($WEB_ADMIN_ALL);
 use pf::authentication;
 use pf::Authentication::constants;

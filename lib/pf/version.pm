@@ -15,7 +15,7 @@ Handles versioning checking routines
 use strict;
 use warnings;
 
-use pf::constants;
+
 use pf::db;
 use pf::file_paths qw($conf_dir);
 use pf::log;

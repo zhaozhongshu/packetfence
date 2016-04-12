@@ -17,7 +17,10 @@ use warnings;
 use Moose;
 use MooseX::Types::Moose qw(HashRef);
 extends qw(pf::condition);
-use pf::constants;
+use pf::constants qw(
+    $FALSE
+    $TRUE
+);
 
 =head2 lookup
 

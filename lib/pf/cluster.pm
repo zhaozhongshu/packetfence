@@ -30,7 +30,10 @@ use pf::file_paths qw(
 use pf::util qw(
     valid_ip
 );
-use pf::constants;
+use pf::constants qw(
+    $FALSE
+    $TRUE
+);
 use Config::IniFiles;
 
 use Exporter;

@@ -41,7 +41,10 @@ use Net::SNMP;
 
 use base ('pf::Switch::Cisco::WLC');
 
-use pf::constants;
+use pf::constants qw(
+    $FALSE
+    $TRUE
+);
 use pf::config qw(
     $MAC
     $SSID

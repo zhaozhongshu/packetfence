@@ -15,7 +15,10 @@ pf::scan::wmi::rules deny or allow based on rules.
 use strict;
 use warnings;
 
-use pf::constants;
+use pf::constants qw(
+    $FALSE
+    $TRUE
+);
 use pf::log;
 use Net::WMIClient qw(wmiclient);
 use Config::IniFiles;
