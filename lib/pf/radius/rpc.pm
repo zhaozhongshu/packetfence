@@ -19,7 +19,7 @@ use WWW::Curl::Easy;
 use Data::MessagePack;
 
 use base qw(Exporter);
-our @EXPORT = qw(send_rpc_request build_msgpack_request send_msgpack_notification);
+our @EXPORT_OK = qw(send_rpc_request build_msgpack_request send_msgpack_notification);
 
 # Configuration parameter
 use constant SOAP_PORT => '7070'; #TODO: See note1

@@ -49,7 +49,9 @@ use constant DEFAULT_RPC_PORT   => '7070';
 use constant DEFAULT_RPC_PROTO  => 'http';
 use constant DEFAULT_RPC_USER   => undef;
 use constant DEFAULT_RPC_PASS   => undef;
-use pf::radius::rpc;
+use pf::radius::rpc qw(
+    send_rpc_request
+);
 
 
 require 5.8.8;
