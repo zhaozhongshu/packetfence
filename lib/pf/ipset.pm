@@ -45,7 +45,7 @@ use pf::util qw(
     pf_run
 );
 use pf::violation qw(violation_view_open_uniq violation_count);
-use pf::iplog;
+
 use pf::authentication;
 use pf::constants::parking qw($PARKING_IPSET_NAME);
 

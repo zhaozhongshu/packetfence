@@ -39,7 +39,7 @@ use pf::db qw(
     db_query_execute
     get_db_handle
 );
-use pf::iplog;
+
 use pf::scan::nessus;
 use pf::scan::openvas;
 use pf::scan::wmi;

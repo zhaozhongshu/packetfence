@@ -64,7 +64,7 @@ use pf::client;
 use pf::cluster;
 use pf::firewallsso;
 use pf::constants::dhcp qw($DEFAULT_LEASE_LENGTH);
-use pf::iplog;
+
 
 use Readonly;
 

@@ -23,7 +23,7 @@ use strict;
 use warnings;
 use lib qw(/usr/local/pf/lib);
 use pf::config qw(%Config);
-use pf::iplog;
+
 
 use Getopt::Long;
 use Pod::Usage;

@@ -1,7 +1,7 @@
 package captiveportal::PacketFence::Model::Portal::Session;
 use Moose;
 
-use pf::iplog;
+
 use pf::config qw(
     $management_network
     %CAPTIVE_PORTAL

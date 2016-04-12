@@ -19,7 +19,7 @@ use JSON;
 use Moo;
 
 use pf::api::queue;
-use pf::iplog;
+
 use pf::log;
 
 extends qw(pf::detect::parser);

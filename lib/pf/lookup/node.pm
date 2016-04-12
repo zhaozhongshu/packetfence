@@ -24,7 +24,9 @@ use pf::accounting qw(
     node_accounting_daily_time node_accounting_weekly_time node_accounting_monthly_time node_accounting_yearly_time
 );
 use pf::config;
-use pf::iplog;
+use pf::iplog qw(
+    iplog_history
+);
 use pf::locationlog;
 use pf::node;
 use pf::useragent qw(node_useragent_view);

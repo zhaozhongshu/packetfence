@@ -23,7 +23,7 @@ use pf::log;
 use UNIVERSAL::require;
 
 use pf::config;
-use pf::iplog;
+
 use pf::locationlog qw(locationlog_view_open_mac locationlog_get_session);
 use pf::Portal::Session;
 use pf::util qw(

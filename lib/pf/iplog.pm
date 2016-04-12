@@ -24,9 +24,9 @@ use constant IPLOG_CACHE_EXPIRE => 60;
 
 BEGIN {
     use Exporter ();
-    our ( @ISA, @EXPORT );
+    our ( @ISA, @EXPORT_OK );
     @ISA = qw(Exporter);
-    @EXPORT = qw(
+    @EXPORT_OK = qw(
         iplog_db_prepare
         $iplog_db_prepared
 

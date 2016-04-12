@@ -21,7 +21,7 @@ use pf::util qw(clean_mac);
 use WWW::Curl::Easy;
 use XML::Simple;
 use pf::log;
-use pf::iplog;
+
 use pf::ConfigStore::Provisioning;
 
 =head1 Atrributes

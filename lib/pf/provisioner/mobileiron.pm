@@ -21,7 +21,7 @@ use JSON::MaybeXS qw( decode_json );
 use pf::util qw(clean_mac);
 use XML::Simple;
 use pf::log;
-use pf::iplog;
+
 use MIME::Base64;
 
 =head1 Atrributes

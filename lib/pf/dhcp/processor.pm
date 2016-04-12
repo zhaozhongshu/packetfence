@@ -38,7 +38,7 @@ use pf::config::cached;
 
 use pf::firewallsso;
 use pf::inline::custom $INLINE_API_LEVEL;
-use pf::iplog;
+
 use pf::lookup::node;
 use pf::node;
 use pf::util qw(
