@@ -14,9 +14,9 @@ use constant GRAPH => 'pfcmd::graph';
 
 BEGIN {
     use Exporter ();
-    our ( @ISA, @EXPORT );
+    our ( @ISA, @EXPORT_OK );
     @ISA    = qw(Exporter);
-    @EXPORT = qw(
+    @EXPORT_OK = qw(
         $graph_db_prepared
         graph_db_prepare
 
