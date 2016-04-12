@@ -26,9 +26,9 @@ use constant NODECATEGORY => 'nodecategory';
 
 BEGIN {
     use Exporter ();
-    our ( @ISA, @EXPORT );
+    our ( @ISA, @EXPORT_OK );
     @ISA = qw(Exporter);
-    @EXPORT = qw(
+    @EXPORT_OK = qw(
         nodecategory_db_prepare
         $nodecategory_db_prepared
 

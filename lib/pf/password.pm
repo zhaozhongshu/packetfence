@@ -38,7 +38,9 @@ use pf::log;
 use POSIX;
 use Readonly;
 
-use pf::nodecategory;
+use pf::nodecategory qw(
+    nodecategory_lookup
+);
 use pf::Authentication::constants;
 use Crypt::Eksblowfish::Bcrypt qw(bcrypt_hash en_base64 de_base64 );
 use Bytes::Random::Secure;

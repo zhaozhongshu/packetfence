@@ -30,7 +30,10 @@ use pf::constants qw(
 use pf::config qw($EAP);
 use pf::error qw(is_error is_success);
 use pf::node;
-use pf::nodecategory;
+use pf::nodecategory qw(
+    nodecategory_lookup
+    nodecategory_view
+);
 use pf::iplog qw(
     iplog_history
 );

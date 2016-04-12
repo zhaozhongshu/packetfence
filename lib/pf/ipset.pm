@@ -37,7 +37,9 @@ use pf::config qw(
     $INLINE
 );
 use pf::node qw(nodes_registered_not_violators node_view node_deregister $STATUS_REGISTERED);
-use pf::nodecategory;
+use pf::nodecategory qw(
+    nodecategory_view_all
+);
 use pf::util qw(
     clean_ip
     clean_mac

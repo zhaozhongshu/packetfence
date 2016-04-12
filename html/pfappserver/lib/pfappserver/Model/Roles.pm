@@ -18,7 +18,14 @@ use namespace::autoclean;
 
 use pf::log;
 use pf::error qw(is_error is_success);
-use pf::nodecategory;
+use pf::nodecategory qw(
+    nodecategory_add
+    nodecategory_delete
+    nodecategory_exist
+    nodecategory_modify
+    nodecategory_view
+    nodecategory_view_all
+);
 use pf::constants::role qw(%STANDARD_ROLES);
 
 =head1 METHODS

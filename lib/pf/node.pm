@@ -98,7 +98,12 @@ use pf::db qw(
     db_query_execute
     get_db_handle
 );
-use pf::nodecategory;
+use pf::nodecategory qw(
+    nodecategory_exist
+    nodecategory_lookup
+    nodecategory_view
+    nodecategory_view_by_name
+);
 use pf::constants::scan qw($SCAN_VID $POST_SCAN_VID);
 use pf::util qw(
     clean_mac
