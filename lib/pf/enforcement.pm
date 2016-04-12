@@ -45,7 +45,7 @@ use pf::config qw(
     $WIRELESS
 );
 use pf::inline::custom $INLINE_API_LEVEL;
-use pf::iptables;
+
 use pf::locationlog;
 use pf::node;
 use pf::SwitchFactory;

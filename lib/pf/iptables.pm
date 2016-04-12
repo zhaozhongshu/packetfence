@@ -27,9 +27,9 @@ use NetAddr::IP;
 
 BEGIN {
     use Exporter ();
-    our ( @ISA, @EXPORT );
+    our ( @ISA, @EXPORT_OK );
     @ISA = qw(Exporter);
-    @EXPORT = qw(
+    @EXPORT_OK = qw(
         iptables_generate iptables_save iptables_restore
         iptables_mark_node iptables_unmark_node get_mangle_mark_for_mac update_mark
     );

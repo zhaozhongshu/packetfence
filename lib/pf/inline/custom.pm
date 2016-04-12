@@ -18,7 +18,7 @@ use warnings;
 
 use base ('pf::inline');
 use pf::config;
-use pf::iptables;
+
 use pf::node qw(node_attributes);
 use pf::violation qw(violation_count_reevaluate_access);
 
