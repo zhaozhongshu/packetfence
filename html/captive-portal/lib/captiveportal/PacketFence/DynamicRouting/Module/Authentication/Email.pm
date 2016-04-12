@@ -16,7 +16,7 @@ with 'captiveportal::Role::FieldValidation';
 
 has '+source' => (isa => 'pf::Authentication::Source::EmailSource');
 
-use pf::auth_log;
+
 use pf::config qw(%Config);
 use pf::constants qw($TRUE);
 use pf::log;

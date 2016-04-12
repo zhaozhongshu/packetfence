@@ -19,7 +19,7 @@ use pf::util qw(
 );
 use pf::config qw($default_pid);
 use pf::log;
-use pf::auth_log;
+
 use pf::Authentication::constants;
 
 has '+source' => (isa => 'pf::Authentication::Source::NullSource');

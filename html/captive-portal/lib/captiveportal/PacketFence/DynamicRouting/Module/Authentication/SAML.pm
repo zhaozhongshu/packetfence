@@ -18,7 +18,7 @@ use pf::util qw(
     isenabled
     strip_username
 );
-use pf::auth_log;
+
 
 has '+source' => (isa => 'pf::Authentication::Source::SAMLSource');
 

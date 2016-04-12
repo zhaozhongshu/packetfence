@@ -17,9 +17,9 @@ Readonly our $INVALIDATED => "invalidated";
 
 BEGIN {
     use Exporter ();
-    our ( @ISA, @EXPORT );
+    our ( @ISA, @EXPORT_OK );
     @ISA = qw(Exporter);
-    @EXPORT = qw(
+    @EXPORT_OK = qw(
         auth_log_db_prepare
         $auth_log_db_prepared
     );

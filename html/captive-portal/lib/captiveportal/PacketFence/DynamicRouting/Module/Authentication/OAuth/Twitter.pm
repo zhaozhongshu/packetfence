@@ -15,7 +15,7 @@ extends 'captiveportal::DynamicRouting::Module::Authentication::OAuth';
 
 has '+source' => (isa => 'pf::Authentication::Source::TwitterSource');
 
-use pf::auth_log;
+
 use pf::log;
 
 =head2 get_client

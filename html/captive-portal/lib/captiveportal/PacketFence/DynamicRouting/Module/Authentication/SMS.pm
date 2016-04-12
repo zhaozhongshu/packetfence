@@ -24,7 +24,7 @@ use pf::sms_carrier qw(
     sms_carrier_view_all
 );
 use pf::web::guest;
-use pf::auth_log;
+
 
 has '+pid_field' => (default => sub { "telephone" });
 

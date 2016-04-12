@@ -15,7 +15,7 @@ extends 'captiveportal::DynamicRouting::Module::Authentication';
 
 use pf::log;
 use pf::config;
-use pf::auth_log;
+
 use Net::OAuth2::Client;
 
 has 'token_scheme' => (is => 'rw', default => sub {"auth-header:OAuth"});
