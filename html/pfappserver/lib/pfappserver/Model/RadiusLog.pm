@@ -15,7 +15,11 @@ use warnings;
 
 use Moose;
 use namespace::autoclean;
-use pf::radius_audit_log;
+use pf::radius_audit_log qw(
+    radius_audit_log_custom
+    radius_audit_log_view
+    radius_audit_log_view_all
+);
 use pf::error qw(is_error is_success);
 use SQL::Abstract::More;
 use POSIX qw(ceil);

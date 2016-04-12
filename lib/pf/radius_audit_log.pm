@@ -19,9 +19,9 @@ use constant RADIUS_AUDIT_LOG => 'radius_audit_log';
 
 BEGIN {
     use Exporter ();
-    our ( @ISA, @EXPORT );
+    our ( @ISA, @EXPORT_OK );
     @ISA = qw(Exporter);
-    @EXPORT = qw(
+    @EXPORT_OK = qw(
         $radius_audit_log_db_prepared
         radius_audit_log_db_prepare
         radius_audit_log_delete

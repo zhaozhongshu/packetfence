@@ -53,7 +53,9 @@ use pf::violation qw(violation_maintenance);
 use pf::ConfigStore::Provisioning;
 use pf::factory::provisioner;
 use pf::SwitchFactory;
-use pf::radius_audit_log;
+use pf::radius_audit_log qw(
+    radius_audit_log_cleanup
+);
 use pf::StatsD;
 use pf::person;
 use pf::fingerbank;
