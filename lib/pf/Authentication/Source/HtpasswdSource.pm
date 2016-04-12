@@ -10,7 +10,10 @@ pf::Authentication::Source::HtpasswdSource
 
 use pf::constants qw($TRUE $FALSE);
 use pf::Authentication::constants;
-use pf::constants::authentication::messages;
+use pf::constants::authentication::messages qw(
+    $AUTH_FAIL_MSG
+    $AUTH_SUCCESS_MSG
+);
 use pf::Authentication::Source;
 use pf::util;
 use pf::log;

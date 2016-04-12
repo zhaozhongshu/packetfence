@@ -25,7 +25,9 @@ use pf::Authentication::Condition;
 use pf::Authentication::Rule;
 use pf::Authentication::Source;
 use pf::Authentication::constants;
-use pf::constants::authentication::messages;
+use pf::constants::authentication::messages qw(
+    $AUTH_FAIL_MSG
+);
 
 use Module::Pluggable
   'search_path' => [qw(pf::Authentication::Source)],
