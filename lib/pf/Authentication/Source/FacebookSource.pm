@@ -8,7 +8,9 @@ pf::Authentication::Source::FacebookSource
 
 =cut
 
-use pf::person;
+use pf::person qw(
+    person_modify
+);
 use pf::log;
 use Moose;
 extends 'pf::Authentication::Source::OAuthSource';

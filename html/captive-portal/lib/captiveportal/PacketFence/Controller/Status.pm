@@ -11,7 +11,9 @@ use pf::constants qw(
 );
 use pf::config;
 use pf::node;
-use pf::person;
+use pf::person qw(
+    person_nodes
+);
 
 
 BEGIN { extends 'captiveportal::Base::Controller'; }

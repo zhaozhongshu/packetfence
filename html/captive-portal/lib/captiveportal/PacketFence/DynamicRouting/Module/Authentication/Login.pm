@@ -25,7 +25,7 @@ use pf::config::util qw(
 );
 use List::MoreUtils qw(all);
 use pf::auth_log;
-use pf::person;
+
 use pf::Authentication::constants;
 use pf::web::guest;
 

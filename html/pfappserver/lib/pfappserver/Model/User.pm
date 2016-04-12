@@ -24,7 +24,15 @@ use pf::config qw(%Config);
 use pf::Authentication::constants;
 use pf::password;
 use pf::error qw(is_error is_success);
-use pf::person;
+use pf::person qw(
+    person_count_all
+    person_delete
+    person_modify
+    person_nodes
+    person_view
+    person_view_all
+    person_violations
+);
 use pf::log;
 use pf::node;
 use pf::violation;

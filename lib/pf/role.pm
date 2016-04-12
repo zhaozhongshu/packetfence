@@ -51,7 +51,13 @@ use pf::authentication;
 use pf::Authentication::constants;
 use pf::Portal::ProfileFactory;
 use pf::access_filter::vlan;
-use pf::person;
+use pf::person qw(
+    person_add
+    person_exist
+    person_modify
+    person_view
+    person_view_simple
+);
 use pf::lookup::person;
 use pf::util::statsd qw(called);
 use pf::StatsD::Timer;

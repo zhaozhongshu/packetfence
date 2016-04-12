@@ -17,7 +17,9 @@ use Tie::IxHash;
 use List::MoreUtils qw(uniq);
 use pf::constants qw($FALSE $TRUE);
 use pf::config qw(%Config);
-use pf::person;
+use pf::person qw(
+    person_modify
+);
 use pf::util qw(
     isenabled
 );

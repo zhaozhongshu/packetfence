@@ -20,7 +20,10 @@ use pf::config qw(
 use Hash::Merge qw(merge);
 use List::MoreUtils qw(any);
 use pf::node;
-use pf::person;
+use pf::person qw(
+    person_add
+    person_exist
+);
 
 has id => (is => 'ro', required => 1);
 

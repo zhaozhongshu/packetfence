@@ -42,7 +42,9 @@ use pf::locationlog qw(
 );
 use pf::log;
 use pf::node;
-use pf::person;
+use pf::person qw(
+    person_exist
+);
 use pf::enforcement qw(reevaluate_access);
 use pf::useragent qw(node_useragent_view);
 use pf::util qw(

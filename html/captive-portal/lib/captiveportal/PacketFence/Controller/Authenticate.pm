@@ -78,7 +78,10 @@ sub authenticationLogin : Private {
     my ( $return, $message, $source_id );
     $logger->debug("authentication attempt");
     if ($request->{'match'} eq "status/login") {
-        use pf::person;
+        use pf::person qw(
+    person_modify
+    person_view
+);
         my $person_info = pf::person::person_view($request->param("username"));
         my $source = pf::authentication::getAuthenticationSource($person_info->{source});
         if (defined($source) && $source->{'class'} eq 'external') {

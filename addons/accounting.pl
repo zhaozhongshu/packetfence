@@ -26,7 +26,7 @@ use lib INSTALL_DIR . "/lib";
 use pf::CHI;
 use pf::SwitchFactory;
 
-use pf::person;
+
 
 use pf::node;
 use pf::ifoctetslog qw(

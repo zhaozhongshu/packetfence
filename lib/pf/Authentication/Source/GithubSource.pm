@@ -8,7 +8,9 @@ pf::Authentication::Source::GithubSource
 
 =cut
 
-use pf::person;
+use pf::person qw(
+    person_modify
+);
 use Moose;
 extends 'pf::Authentication::Source::OAuthSource';
 with 'pf::Authentication::CreateLocalAccountRole';

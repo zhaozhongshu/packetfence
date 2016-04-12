@@ -13,7 +13,7 @@ Role for portal modules with custom fields
 use HTML::FormHandler::Moose::Role;
 with 'pfappserver::Base::Form::Role::Help';
 
-use pf::person;
+
 
 ## Definition
 has_field 'custom_fields' =>

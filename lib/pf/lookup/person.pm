@@ -20,7 +20,10 @@ use warnings;
 use Net::LDAP;
 
 use pf::log;
-use pf::person;
+use pf::person qw(
+    person_exist
+    person_modify
+);
 
 use pf::authentication;
 use pf::pfqueue::producer::redis;

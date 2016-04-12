@@ -25,9 +25,9 @@ use constant PERSON => 'person';
 
 BEGIN {
     use Exporter ();
-    our ( @ISA, @EXPORT );
+    our ( @ISA, @EXPORT_OK );
     @ISA = qw(Exporter);
-    @EXPORT = qw(
+    @EXPORT_OK = qw(
         $person_db_prepared
         person_db_prepare
 

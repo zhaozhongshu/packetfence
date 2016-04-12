@@ -11,7 +11,9 @@ pf::Authentication::Source::LinkedInSource
 use WWW::Curl::Easy;
 use JSON::MaybeXS qw( decode_json );
 use Moose;
-use pf::person;
+use pf::person qw(
+    person_modify
+);
 extends 'pf::Authentication::Source::OAuthSource';
 with 'pf::Authentication::CreateLocalAccountRole';
 

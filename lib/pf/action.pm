@@ -23,7 +23,9 @@ use warnings;
 use pf::log;
 use Readonly;
 use pf::node;
-use pf::person;
+use pf::person qw(
+    person_view
+);
 use pf::util qw(
     mysql_date
     pf_run
