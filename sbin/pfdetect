@@ -29,7 +29,7 @@ BEGIN {
 }
 
 
-use pf::class;
+
 use pf::config qw(%ConfigDetect);
 use pf::config::cached;
 

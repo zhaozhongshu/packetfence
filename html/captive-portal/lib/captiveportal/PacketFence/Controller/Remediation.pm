@@ -3,7 +3,9 @@ use Moose;
 use namespace::autoclean;
 
 use pf::violation;
-use pf::class;
+use pf::class qw(
+    class_view
+);
 use pf::node;
 use List::Util qw(first);
 use pf::config qw(%Config);

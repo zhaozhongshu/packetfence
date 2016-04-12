@@ -20,9 +20,9 @@ use constant CLASS => 'class';
 
 BEGIN {
     use Exporter ();
-    our ( @ISA, @EXPORT );
+    our ( @ISA, @EXPORT_OK );
     @ISA = qw(Exporter);
-    @EXPORT = qw(
+    @EXPORT_OK = qw(
         class_db_prepare
         $class_db_prepared
 

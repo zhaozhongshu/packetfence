@@ -2,7 +2,9 @@ package captiveportal::PacketFence::Controller::Violation;
 use Moose;
 use namespace::autoclean;
 use pf::violation;
-use pf::class;
+use pf::class qw(
+    class_view
+);
 use pf::constants::scan qw($SCAN_VID $POST_SCAN_VID $PRE_SCAN_VID);
 use pf::log;
 

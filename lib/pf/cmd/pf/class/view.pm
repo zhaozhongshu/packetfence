@@ -14,7 +14,10 @@ pf::cmd::pf::class::view
 use strict;
 use warnings;
 use base qw(pf::cmd);
-use pf::class;
+use pf::class qw(
+    class_view
+    class_view_all
+);
 
 sub run {
     my ($self) = @_;

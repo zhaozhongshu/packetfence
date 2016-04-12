@@ -15,7 +15,7 @@ use pf::Portal::Session;
 use pf::node;
 use pf::useragent;
 use pf::violation;
-use pf::class;
+
 use Cache::FileCache;
 use List::Util qw(first);
 use POSIX;

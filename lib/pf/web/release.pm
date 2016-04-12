@@ -18,7 +18,9 @@ use Date::Parse;
 use pf::log;
 use URI::Escape::XS qw(uri_escape);
 
-use pf::class;
+use pf::class qw(
+    class_view
+);
 use pf::config;
 use pf::file_paths qw($bin_dir);
 
