@@ -33,7 +33,10 @@ BEGIN {
     );
 }
 
-use pf::action;
+use pf::action qw(
+    action_add
+    action_delete_all
+);
 use pf::db;
 
 # The next two variables and the _prepare sub are required for database handling magic (see pf::db)

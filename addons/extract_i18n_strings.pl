@@ -15,7 +15,7 @@ can be localized.
 
 use File::Find;
 use lib qw(/usr/local/pf/lib /usr/local/pf/html/pfappserver/lib);
-use pf::action;
+
 use pf::admin_roles;
 use pf::Authentication::Source;
 use pf::Authentication::constants;

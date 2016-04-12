@@ -108,7 +108,10 @@ BEGIN {
         violation_count_open_vid
     );
 }
-use pf::action;
+use pf::action qw(
+    action_execute
+    action_exist
+);
 use pf::accounting qw($ACCOUNTING_TRIGGER_RE);
 use pf::class qw(class_view);
 use pf::constants qw(

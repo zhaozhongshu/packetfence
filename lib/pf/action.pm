@@ -62,9 +62,9 @@ Readonly::Array our @VIOLATION_ACTIONS =>
 
 BEGIN {
     use Exporter ();
-    our ( @ISA, @EXPORT );
+    our ( @ISA, @EXPORT_OK );
     @ISA = qw(Exporter);
-    @EXPORT = qw(
+    @EXPORT_OK = qw(
         $action_db_prepared  action_db_prepare
 
         action_add           action_exist

@@ -28,7 +28,7 @@ BEGIN {
     use pf::log(service => 'pfdetect');
 }
 
-use pf::action;
+
 use pf::class;
 use pf::config qw(%ConfigDetect);
 use pf::config::cached;

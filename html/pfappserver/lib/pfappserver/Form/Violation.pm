@@ -16,7 +16,7 @@ with 'pfappserver::Base::Form::Role::Help';
 
 use HTTP::Status qw(:constants is_success);
 
-use pf::action;
+
 use pf::log;
 
 has '+field_name_space' => ( default => 'pfappserver::Form::Field' );
