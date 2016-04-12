@@ -26,7 +26,7 @@ use POSIX;
 use Readonly;
 
 our $VERSION = 1.000000;
-our @EXPORT = qw($statsd);
+our @EXPORT_OK = qw($statsd);
 our $statsd;
 
 Readonly my $GRAPHITE_DELIMITER => ".";

@@ -70,7 +70,7 @@ use pf::SwitchFactory;
 use pf::radius_audit_log qw(
     radius_audit_log_cleanup
 );
-use pf::StatsD;
+
 use pf::person qw(
     person_cleanup
 );

@@ -52,7 +52,7 @@ How to use time different parts of a function
 
 use strict;
 use warnings;
-use pf::StatsD;
+
 use Time::HiRes;
 
 =head2 $timer = $self->new({ 'stat' => "stat", sample_rate => $sample_rate });
