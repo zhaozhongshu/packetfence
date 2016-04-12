@@ -23,7 +23,9 @@ use pf::util qw(
 use HTTP::Status qw(:constants is_error is_success);
 use List::MoreUtils qw(part any);
 use pfconfig::manager;
-use pf::freeradius;
+use pf::freeradius qw(
+    freeradius_populate_nas_config
+);
 
 extends qw(pf::ConfigStore Exporter);
 with 'pf::ConfigStore::Hierarchy';

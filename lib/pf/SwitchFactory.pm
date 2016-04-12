@@ -23,7 +23,7 @@ use pf::util qw(
     valid_ip
     valid_mac
 );
-use pf::freeradius;
+
 use Module::Load;
 use Benchmark qw(:all);
 use List::Util qw(first);

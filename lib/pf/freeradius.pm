@@ -34,9 +34,9 @@ use constant SWITCHES_CONF => '/switches.conf';
 
 BEGIN {
     use Exporter ();
-    our ( @ISA, @EXPORT );
+    our ( @ISA, @EXPORT_OK );
     @ISA = qw(Exporter);
-    @EXPORT = qw(
+    @EXPORT_OK = qw(
         freeradius_db_prepare
         $freeradius_db_prepared
 
