@@ -19,7 +19,9 @@ use Moose;
 use pfappserver::Form::SavedSearch;
 use pf::admin_roles;
 use List::MoreUtils qw(none);
-use pf::pfcmd::checkup;
+use pf::pfcmd::checkup qw(
+    sanity_check
+);
 
 BEGIN { extends 'pfappserver::Base::Controller'; }
 

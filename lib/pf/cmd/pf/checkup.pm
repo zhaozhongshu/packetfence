@@ -20,7 +20,9 @@ use warnings;
 use pf::services;
 use pf::constants;
 use pf::constants::exit_code qw($EXIT_SUCCESS $EXIT_FAILURE $EXIT_FATAL);
-use pf::pfcmd::checkup;
+use pf::pfcmd::checkup qw(
+    sanity_check
+);
 use base qw(pf::cmd);
 sub _run {
     my ($self) = @_;
