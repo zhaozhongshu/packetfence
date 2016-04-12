@@ -86,7 +86,9 @@ use pf::Switch 2.00;
 use pf::Switch::constants;
 use pf::SwitchFactory;
 
-use pf::traplog;
+use pf::traplog qw(
+    traplog_insert
+);
 use pf::util qw(
     clean_mac
     isdisabled

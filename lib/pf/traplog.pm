@@ -21,9 +21,9 @@ use constant TRAPLOG => 'traplog';
 
 BEGIN {
     use Exporter ();
-    our ( @ISA, @EXPORT );
+    our ( @ISA, @EXPORT_OK );
     @ISA    = qw(Exporter);
-    @EXPORT = qw(
+    @EXPORT_OK = qw(
         $traplog_db_prepared
         traplog_db_prepare
 

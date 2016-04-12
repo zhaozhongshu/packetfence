@@ -48,7 +48,9 @@ use pf::db qw(
     db_disconnect
 );
 use pf::services;
-use pf::traplog;
+use pf::traplog qw(
+    traplog_cleanup
+);
 use pf::util qw(
     isenabled
 );
