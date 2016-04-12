@@ -35,7 +35,10 @@ BEGIN {
 use pf::file_paths qw($var_dir);;
 use pf::util;
 use pf::config::pfqueue;
-use pf::services::util;
+use pf::services::util qw(
+    daemonize
+    deletepid
+);
 use pf::db;
 use Config::IniFiles;
 use pf::SwitchFactory;

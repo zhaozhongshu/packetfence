@@ -82,7 +82,10 @@ use pf::SwitchFactory;
 use pf::traplog;
 use pf::util;
 use pf::config::util;
-use pf::services::util;
+use pf::services::util qw(
+    daemonize
+    deletepid
+);
 use pf::violation;
 use pf::role::custom $ROLE_API_LEVEL;
 

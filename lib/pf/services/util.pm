@@ -16,7 +16,7 @@ Util functions for pf services
 use strict;
 use warnings;
 use base qw(Exporter);
-our @EXPORT = qw(daemonize createpid deletepid);
+our @EXPORT_OK = qw(daemonize createpid deletepid);
 use Log::Log4perl::Level;
 use pf::log;
 use pf::log::trapper;
