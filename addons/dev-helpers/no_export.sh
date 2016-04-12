@@ -13,7 +13,7 @@ for module in $MODULES ;do
     ALL_EXPORTED_VALUES="$(perl -Ilib -M$m -e'print join("\n",  @'"$m"'::EXPORT);')"
 
     #Create a regex for subs and scalars
-    ALL_EXPORTED_SUBS="$(perl -Ilib -M$m -e'print join("|", map { $a= $_; $a=~s/\$/\\\$/;$a  } grep { /^([a-zA_Z0-9_]|\$)/ }  @'"$m"'::EXPORT);')"
+    ALL_EXPORTED_SUBS="$(perl -Ilib -M$m -e'print join("|", map { $a= $_; $a=~s/\$/\\\$/;$a  } sort { length($b) <=> length($a) } grep { /^([a-zA_Z0-9_]|\$)/ }  @'"$m"'::EXPORT);')"
     #Create a regex for arrays and hashes
     ALL_EXPORTED_VARS_RX="$(perl -Ilib -M$m -e'print join("|", map { $a= $_; $a=~s/^./\\\$/;($a,$_)  } grep { /^[@%]/ }  @'"$m"'::EXPORT);')"
     ALL_EXPORTED_VARS="$(perl -Ilib -M$m -e'print join("|", map { $a= $_; $a=~s/^./\\\$/;($a,$_)  } grep { /^[@%]/ }  @'"$m"'::EXPORT);')"
