@@ -80,7 +80,15 @@ use pf::config qw(
 );
 use pf::floatingdevice::custom;
 use pf::inline::custom $INLINE_API_LEVEL;
-use pf::locationlog;
+use pf::locationlog qw(
+    locationlog_close_all
+    locationlog_synchronize
+    locationlog_update_end_mac
+    locationlog_update_end_switchport_only_VoIP
+    locationlog_view_open_mac
+    locationlog_view_open_switchport_no_VoIP
+    locationlog_view_open_switchport_only_VoIP
+);
 use pf::node;
 use pf::Switch 2.00;
 use pf::Switch::constants;

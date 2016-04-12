@@ -23,7 +23,9 @@ use strict;
 use warnings;
 use lib qw(/usr/local/pf/lib);
 use pf::config qw(%Config);
-use pf::locationlog;
+use pf::locationlog qw(
+    locationlog_cleanup
+);
 
 use Getopt::Long;
 use Pod::Usage;

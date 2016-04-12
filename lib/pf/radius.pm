@@ -43,7 +43,11 @@ use pf::config qw(
     $WIRELESS_MAC_AUTH
     $WIRELESS_802_1X
 );
-use pf::locationlog;
+use pf::locationlog qw(
+    locationlog_last_entry_mac
+    locationlog_update_end_mac
+    locationlog_view_open_mac
+);
 use pf::node;
 use pf::Switch;
 use pf::SwitchFactory;

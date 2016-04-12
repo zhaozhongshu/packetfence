@@ -34,7 +34,9 @@ use pf::nodecategory;
 use pf::iplog qw(
     iplog_history
 );
-use pf::locationlog;
+use pf::locationlog qw(
+    locationlog_history_mac
+);
 use pf::log;
 use pf::node;
 use pf::person;

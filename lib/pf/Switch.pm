@@ -40,7 +40,10 @@ use pf::config qw(
     $WIRED_MAC_AUTH
     $NO_VOIP
 );
-use pf::locationlog;
+use pf::locationlog qw(
+    locationlog_set_session
+    locationlog_synchronize
+);
 use pf::node;
 use pf::cluster;
 # RADIUS constants (RADIUS:: namespace)

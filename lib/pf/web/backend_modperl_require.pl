@@ -18,7 +18,7 @@ use warnings;
 
 
 use pf::config;
-use pf::locationlog;
+
 use pf::node;
 use pf::roles::custom;
 use pf::Switch;

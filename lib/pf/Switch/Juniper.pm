@@ -39,7 +39,7 @@ use pf::constants qw(
     $TRUE
 );
 use pf::config qw($MAC $PORT);
-use pf::locationlog;
+
 # importing switch constants
 use pf::Switch::constants;
 use pf::util qw(

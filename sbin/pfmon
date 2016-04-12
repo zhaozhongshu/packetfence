@@ -41,7 +41,9 @@ use pf::inline::accounting qw(
     inline_accounting_maintenance
 );
 
-use pf::locationlog;
+use pf::locationlog qw(
+    locationlog_cleanup
+);
 use pf::node;
 use pf::db qw(
     db_cancel_current_query

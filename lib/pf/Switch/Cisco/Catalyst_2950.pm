@@ -101,7 +101,9 @@ use pf::config qw(
     $WIRED_802_1X
     $WIRED_MAC_AUTH
 );
-use pf::locationlog;
+use pf::locationlog qw(
+    locationlog_view_open_switchport_no_VoIP
+);
 sub description { 'Cisco Catalyst 2950' }
 
 # importing switch constants

@@ -27,7 +27,9 @@ use pf::config;
 use pf::iplog qw(
     iplog_history
 );
-use pf::locationlog;
+use pf::locationlog qw(
+    locationlog_history_mac
+);
 use pf::node;
 use pf::useragent qw(node_useragent_view);
 use pf::util qw(

@@ -39,7 +39,9 @@ use pf::Portal::Session;
 use pf::util qw(
     isenabled
 );
-use pf::locationlog;
+use pf::locationlog qw(
+    locationlog_view_open_mac
+);
 use pf::enforcement qw(reevaluate_access);
 
 =head1 SUBROUTINES

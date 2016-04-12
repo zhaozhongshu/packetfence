@@ -97,7 +97,9 @@ use pf::constants qw(
 use pf::config qw(%connection_type_explained $UNKNOWN);
 use pf::file_paths qw($bin_dir);
 use pf::enforcement;
-use pf::locationlog;
+use pf::locationlog qw(
+    locationlog_view_open_switchport_no_VoIP
+);
 use pf::SwitchFactory;
 use pf::util qw(
     pf_run

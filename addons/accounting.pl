@@ -27,7 +27,7 @@ use pf::CHI;
 use pf::SwitchFactory;
 
 use pf::person;
-use pf::locationlog;
+
 use pf::node;
 use pf::ifoctetslog qw(
     ifoctetslog_insert

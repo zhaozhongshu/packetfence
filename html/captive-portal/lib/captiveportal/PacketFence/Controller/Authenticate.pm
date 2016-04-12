@@ -17,7 +17,9 @@ use pf::util qw(
 use pf::config::util qw(
     get_realm_source
 );
-use pf::locationlog;
+use pf::locationlog qw(
+    locationlog_view_open_mac
+);
 use pf::authentication;
 use pf::Authentication::constants;
 use HTML::Entities;

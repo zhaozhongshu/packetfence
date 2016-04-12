@@ -49,7 +49,9 @@ use pf::config qw(
 );
 use pf::inline::custom $INLINE_API_LEVEL;
 
-use pf::locationlog;
+use pf::locationlog qw(
+    locationlog_view_open_mac
+);
 use pf::node;
 use pf::SwitchFactory;
 use pf::util qw(

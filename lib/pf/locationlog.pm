@@ -24,9 +24,9 @@ use constant LOCATIONLOG => 'locationlog';
 
 BEGIN {
     use Exporter ();
-    our ( @ISA, @EXPORT );
+    our ( @ISA, @EXPORT_OK );
     @ISA    = qw(Exporter);
-    @EXPORT = qw(
+    @EXPORT_OK = qw(
         $locationlog_db_prepared
         locationlog_db_prepare
 

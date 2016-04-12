@@ -66,7 +66,9 @@ use pf::log;
 use pf::StatsD::Timer;
 use pf::Redis;
 use pf::CHI;
-use pf::locationlog;
+use pf::locationlog qw(
+    locationlog_history_mac
+);
 use DateTime::Format::MySQL;
 use pf::parking;
 

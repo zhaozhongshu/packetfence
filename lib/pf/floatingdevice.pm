@@ -82,7 +82,10 @@ use pf::config qw(
     %ConfigFloatingDevices
     $WIRED_MAC_AUTH
 );
-use pf::locationlog;
+use pf::locationlog qw(
+    locationlog_update_end_switchport_no_VoIP
+    locationlog_view_open_switchport_no_VoIP
+);
 
 use pf::config::util qw(
     str_to_connection_type

@@ -23,7 +23,9 @@ use pf::util qw(
 );
 use pf::log;
 use captiveportal::Form::Authentication;
-use pf::locationlog;
+use pf::locationlog qw(
+    locationlog_view_open_mac
+);
 
 has 'source' => (is => 'rw', isa => 'pf::Authentication::Source|Undef');
 
