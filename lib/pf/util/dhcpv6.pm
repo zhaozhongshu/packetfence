@@ -17,9 +17,9 @@ use warnings;
 
 BEGIN {
     use Exporter ();
-    our (@ISA, @EXPORT);
+    our (@ISA, @EXPORT_OK);
     @ISA    = qw(Exporter);
-    @EXPORT = qw(decompose_dhcpv6 decode_dhcpv6);
+    @EXPORT_OK = qw(decompose_dhcpv6 decode_dhcpv6);
 }
 
 use NetPacket::Ethernet;
