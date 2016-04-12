@@ -54,6 +54,7 @@ use strict;
 use warnings;
 
 use Time::HiRes;
+use pf::StatsD;
 
 =head2 $timer = $self->new({ 'stat' => "stat", sample_rate => $sample_rate });
 
