@@ -40,6 +40,7 @@ use pf::config qw(
     %ConfigDomain
     $local_secret
     @radius_ints
+    %ConfigRadiusRemote
 );
 
 tie my @cli_switches, 'pfconfig::cached_array', 'resource::cli_switches';
@@ -101,9 +102,10 @@ sub _generateConfig {
     $self->generate_radiusd_sqlconf();
     $self->generate_radiusd_sitesconf();
     $self->generate_radiusd_proxy();
-    $self->generate_radiusd_cluster($tt);
-    $self->generate_radiusd_cliconf($tt);
-    $self->generate_radiusd_eduroamconf($tt);
+    $self->generate_radiusd_cluster();
+    $self->generate_radiusd_cliconf();
+    $self->generate_radiusd_eduroamconf();
+    $self->generate_radiusd_remote();
 }
 
 
@@ -666,19 +668,22 @@ EOT
 sub generate_radiusd_remote {
     my ($self) = @_;
     my %tags;
+    if (scalar keys %ConfigRadiusRemote) {
 
-$tags{'management_ip'} = defined($management_network->tag('vip')) ? $management_network->tag('vip') : $management_network->tag('ip');
+        $tags{'management_ip'} = defined($management_network->tag('vip')) ? $management_network->tag('vip') : $management_network->tag('ip');
 
-    $tags{'members'} = '';
-    $tags{'config'} ='';
+        $tags{'members'} = '';
+        $tags{'config'} ='';
+        my $i = 0;
+        foreach my $radius_remote ( sort keys %pf::config::ConfigRadiusRemote ) {
 
-    $tags{'members'} .= <<"EOT";
-home_server pf01.cluster {
+            $tags{'members'} .= <<"EOT";
+home_server pf$i.remote {
         type = auth+acct
-        ipaddr = $remote_radius_ip
+        ipaddr = $radius_remote
         src_ipaddr = $tags{'management_ip'}
-        port = $remote_radius_port
-        secret = $remote_radius_secret
+        port = $pf::config::ConfigRadiusRemote{$radius_remote}{'port'}
+        secret = $pf::config::ConfigRadiusRemote{$radius_remote}{'password'}
         response_window = 6
         status_check = status-server
         revive_interval = 120
@@ -687,10 +692,16 @@ home_server pf01.cluster {
 }
 EOT
             $tags{'home_server'} .= <<"EOT";
-        home_server =  pf01.cluster
+        home_server =  pf$i.remote
 EOT
-        parse_template( \%tags, "$conf_dir/radiusd/packetfence-remote", "$install_dir/raddb/sites-enabled/packetfence-remote" );
 
+            $i++
+        }
+        parse_template( \%tags, "$conf_dir/radiusd/packetfence-remote", "$install_dir/raddb/sites-enabled/packetfence-remote" );
+    } else {
+        my $file = $install_dir."/raddb/sites-enabled/packetfence-remote";
+        unlink($file);
+    }
         %tags = ();
         $tags{'template'} = "$conf_dir/radiusd/remote.conf";
         $tags{'virt_ip'} = pf::cluster::management_cluster_ip();
@@ -700,7 +711,6 @@ EOT
         parse_template( \%tags, $tags{'template'}, "$install_dir/raddb/remote.conf");
 
 }
-
 
 =head1 AUTHOR
 
