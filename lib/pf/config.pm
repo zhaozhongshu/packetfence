@@ -141,6 +141,8 @@ our (
     %ConfigRoles,
 #device_Registration.conf
     %ConfigDeviceRegistration,
+#RadiusRemote
+    %ConfigRadiusRemote,
 );
 
 BEGIN {
@@ -200,6 +202,7 @@ BEGIN {
         %ConfigReport
         %ConfigRoles
         %ConfigDeviceRegistration
+        %ConfigRadiusRemote
     );
 }
 
@@ -283,6 +286,8 @@ tie %ConfigSwitchesList, 'pfconfig::cached_hash', 'resource::switches_list';
 tie %ConfigReport, 'pfconfig::cached_hash', 'config::Report';
 
 tie %ConfigRoles, 'pfconfig::cached_hash', 'config::Roles';
+
+tie %ConfigRadiusRemote, 'pfconfig::cached_hash', 'config::RadiusRemote';
 
 tie %ConfigDeviceRegistration, 'pfconfig::cached_hash', 'config::DeviceRegistration';
 
