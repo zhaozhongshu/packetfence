@@ -41,5 +41,6 @@ ATTRIBUTE       PacketFence-NasName                   25       string
 ATTRIBUTE       PacketFence-Proxied-To                26       string
 ATTRIBUTE       PacketFence-Authorization-Status      27       string
 
+ATTRIBUTE       PacketFence-reply-insert              28       string
 END-VENDOR      Inverse
 
