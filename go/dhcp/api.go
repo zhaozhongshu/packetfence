@@ -11,11 +11,9 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/RoaringBitmap/roaring"
 	"github.com/davecgh/go-spew/spew"
 	"github.com/gorilla/mux"
 	"github.com/inverse-inc/packetfence/go/api-frontend/unifiedapierrors"
-	"github.com/inverse-inc/packetfence/go/log"
 	"github.com/inverse-inc/packetfence/go/pfconfigdriver"
 	"github.com/inverse-inc/packetfence/go/sharedutils"
 	dhcp "github.com/krolaw/dhcp4"
@@ -144,26 +142,6 @@ func handleStats(res http.ResponseWriter, req *http.Request) {
 	return
 }
 
-func handleInitiaLease(res http.ResponseWriter, req *http.Request) {
-	vars := mux.Vars(req)
-
-	if h, ok := intNametoInterface[vars["int"]]; ok {
-		stat := h.handleApiReq(ApiReq{Req: "initialease", NetInterface: vars["int"], NetWork: ""})
-
-		outgoingJSON, err := json.Marshal(stat)
-
-		if err != nil {
-			unifiedapierrors.Error(res, err.Error(), http.StatusInternalServerError)
-			return
-		}
-
-		fmt.Fprint(res, string(outgoingJSON))
-		return
-	}
-	unifiedapierrors.Error(res, "Interface not found", http.StatusNotFound)
-	return
-}
-
 func handleDebug(res http.ResponseWriter, req *http.Request) {
 	vars := mux.Vars(req)
 
@@ -209,8 +187,8 @@ func handleOverrideOptions(res http.ResponseWriter, req *http.Request) {
 		panic(err)
 	}
 
-	// Insert information in etcd
-	_ = etcdInsert(vars["mac"], sharedutils.ConvertToString(body))
+	// Insert information in MySQL
+	_ = MysqlInsert(vars["mac"], sharedutils.ConvertToString(body))
 
 	var result = &Info{Mac: vars["mac"], Status: "ACK"}
 
@@ -233,8 +211,8 @@ func handleOverrideNetworkOptions(res http.ResponseWriter, req *http.Request) {
 		panic(err)
 	}
 
-	// Insert information in etcd
-	_ = etcdInsert(vars["network"], sharedutils.ConvertToString(body))
+	// Insert information in MySQL
+	_ = MysqlInsert(vars["network"], sharedutils.ConvertToString(body))
 
 	var result = &Info{Network: vars["network"], Status: "ACK"}
 
@@ -251,7 +229,7 @@ func handleRemoveOptions(res http.ResponseWriter, req *http.Request) {
 
 	var result = &Info{Mac: vars["mac"], Status: "ACK"}
 
-	err := etcdDel(vars["mac"])
+	err := MysqlDel(vars["mac"])
 	if !err {
 		result = &Info{Mac: vars["mac"], Status: "NAK"}
 	}
@@ -268,7 +246,7 @@ func handleRemoveNetworkOptions(res http.ResponseWriter, req *http.Request) {
 
 	var result = &Info{Network: vars["network"], Status: "ACK"}
 
-	err := etcdDel(vars["network"])
+	err := MysqlDel(vars["network"])
 	if !err {
 		result = &Info{Network: vars["network"], Status: "NAK"}
 	}
@@ -281,7 +259,7 @@ func handleRemoveNetworkOptions(res http.ResponseWriter, req *http.Request) {
 
 func decodeOptions(b string) (map[dhcp.OptionCode][]byte, bool) {
 	var options []Options
-	_, value := etcdGet(b)
+	_, value := MysqlGet(b)
 	decodedValue := sharedutils.ConvertToByte(value)
 	var dhcpOptions = make(map[dhcp.OptionCode][]byte)
 	if err := json.Unmarshal(decodedValue, &options); err != nil {
@@ -316,8 +294,6 @@ func (h *Interface) handleApiReq(Request ApiReq) interface{} {
 					continue
 				}
 			}
-			var statistics roaring.Statistics
-			statistics = v.dhcpHandler.available.Stats()
 			var Options map[string]string
 			Options = make(map[string]string)
 			Options["optionIPAddressLeaseTime"] = v.dhcpHandler.leaseDuration.String()
@@ -336,7 +312,9 @@ func (h *Interface) handleApiReq(Request ApiReq) interface{} {
 			}
 
 			var Members []Node
+			id, _ := GlobalTransactionLock.Lock()
 			members := v.dhcpHandler.hwcache.Items()
+			GlobalTransactionLock.Unlock(id)
 			var Status string
 			var Count int
 			Count = 0
@@ -351,23 +329,15 @@ func (h *Interface) handleApiReq(Request ApiReq) interface{} {
 				Count = Count + reserved
 			}
 
-			availableCount := (int(statistics.RunContainerValues) + int(statistics.ArrayContainerValues))
+			availableCount := int(v.dhcpHandler.available.FreeIPsRemaining())
+
 			if Count == (v.dhcpHandler.leaseRange - availableCount) {
 				Status = "Normal"
 			} else {
 				Status = "Calculated available IP " + strconv.Itoa(v.dhcpHandler.leaseRange-Count) + " is different than what we have available in the pool " + strconv.Itoa(availableCount)
 			}
 
-			stats = append(stats, Stats{EthernetName: Request.NetInterface, Net: v.network.String(), Free: int(statistics.RunContainerValues) + int(statistics.ArrayContainerValues), Category: v.dhcpHandler.role, Options: Options, Members: Members, Status: Status})
-		}
-		return stats
-	}
-	// Update the lease
-	if Request.Req == "initialease" {
-
-		for _, v := range h.network {
-			initiaLease(&v.dhcpHandler)
-			stats = append(stats, Stats{EthernetName: Request.NetInterface, Net: v.network.String(), Category: v.dhcpHandler.role, Status: "Init Lease success"})
+			stats = append(stats, Stats{EthernetName: Request.NetInterface, Net: v.network.String(), Free: availableCount, Category: v.dhcpHandler.role, Options: Options, Members: Members, Status: Status})
 		}
 		return stats
 	}
@@ -376,12 +346,8 @@ func (h *Interface) handleApiReq(Request ApiReq) interface{} {
 	if Request.Req == "debug" {
 		for _, v := range h.network {
 			if Request.Role == v.dhcpHandler.role {
-				var statistiques roaring.Statistics
-				statistiques = v.dhcpHandler.available.Stats()
-				spew.Dump(v.dhcpHandler.available.Stats())
 				spew.Dump(v.dhcpHandler.hwcache)
-				log.LoggerWContext(ctx).Info(v.dhcpHandler.available.String())
-				stats = append(stats, Stats{EthernetName: Request.NetInterface, Net: v.network.String(), Free: int(statistiques.RunContainerValues) + int(statistiques.ArrayContainerValues), Category: v.dhcpHandler.role, Status: "Debug finished"})
+				stats = append(stats, Stats{EthernetName: Request.NetInterface, Net: v.network.String(), Free: int(v.dhcpHandler.available.FreeIPsRemaining()), Category: v.dhcpHandler.role, Status: "Debug finished"})
 			}
 		}
 		return stats
