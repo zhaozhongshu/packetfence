@@ -44,11 +44,3 @@ func MysqlDel(key string) bool {
 	}
 	return true
 }
-
-func MysqlCreateTable() {
-	rows, err := MySQLdatabase.Query("CREATE TABLE IF NOT EXISTS key_value_storage id VARCHAR(255), value BLOB,PRIMARY KEY(id) ENGINE=InnoDB")
-	defer rows.Close()
-	if err != nil {
-		log.LoggerWContext(ctx).Error("Error while creating the table into MySQL: " + err.Error())
-	}
-}
