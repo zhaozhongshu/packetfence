@@ -5,6 +5,7 @@ import (
 	"math"
 	"net"
 	"strconv"
+	"sync"
 	"time"
 
 	cache "github.com/fdurand/go-cache"
@@ -29,6 +30,7 @@ type DHCPHandler struct {
 	layer2        bool
 	role          string
 	ipReserved    string
+	ipAssigned    map[string]uint32
 }
 
 type Interfaces struct {
@@ -46,7 +48,7 @@ type Interface struct {
 
 type Network struct {
 	network     net.IPNet
-	dhcpHandler DHCPHandler
+	dhcpHandler *DHCPHandler
 	splittednet bool
 }
 
@@ -66,6 +68,7 @@ func (d *Interfaces) readConfig() {
 
 	pfconfigdriver.FetchDecodeSocket(ctx, &keyConfNet)
 
+	wg := &sync.WaitGroup{}
 	for _, v := range interfaces.Element {
 
 		eth, err := net.InterfaceByName(v)
@@ -139,7 +142,8 @@ func (d *Interfaces) readConfig() {
 
 						for _, subnet := range smallnet {
 							var DHCPNet Network
-							var DHCPScope DHCPHandler
+							var DHCPScope *DHCPHandler
+							DHCPScope = &DHCPHandler{}
 							var NetWork *net.IPNet
 							var lastrole bool
 							if len(Roles) == 1 {
@@ -205,13 +209,10 @@ func (d *Interfaces) readConfig() {
 							DHCPScope.available = available
 
 							// Initialize hardware cache
-							// Add 10 minutes to the expiration as a buffer so the IP addresses don't get reused too fast
-							hwcache := cache.New((time.Duration(seconds)*time.Second)+(600*time.Second), 10*time.Second)
+							hwcache := cache.New(time.Duration(seconds)*time.Second, 2*time.Second)
 
 							hwcache.OnEvicted(func(nic string, pool interface{}) {
 								go func() {
-									// Always wait 10 minutes before releasing the IP again
-									time.Sleep(10 * time.Minute)
 									log.LoggerWContext(ctx).Info(nic + " " + dhcp.IPAdd(DHCPScope.start, pool.(int)).String() + " Added back in the pool " + DHCPScope.role + " on index " + strconv.Itoa(pool.(int)))
 									DHCPScope.available.FreeIPIndex(uint64(pool.(int)))
 								}()
@@ -222,10 +223,11 @@ func (d *Interfaces) readConfig() {
 							xid := cache.New(time.Duration(4)*time.Second, 2*time.Second)
 
 							DHCPScope.xid = xid
-
-							initiaLease(&DHCPScope)
-							ExcludeIP(&DHCPScope, ConfNet.IpReserved)
-							DHCPScope.ipReserved = ConfNet.IpReserved
+							wg.Add(1)
+							go func() {
+								initiaLease(DHCPScope, ConfNet)
+								wg.Done()
+							}()
 							var options = make(map[dhcp.OptionCode][]byte)
 
 							options[dhcp.OptionSubnetMask] = []byte(DHCPNet.network.Mask)
@@ -248,7 +250,8 @@ func (d *Interfaces) readConfig() {
 
 					} else {
 						var DHCPNet Network
-						var DHCPScope DHCPHandler
+						var DHCPScope *DHCPHandler
+						DHCPScope = &DHCPHandler{}
 						DHCPNet.splittednet = false
 						DHCPNet.network.IP = net.ParseIP(key)
 						DHCPNet.network.Mask = net.IPMask(net.ParseIP(ConfNet.Netmask))
@@ -267,12 +270,10 @@ func (d *Interfaces) readConfig() {
 						DHCPScope.available = available
 
 						// Initialize hardware cache
-						hwcache := cache.New(time.Duration(seconds)*time.Second, 10*time.Second)
+						hwcache := cache.New(time.Duration(seconds)*time.Second, 2*time.Second)
 
 						hwcache.OnEvicted(func(nic string, pool interface{}) {
 							go func() {
-								// Always wait 10 minutes before releasing the IP again
-								time.Sleep(10 * time.Minute)
 								log.LoggerWContext(ctx).Info(nic + " " + dhcp.IPAdd(DHCPScope.start, pool.(int)).String() + " Added back in the pool " + DHCPScope.role + " on index " + strconv.Itoa(pool.(int)))
 								DHCPScope.available.FreeIPIndex(uint64(pool.(int)))
 							}()
@@ -283,10 +284,11 @@ func (d *Interfaces) readConfig() {
 						xid := cache.New(time.Duration(4)*time.Second, 2*time.Second)
 
 						DHCPScope.xid = xid
-
-						initiaLease(&DHCPScope)
-						ExcludeIP(&DHCPScope, ConfNet.IpReserved)
-						DHCPScope.ipReserved = ConfNet.IpReserved
+						wg.Add(1)
+						go func() {
+							initiaLease(DHCPScope, ConfNet)
+							wg.Done()
+						}()
 
 						var options = make(map[dhcp.OptionCode][]byte)
 
@@ -307,6 +309,7 @@ func (d *Interfaces) readConfig() {
 				}
 			}
 		}
+		wg.Wait()
 		d.intsNet = append(d.intsNet, ethIf)
 
 	}
