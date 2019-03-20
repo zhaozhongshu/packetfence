@@ -49,9 +49,9 @@ MARIADB_BACKUP_SERVER_HOSTNAME=''
 # Create the backup directory
 if [ ! -d "$BACKUP_DIRECTORY" ]; then
     mkdir -p $BACKUP_DIRECTORY
-    echo -e "$BACKUP_DIRECTORY , created. \n"
+    echo -e "$BACKUP_DIRECTORY, created. \n"
 else
-    echo -e "$BACKUP_DIRECTORY , folder already created. \n"
+    echo -e "$BACKUP_DIRECTORY, folder already created. \n"
 fi
 
 PF_USED_SPACE=`du -s $PF_DIRECTORY --exclude=logs --exclude=var | awk '{ print $1 }'`
@@ -142,7 +142,7 @@ backup_db(){
             INNO_TMP="/tmp/pf-innobackups"
             mkdir -p $INNO_TMP
             if [ $MARIADB_LOCAL_CLUSTER -eq 1 ]; then
-                innobackupex --user=$REP_USER --password=$REP_PWD  --no-timestamp --stream=xbstream --tmpdir=$INNO_TMP $INNO_TMP 2>> /usr/local/pf/logs/innobackup.log | gzip - > $BACKUP_DIRECTORY/$BACKUP_DB_FILENAME-innobackup-`date +%F_%Hh%M`.xbstream.gz
+                innobackupex --user=$REP_USER --password=$REP_PWD --no-timestamp --stream=xbstream --tmpdir=$INNO_TMP $INNO_TMP 2>> /usr/local/pf/logs/innobackup.log | gzip - > $BACKUP_DIRECTORY/$BACKUP_DB_FILENAME-innobackup-`date +%F_%Hh%M`.xbstream.gz
             elif [ $MARIADB_REMOTE -eq 1 ]; then
                 innobackupex --user=$DB_USER --password=$DB_PWD --host=$DB_HOST --no-timestamp --stream=xbstream --tmpdir=$INNO_TMP $INNO_TMP 2>> /usr/local/pf/logs/innobackup.log | gzip - > $BACKUP_DIRECTORY/$BACKUP_DB_FILENAME-innobackup-`date +%F_%Hh%M`.xbstream.gz
             else
