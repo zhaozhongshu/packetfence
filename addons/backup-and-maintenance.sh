@@ -127,7 +127,7 @@ backup_db(){
         elif [ $MARIADB_REMOTE_CLUSTER -eq 1 ]; then
              echo "Temporarily stopping **remote** Galera cluster sync for DB backup"
              # We couldn't use the local socket
-             mysql -u$REP_USER -p$REP_PWD -h $DB_HOST -e 'set global wsrep_desync=ON;'
+             mysql -u$DB_USER -p$DB_PWD -h $DB_HOST -e 'set global wsrep_desync=ON;'
         else
             echo "Not a Galera cluster, nothing to stop"
         fi
@@ -140,7 +140,7 @@ backup_db(){
             if [ $MARIADB_LOCAL_CLUSTER -eq 1 ]; then
                 innobackupex --user=$REP_USER --password=$REP_PWD  --no-timestamp --stream=xbstream --tmpdir=$INNO_TMP $INNO_TMP 2>> /usr/local/pf/logs/innobackup.log | gzip - > $BACKUP_DIRECTORY/$BACKUP_DB_FILENAME-innobackup-`date +%F_%Hh%M`.xbstream.gz
             elif [ $MARIADB_REMOTE -eq 1 ]; then
-                innobackupex --user=$REP_USER --password=$REP_PWD --host=$DB_HOST --no-timestamp --stream=xbstream --tmpdir=$INNO_TMP $INNO_TMP 2>> /usr/local/pf/logs/innobackup.log | gzip - > $BACKUP_DIRECTORY/$BACKUP_DB_FILENAME-innobackup-`date +%F_%Hh%M`.xbstream.gz
+                innobackupex --user=$DB_USER --password=$DB_PWD --host=$DB_HOST --no-timestamp --stream=xbstream --tmpdir=$INNO_TMP $INNO_TMP 2>> /usr/local/pf/logs/innobackup.log | gzip - > $BACKUP_DIRECTORY/$BACKUP_DB_FILENAME-innobackup-`date +%F_%Hh%M`.xbstream.gz
             else
                 innobackupex --user=$DB_USER --password=$DB_PWD --no-timestamp --stream=xbstream --tmpdir=$INNO_TMP $INNO_TMP 2>> /usr/local/pf/logs/innobackup.log | gzip - > $BACKUP_DIRECTORY/$BACKUP_DB_FILENAME-innobackup-`date +%F_%Hh%M`.xbstream.gz
             fi
@@ -172,7 +172,7 @@ backup_db(){
              mysql -u$REP_USER -p$REP_PWD -e 'set global wsrep_desync=OFF;'
         elif [ $MARIADB_REMOTE_CLUSTER -eq 1 ]; then
              echo "Reenabling **remote** Galera cluster sync"
-             mysql -u$REP_USER -p$REP_PWD -h $DB_HOST -e 'set global wsrep_desync=OFF;'
+             mysql -u$DB_USER -p$DB_PWD -h $DB_HOST -e 'set global wsrep_desync=OFF;'
         else
             echo "Not a Galera cluster, nothing to reenable"
         fi
