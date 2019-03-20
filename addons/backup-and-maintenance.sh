@@ -40,7 +40,8 @@ NODE2_HOSTNAME=''
 NODE1_IP=''
 NODE2_IP=''
 
-# Only for MariaDB remote clusters
+## Only for remote MariaDB databases
+MARIADB_REMOTE=0
 MARIADB_REMOTE_CLUSTER=0
 # should be equal to return of hostname command
 MARIADB_BACKUP_SERVER_HOSTNAME=''
@@ -94,7 +95,7 @@ should_backup(){
         else
             echo -e "First server of the cluster : database backup will start.\n"
         fi
-    elif [ $MARIADB_REMOTE_CLUSTER -eq 1 ]; then
+    elif [ $MARIADB_REMOTE -eq 1 ]; then
         PF_SERVER_HOSTNAME=$(hostname)
         if [ "$MARIADB_BACKUP_SERVER_HOSTNAME" == "$PF_SERVER_HOSTNAME" ]; then
             echo "Backup server detected: database backup will start"
@@ -138,7 +139,7 @@ backup_db(){
             mkdir -p $INNO_TMP
             if [ $MARIADB_LOCAL_CLUSTER -eq 1 ]; then
                 innobackupex --user=$REP_USER --password=$REP_PWD  --no-timestamp --stream=xbstream --tmpdir=$INNO_TMP $INNO_TMP 2>> /usr/local/pf/logs/innobackup.log | gzip - > $BACKUP_DIRECTORY/$BACKUP_DB_FILENAME-innobackup-`date +%F_%Hh%M`.xbstream.gz
-            elif [ "$MARIADB_REMOTE_CLUSTER" -eq 1 ]; then
+            elif [ $MARIADB_REMOTE -eq 1 ]; then
                 innobackupex --user=$REP_USER --password=$REP_PWD --host=$DB_HOST --no-timestamp --stream=xbstream --tmpdir=$INNO_TMP $INNO_TMP 2>> /usr/local/pf/logs/innobackup.log | gzip - > $BACKUP_DIRECTORY/$BACKUP_DB_FILENAME-innobackup-`date +%F_%Hh%M`.xbstream.gz
             else
                 innobackupex --user=$DB_USER --password=$DB_PWD --no-timestamp --stream=xbstream --tmpdir=$INNO_TMP $INNO_TMP 2>> /usr/local/pf/logs/innobackup.log | gzip - > $BACKUP_DIRECTORY/$BACKUP_DB_FILENAME-innobackup-`date +%F_%Hh%M`.xbstream.gz
@@ -186,7 +187,7 @@ should_backup
 # Is the database running on the current server and should we be running a backup ?
 if [ $SHOULD_BACKUP -eq 1 ] && { [ -f /var/run/mysqld/mysqld.pid ] || [ -f /var/run/mariadb/mariadb.pid ] || [ -f /var/lib/mysql/`hostname`.pid ]; }; then
     backup_db
-elif [ $SHOULD_BACKUP -eq 1 ] && [ $MARIADB_REMOTE_CLUSTER -eq 1 ]; then
+elif [ $SHOULD_BACKUP -eq 1 ] && [ $MARIADB_REMOTE -eq 1 ]; then
     backup_db
 else
     echo "Nothing to do"
