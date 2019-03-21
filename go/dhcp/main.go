@@ -125,7 +125,7 @@ func main() {
 		// Create a channel for each interfaces
 		intNametoInterface[v.Name] = &v
 		go func() {
-			v.runUnicast(jobs, ctx)
+			v.runUnicast(ctx, jobs)
 		}()
 
 	}
@@ -134,7 +134,7 @@ func main() {
 	for _, v := range DHCPConfig.intsNet {
 		v := v
 		go func() {
-			v.run(jobs, ctx)
+			v.run(ctx, jobs)
 		}()
 	}
 
@@ -193,17 +193,18 @@ func main() {
 }
 
 // Broadcast Listener
-func (I *Interface) run(jobs chan job, ctx context.Context) {
+func (I *Interface) run(ctx context.Context, jobs chan job) {
 
 	ListenAndServeIf(I, I, jobs, ctx)
 }
 
 // Unicast listener
-func (I *Interface) runUnicast(jobs chan job, ctx context.Context) {
+func (I *Interface) runUnicast(ctx context.Context, jobs chan job) {
 
 	ListenAndServeIfUnicast(I, I, jobs, ctx)
 }
 
+// ServeDHCP is the main function that receive the dhcp packets
 func (I *Interface) ServeDHCP(ctx context.Context, p dhcp.Packet, msgType dhcp.MessageType, srcIP net.Addr) (answer Answer) {
 
 	var handler DHCPHandler
@@ -280,7 +281,6 @@ func (I *Interface) ServeDHCP(ctx context.Context, p dhcp.Packet, msgType dhcp.M
 	if VIP[I.Name] {
 
 		defer recoverName(options)
-
 
 		var Options map[string]string
 		Options = make(map[string]string)

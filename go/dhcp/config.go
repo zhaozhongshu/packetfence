@@ -55,8 +55,8 @@ type Network struct {
 	splittednet bool
 }
 
-const bootp_client = 68
-const bootp_server = 67
+const bootpClient = 68
+const bootpServer = 67
 
 func newDHCPConfig() *Interfaces {
 	var p Interfaces
@@ -92,7 +92,7 @@ func (d *Interfaces) readConfig() {
 		ethIf.intNet = eth
 		ethIf.Name = eth.Name
 		ethIf.InterfaceType = "server"
-		ethIf.listenPort = bootp_server
+		ethIf.listenPort = bootpServer
 
 		adresses, _ := eth.Addrs()
 		for _, adresse := range adresses {
